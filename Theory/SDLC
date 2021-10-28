@@ -1,0 +1,36 @@
+# SDLC/STLC
+
+Software Development Life Cycle
+
+calculator
+
+2+3 add
+2-3 substract
+
+SDLC/STLC
+Test data/unit(method) testing
+
+Agile methodology: Development, testing parallel
+Waterfall : old model, Development and testing sequential
+
+2,3 5
+5,6 11
+
+Enterprise = web application = deployable application
+
+third party libraries
+
+
+Mov a,b
+Rsft a,1
+
+a=b+1
+if a>b:
+	print("a is greater");
+
+positive testing  = Whether code working or not
+negative testing  = Is code working in all conditions
+
+
+
+

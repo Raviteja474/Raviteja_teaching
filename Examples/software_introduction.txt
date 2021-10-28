@@ -1,0 +1,216 @@
+Questions:
+
+1. why software?
+2. how commited are you?
+3. Check candidate knowledge(software and general)
+4. r u travelling in 2 boats? What about other technologies
+5. Define the roadmap
+
+Dec 31 = preperation complete
+one month : Alias
+Feb 1- Till you get job 
+
+
+Experience - 3.5 years 
+profile python automation Engineer
+Target date - 2021 Mar 1
+
+______________________________________________________________________________
+Commitement from Tutor:
+
+10 hours a week
+Evaluate continuously 
+Be ruthless and define the relationship
+Give them project 
+Help them from Background verification
+
+____________________________________________________________________________________________
+
+
+Commitement from candidate:
+
+BE ON TIME and align to me..
+stable internet connection..
+
+1. 4 moths no job
+2. salary min 9-10 LPA
+3. Minimum 8(2*4)/10(2*5) hours sincere
+4. Everything u should practice
+5. 15 K expenditure
+6. join in face book groups in python 
+7. Daily status on Wednesday and saturday morning in excel
+8. Work in group
+_________________________________________________________________________________________
+
+Requirement: Fluent English + python + with some knowledge on domain + Back ground Verification
+
+
+
+youtube vedios ( Pluralsight )
+
+https://www.youtube.com/watch?v=QXeEoD0pB3E&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3
+pluralsight 
+________________________________________________________________________________________
+
+
+screen visible - User Interface/Front end
+Eg: HTML, JSS, JQuery, Javascript, React js, angular js, vue js
+
+Message store: Storage Technology- database
+Eg: Oracle, sql Plus, mongo Db, dynamo Db,
+
+Decision making/ logical thinking/ programming/ analaysis:
+Eg: Java, .Net, python
+
+Network- To data transffer or to connect
+Eg: Bluetooth, Zigbee, internet, intranet, LAN, WAN, SAN,
+companies: Cisco, ACT
+
+Artificial Intelligence/ Machine learning:
+A programn to take it's own decision based on context.
+Eg: Somany frameworks(partially completed code with standard of rules how to code) with python
+
+Srotage Technologies/ Big data
+Will store the data physically(in phone or laptop) or cloud(over mail or google drive)
+Eg: Google, godaddy, facebook, Dell, Lenovo
+
+Automation Technologies:
+some survelliance mechanism or monitoring mechanism in place.
+Eg: python, java+selenium, cubernets.
+
+__________________________________________________________________________________________
+Example: Facebook application calling.
+
+steps:
+1. A click - Application should verify sumanth present or not in friends list(programming langage), if yes Display on screen(Front end)
+2. call click-  request u r submitting,request should be accepted(PL)
+3. call receive - data trasmission(networking)
+4. Discussion- there should be some mechanism to correct errors(Noise cancellation- AI, ML)
+5. end the call - request u r submitting,request should be accepted(PL)
+6. Goverment should record - TB datas storage Medium(Big data)
+7. Frequent user should always showup first - Some automation task
+
+PL= programming language
+___________________________________________________________________________________________
+
+product companies  and service based company
+
+product Adhar project (company governament)-  service company Infosys
+Eg: Cisco, Google, Facebook,
+
+
+Service based company :
+HCL, infosys, TCS, CTS, Wipro, Tech Machindra, Accenture, Virtusa polaris, Capgemini, Hexaware
+
+______________________________________________________________________________
+
+How many domains are there in software/ software jobs categorization
+
+Banking & Finance - HDFC, FIS, ICICI, yes bank,  Muthut finance
+
+Helath Insurance Insurance - Apollo, Global Hospitals, Medibuddy(Insurance), UHG
+
+Life sceinces - Agriculture, pesticides, small services like ayurvedic, agro chemical
+
+Monsanto bear pathanjali 
+
+Life Insurace & property insurance (car & House)   LIC, gheevan Bhemma
+
+Research & Develpement - Genetic, biotechnology, SSD, semiconductor, 
+
+Manufacatures: FW Engineering
+
+Laptop- HP, Lenovo, Apple, Dell, Sony
+Mobiles - Vivo, realme, redmi, Apple, Samsung, Nokia
+
+Software Developing Corporations:
+Apche, redhat, Microsoft(windows)
+
+___________________________________________________________________
+
+
+Software company hierarchy:
+
+parent = payroll
+
+HCL:
+200 employees
+Software engineer(50) -> senior software engineer(60)  -> Lead engineer (50) --> Team lead(10)  -> Manager(5) -> Senor manager(2/3)  -> project Manager(1)
+
+CTS:
+200
+programmer analyst Trainee-> programmer analyst -> Associate -> Senior Associate -> Manager ->Senior manager -> Vice president
+
+Ratings : 4/5 levels - annual  - Increments /Variable pay/ promotions/ On-sites
+
+Onsite : out of India/ abroad
+
+off-site/offshore : In india
+_____________________________________________________________________________________________________
+
+Recruitment process:
+
+Naukri/ Linkedin:
+
+1. Candidate will upload profile
+2. HR department will contact us, based on suitability for our skills to the requirement
+3. 2 technical interviews, 1 HR interviews
+4. offer letter released with compensation(CTC) and On-boarding process intialted.
+
+On-boarding = pre-joining process + BGV
+Pre-joining = education details, residence details, medical details
+BGV = previous experience certificate , payslips, bank statements, previous company offer letter
+
+
+After all this, you will be joined.
+
+____________________________________________________________________________________________
+HR policies and Induction:
+
+Induction: Joining day formalities , introduction company policies and taking signatures
+
+HR policies:  How many hours of time per day, leave policy
+
+You need to report to your Reporting manager.
+
+Project allocation:
+Bench project * client project
+
+
+__________________________________________________________________________________________________
+Project Allocation/Billing:
+
+Client : Intel
+
+End product/product : SSD/ Bank application/Insurance
+
+Customers/OEM : lenovo/ Dell
+
+Teams/ groups:  CDE team
+
+K.T - Knowledge acquisition or knowledge Transfer(2-3 weeks)
+
+Shadow resource: work with partial responsibility (1 Month); supervisor
+
+Resource= person, employee
+Bandwidth = time
+
+Type of project : Development or Support project
+
+
+Development : Need to develop total code from scratch
+
+Support(L1/L2/L3) : Need to fix bugs and enhancements
+
+Level 1 : less coding
+Level 2 : normal coding
+level 3:  More coding
+
+Development : Normal shift(10 AM- 7 AM)
+support : Morning shift(6 AM-3PM)  and evening shift(2 PM - 11 PM) and night shift(8 PM- 5 AM) - Allowance & Cab
+
+Bidding: Bank 3 years  software need to take care by company.
+
+1. Fixed amount - 3 years - 100 crores
+2. Per head amount - will get money from them.
+______________________________________________________________________

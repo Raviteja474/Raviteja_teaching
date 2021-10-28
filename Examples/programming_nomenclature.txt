@@ -1,0 +1,126 @@
+high level programming (language) = python, easy, english, easy to understand
+low level programming  =  non-english, embedded c, binary codes, 8085 processor mahcine codes
+
+assembly language
+
+terminal , command prompt = black window(ctrl+r, type cmd)
+
+integer = 9, 10, 11
+float = 5.9, 98.4
+boolean = True or False
+hexadecimal = x12, 0 1 2 3 4 5 6 7 8 9 A B C D E F
+octal
+
+!=, ! , 
+
+IDE = Integrated developement environment , application, where we code = pycharm(python)
+
+Eclipse(Java)
+
+bit ,byte(8), word(16), nible(4)
+
+
+
+2**1 = 2, 2**2=4, 2**3=8, 2**15 = 16,384
+
+2**64 OS = 1TB= 1000GB= 1000000MB= 1000000000KB= 1000000000000 B
+
+0
+1
+
+00
+01
+10
+11
+
+000
+001
+010
+011
+100
+101
+110
+111
+
+
+looping /iterating 
+
+for , while loop
+
+hard code
+
+https://www.onlinegdb.com/online_python_compiler
+
+
+identifier = constant+ variable 
+module = ends with .py
+
+library = professional developers and we are able to import ;import time, import re
+identation  = tab, 4 spaces, every level should have one tab 
+
+intialise, assign
+iteration(loop)
+
+execution flow
+method
+
+naming convention= yes
+lowercase(variable), uppaercase(constant), snake case (userName , user_name) =yes
+function = module level ,
+
+escape characters =  yes \n \t
+
+string, raw_string
+
+type,datatype
+integer, float, string,boolean 
+identifier  = variable+constants
+constant =yes
+
+loop =yes
+
+condtion = yes
+
+program = yes
+
+
+Error, exception
+
+class, 
+object = data, behavior, scope
+
+path, absolute path
+
+argument = parameter; we will pass to method
+
+calling, defintion/implementation/  =yes
+
+
+
+
+
+compile  = .pyc
+
+interpreter = line by line
+
+execution, program run, machine code, byte code
+
+IDE= Integrated Developement environment; pycharm
+
+module =.py, package=lbrary
+
+
+
+error = yes
+debug =yes
+breakpoint = yes
+log  = print statements
+print  =yes
+operator =  +,-, 
+operand= x,y, a,b
+datatype(type)  = int float 
+keywords  = if, elif, else
+
+duck typing = dynamic typing
+compile time ,static time * runtime, dynamic time
+
