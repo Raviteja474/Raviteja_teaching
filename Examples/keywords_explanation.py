@@ -6,6 +6,8 @@ True		is	return and	continue	for
 as	def	from		while
 assert	del		not	 elif	if	or
 
+return  None  in
+
 # static typing
 int i = 10;
 float f= 9.0;
@@ -96,6 +98,40 @@ student_python = input("Enter name??")
 assert student_python!="raviteja", "WHY U R WRITING MAN??"
 student_python = input("Enter name??")
 assert student_python!="raviteja", "WHY U R WRITING MAN??"
+
+
+# return keyword returns the result of the method
+def add_method(a,b):
+    print("Hi, I am add method")
+    return a+b
+
+# reusability if primary purpose of the method.
+def add_ages(a,b):
+    print("Adding 2 poeple ages")
+    # To check validity of the parameters
+    if a<0 or b<0:
+        print("We can't enter negative ages. Invalid data!!")
+        # We don't have that data/ invalid data
+        return None
+    else:
+        return a+b
+
+
+print(f"Adding 2 person ages {add_ages(15,34)}")
+print(f"Adding 2 person ages {add_ages(0,0)}")
+
+print(f"Adding 3+4 = {add_method(0,0)}")
+print(f"Adding 3+4 = {add_method(3,4)}")
+print(f"Adding 48+414 = {add_method(48,414)}")
+add_result = add_method(-5748,4144)
+print(f"Adding -5748+4144 = {add_result}")
+print(f"Adding -5748+4144 = {add_method(-5748,4144)}")
+
+# Ram Ramakrishna  , Ravi Raviteja   purpose  not in purposie
+# in keyword used for checking whether this sub string exist in string or not.
+if "Ram" in "Ramkrishna":
+    print("Ram present in above string.")
+
 
 name = "Ram"
 print(name)

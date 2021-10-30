@@ -17,15 +17,13 @@ how: this program tells
 # starts from index 0 to index 4
 var_1= "madam"
 # run time value passing
-var = input("Enter your string?")
-length = len(var)
-print(len(var)//2)
 
-# clue 5->2
-for i in range(0, length):
-    # Formatted strings
-    print(f"i {i} ........{var[i]} comparing {var[length-1-i]}")
-    if var[i] != var[length-1-i]:
-        print("It's not palindrome!!")
-
-print("It's palindrome")
+x = str(input("enter a name:"))
+for i in range(0, int(len(x) // 2)):
+    if x[i] == x[len(x) - i - 1]:
+        continue
+    else:
+        print("{0} is not a palindrome".format(x))
+        break
+else:
+    print("{0} is a palindrome..".format(x))
