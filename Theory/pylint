@@ -1,0 +1,11 @@
+C:\Users\Avinash\AppData\Roaming\Python\Python310\Scripts>pylint mood_level.py
+************* Module mood_level
+mood_level.py:31:0: C0305: Trailing newlines (trailing-newlines)
+mood_level.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+mood_level.py:5:0: C0103: Constant name "allergy_item" doesn't conform to UPPER_CASE naming style (invalid-name)
+mood_level.py:6:0: C0103: Constant name "mood" doesn't conform to UPPER_CASE naming style (invalid-name)
+mood_level.py:11:4: C0103: Constant name "mood_level" doesn't conform to UPPER_CASE naming style (invalid-name)
+mood_level.py:20:4: R1722: Consider using sys.exit() (consider-using-sys-exit)
+
+-----------------------------------
+Your code has been rated at 7.27/10

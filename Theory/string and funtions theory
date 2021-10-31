@@ -23,4 +23,40 @@ ECE     13     11
 EEE     10     21
 Civil   21     2
 
-default = usually
+default = usually expected value
+
+
+
+Modulaity = we need to divide the program logically
+atomosity = each function is atom, that function should carry single responsibility
+reusability = reusage purpose, we will call function multiple times from mutiple places
+maintainability = documentation (purpose, inputs, outputs), need to change function in future in case of requirement change
+
+explicit = forcefully or manually
+implicit = automatically/ by default
+
+mandatory argument/parameter = that parameter you should explicitly pass to the method
+default  argument/parameter = optional to pass, if you don't send it will take default value
+
+pylint = a python module which gives rating to your python file
+pip = python installation package , install and manage software packages.
+
+alignment = in accordance with
+
+numeric = numbers
+alpha characters = alphabeticals
+alphanumerical = numbers or alphabates
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,6 +8,8 @@ assert	del		not	 elif	if	or
 
 return  None  in
 
+any all
+
 # static typing
 int i = 10;
 float f= 9.0;
@@ -131,9 +133,21 @@ print(f"Adding -5748+4144 = {add_method(-5748,4144)}")
 # in keyword used for checking whether this sub string exist in string or not.
 if "Ram" in "Ramkrishna":
     print("Ram present in above string.")
+print("_______________________________________________________________________________________________")
 
+# oth index will tell if he is faculty or not and 1st index indicates if he is HOD or not
+sample_list = [True, False]
+
+if any(sample_list):
+    print("Please enter into college!!")
+
+if all(sample_list):
+    print("You don't have permission to suspend student!!")
+else:
+    print("You are just a faculty")
 
 name = "Ram"
 print(name)
+# Deleting the variable will give error.
 del name
 print(name)

@@ -1,0 +1,172 @@
+Microsoft Windows [Version 10.0.19042.1288]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\ravit>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::dc9e:d603:8f2e:af12%7
+   IPv4 Address. . . . . . . . . . . : 192.168.55.105
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::1%7
+                                       192.168.55.1
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+C:\Users\ravit>ping www.google.com
+
+Pinging www.google.com [142.250.77.36] with 32 bytes of data:
+Reply from 142.250.77.36: bytes=32 time=134ms TTL=120
+Reply from 142.250.77.36: bytes=32 time=36ms TTL=120
+Reply from 142.250.77.36: bytes=32 time=36ms TTL=120
+Reply from 142.250.77.36: bytes=32 time=37ms TTL=120
+
+Ping statistics for 142.250.77.36:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 36ms, Maximum = 134ms, Average = 60ms
+
+C:\Users\ravit>cd C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples
+
+C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples>dir
+ Volume in drive C is OS
+ Volume Serial Number is CCA7-5BE9
+
+ Directory of C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples
+
+31-10-2021  20:08    <DIR>          .
+31-10-2021  20:08    <DIR>          ..
+31-10-2021  20:08             2,698 calculator.py
+26-10-2021  22:31               383 different_prints.py
+24-10-2021  09:20             1,268 First_program.txt
+30-10-2021  22:36             3,660 keywords_explanation.py
+30-10-2021  22:53               585 palindrome.py
+31-10-2021  13:29               489 pattern_1.py
+30-10-2021  22:42               254 practise.py
+28-10-2021  23:35             2,089 programming_nomenclature.txt
+31-10-2021  13:25               957 range_function.py
+31-10-2021  11:31               308 raw_strings.py
+28-10-2021  23:35             6,964 software_introduction.txt
+31-10-2021  13:52             1,298 strings_introduction.py
+              12 File(s)         20,953 bytes
+               2 Dir(s)  142,816,653,312 bytes free
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

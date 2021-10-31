@@ -3,6 +3,7 @@
 # constant
 PERSON_TEMPRATURE = 98
 
+
 # Taking input from user
 user_name = input("Enter user name ??")
 # type conversion str -> integer

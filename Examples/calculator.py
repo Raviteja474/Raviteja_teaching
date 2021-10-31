@@ -1,11 +1,16 @@
 import time
 
+import pylint
+
+
 # BODMAS Brackets Order Division Multiplication Addition subtraction
 # 2*3+4-5*(7+9)-11  = 2*3+4-5*16-11 = 6+4-80-11 =10-80-11 = -81
 # This illustrates string and functions concepts
 # Aim: simple and complex calculations
 # exec function
-# Modulaity, atomosity, reusability,
+# Modulaity, atomosity, reusability, maintainability
+
+
 
 # raw_string
 
@@ -18,6 +23,12 @@ import time
 # values = input("Enter your values?")
 # a,b,c = values.split(",")
 # print(a,b)
+
+# Make addition as default operation, if user don't provide operation name
+# values mandatory argument and operation default argument
+def extract_operation(values, operation = "addition"):
+    value_1, value_2 = values.split(" ")
+    return value_1,value_2,operation
 
 
 def addition(a,b):
@@ -50,7 +61,11 @@ while True:
     if time.time()-starting_time > 60:
         print("Calculator works only 1 minute!!")
         break
-    value_1, value_2, operation = values.split(" ")
+
+    if len(values.split(" ")) > 2:
+        value_1, value_2, operation = values.split(" ")
+    else:
+        value_1, value_2, operation = extract_operation(values)
     print(value_1, value_2, operation)
     print(type(value_1), type(value_2), type(operation))
 
