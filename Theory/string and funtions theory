@@ -1,0 +1,26 @@
+
+builtin method = the method provided by python
+implemented method = the method implemented by developer
+
+standard = every unit is same like other units
+eg: apartment house
+adhoc/customized = it follows developer/client own interests
+
+string = sentence
+character = letter
+
+unit testing = testing each individual unit of the program
+positive testing = intention is to find whether it is positive or not
+negative testing = intention is to find whether it is negative or not
+eg: ZeroDivisionError: division by zero
+
+wide input = accepting more possible inputs
+
+two matrix
+Branch girls boys
+CSE     12     13
+ECE     13     11
+EEE     10     21
+Civil   21     2
+
+default = usually
