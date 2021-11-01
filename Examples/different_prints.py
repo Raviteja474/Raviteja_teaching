@@ -5,17 +5,19 @@ b = 2
 print(a, b)
 print("a value is ", a, "b value is ", b)
 # prints with format function
+# substitution
 print("a value is {}, b value is {}".format(a, b))
 
 # F-string or formatted strings
 print(f"a value is {a}, b value is {b}")
 
 # positional strings
+# 0 th index a value , 1st index b value
 print("a value is {0}, b value is {1}".format(a, b))
-print("a value is {1}, b value is {0}".format(a, b))
+print("b value is {1}, a value is {0}".format(a, b))
 
 # Alias names
-print("Pamujula family members names.{visu} {avi} and {teja}".format(visu="Visweswar", avi= "Avinash", teja="Raviteja"))
+print("Pamujula family members names. {visu} {avi} and {teja}".format(visu="Visweswar", avi= "Avinash", teja="Raviteja"))
 
 # o th index element should have atlas 16 letter size with center alignment
 # 1st index element should have atlas 4 letter size with left alignment.

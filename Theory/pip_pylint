@@ -1,0 +1,38 @@
+To install pip in our laptop
+
+python get-pip.py in cmd
+
+pip = python installation package
+# import time
+
+# If you want use outside module(dependencies), install them using below pip command. (pip is dependent management tool in python)
+pip install <module_name>
+eg: time, os
+
+eg: pip install time
+pip install winrm
+pip install os
+
+
+________________________________________________________________________________________________________________________
+
+pylint: static code checker
+
+pylint is python module which take any python file as input and inspect the file through out and checkes that file
+followed PEP standards or not and based on that it will give rating out of 10.
+
+How to use it:
+go to that file directory and give below command (eg:mood_level.py)
+
+
+C:\Users\Avinash\AppData\Roaming\Python\Python310\Scripts>pylint mood_level.py
+************* Module mood_level
+mood_level.py:31:0: C0305: Trailing newlines (trailing-newlines)
+mood_level.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+mood_level.py:5:0: C0103: Constant name "allergy_item" doesn't conform to UPPER_CASE naming style (invalid-name)
+mood_level.py:6:0: C0103: Constant name "mood" doesn't conform to UPPER_CASE naming style (invalid-name)
+mood_level.py:11:4: C0103: Constant name "mood_level" doesn't conform to UPPER_CASE naming style (invalid-name)
+mood_level.py:20:4: R1722: Consider using sys.exit() (consider-using-sys-exit)
+
+-----------------------------------
+Your code has been rated at 7.27/10

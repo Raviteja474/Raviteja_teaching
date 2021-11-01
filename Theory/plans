@@ -1,0 +1,15 @@
+
+operators
+
+Next : Data structures
+
+mutable vs immutable
+
+list - list ,list comprehensions
+tuple
+set
+dictionary -dictionary comprehensions
+
+functions: inner functions, lambda
+
+subprocess, paramiko, winrm
