@@ -55,6 +55,7 @@ starting_time = time.time()
 # Infinite loop which runs forever and terminates only when break happens
 while True:
     values = input("Enter your first two values followed by name of the operation?")
+    # There are 2 breks , 1 will close program when we type I am done and second will close calculator for every 1 min
     if "I am done" in values:
         print("Closing the calculator!!!")
         break
@@ -75,6 +76,7 @@ while True:
     print(type(value_1), type(value_2), type(operation))
 
     # changing to lowercase irrespective of the case provide by user.
+    # This treats Addition, addition , AddITION, adDITION same as everything converted to lowercase "addition".
     operation = operation.lower()
 
     # perform unit testing for this.

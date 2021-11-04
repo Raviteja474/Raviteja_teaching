@@ -1,9 +1,7 @@
 
-operators
-
 Next : Data structures
 
-mutable vs immutable
+mutable vs immutable  datatypes
 
 list - list ,list comprehensions
 tuple
@@ -13,3 +11,7 @@ dictionary -dictionary comprehensions
 functions: inner functions, lambda
 
 subprocess, paramiko, winrm
+
+file handling
+
+project
