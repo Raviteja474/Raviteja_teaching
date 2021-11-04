@@ -1,17 +1,9 @@
 
-Next : Data structures
-
-mutable vs immutable  datatypes
-
-list - list ,list comprehensions
-tuple
-set
-dictionary -dictionary comprehensions
-
 functions: inner functions, lambda
 
-subprocess, paramiko, winrm
+subprocess with windows command
 
-file handling
+paramiko, winrm
 
-project
+file handling: notepad, openpyxl
+

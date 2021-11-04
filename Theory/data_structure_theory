@@ -1,0 +1,29 @@
+winformation: raw information
+eg: we have a organized electric board power cut from 5 PM to 7 PM by local electric line manager Mr.Ramu
+
+data: ket information
+eg: powercut from 5 PM-7PM
+
+data type: it describes which data type a value belongs to
+
+int(9), float(9.0), boolean(True), str("Avinash")
+
+data structure: The way you are storing the data based on data structure which have in-build methods to operate with the data.
+
+Builtin datastructure/ non-customized data types: datastructure provided by python
+
+list : a HETEROGENEOUS data structure where we can store multiple elements from different data types.
+["Raviteja", "28", "M.Tech"]
+tuple: immutable data type unlike list.
+set
+dictionary
+
+arrays(we don't use this)
+
+customized data structures:  We can define our own data structures using built in data structures
+eg: 19@@
+
+
+immutable datatype:non-changeable changeable, once we create the data we can't change them
+mutable type: changeable, once we create the data we can change them
+

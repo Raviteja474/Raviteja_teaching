@@ -32,7 +32,6 @@ print(hex_value)
 hex_value = oct(255)
 print(hex_value)
 
-# 19@@
 String1 = "{0:e}".format(165.6458)
 print("\nExponent representation of 165.6458 is ")
 print(String1)
