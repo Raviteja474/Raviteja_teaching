@@ -1,0 +1,102 @@
+# -*- coding: utf-8 -*-
+# Copyright 2021 Intel Corporation All Rights Reserved.
+# Author: ravitejax.pamujula@intel.com
+
+import sys
+import subprocess
+import unittest
+import time
+import lebats_config
+
+import cv2
+import pyautogui
+import uinput
+import numpy as np
+import time
+
+sys.path.append(lebats_config.PYTHON_DIST_PKG)
+sys.path.append(lebats_config.TEST_SCRIPT_PATH)
+
+from common import common
+from common import media_helper
+from common import common_image
+from common import testexe
+
+URL = "https://www.youtube.com/watch?v=aqz-KE-bpKQ"
+page_load_element_id = "logo-icon"
+quality = "720p60"
+image_1 = "image1.png"
+remove_image_1 = "sudo rm "+image_1
+image_2 = "image2.png"
+remove_image_2 = "sudo rm "+image_2
+image_2 = "image3.png"
+remove_image_3 = "sudo rm "+image_2
+
+class Video_Stream_720p(unittest.TestCase):
+
+	def setUp(self):
+		print("Creating Media helper object.")
+		self.media_helper = media_helper.MediaHelper()
+		self.youtube_helper = media_helper.Youtube()
+		self.testexe = testexe.TestLocalExec()
+
+	def test_video_Stream_720p(self):
+		"""
+		Step 1: Prerequisite: If Onboard/3.5mm Audio is not enabled, Test this scenario on USB speaker
+		Step 2: Boot the Linux device and enter credentials to login.
+		Step 3: Change the display zoom settings using hot keys "Ctrl + Shift + (+, -Key)"
+		Step 4: Launch the YouTube video from the given link and stearm the video in 720p60 (change the video mode to 720p60 in YouTube settings) Link:
+		https://www.youtube.com/watch?v=aqz-KE-bpKQ
+		Step 5: verify that there is no frame drop, jitter or delay.Verify audio video sync and audio fine on onboard speakers.
+
+		"""
+		common_image.image_screenshot(image_1)
+		keys_list = [uinput.KEY_A, uinput.KEY_B, uinput.KEY_C, uinput.KEY_D, uinput.KEY_SPACE, uinput.KEY_E,
+					 uinput.KEY_F, uinput.KEY_G, uinput.KEY_H, uinput.KEY_I, uinput.KEY_J, uinput.KEY_K, uinput.KEY_L,
+					 uinput.KEY_M, uinput.KEY_N, uinput.KEY_O, uinput.KEY_P, uinput.KEY_Q, uinput.KEY_R, uinput.KEY_S,
+					 uinput.KEY_T, uinput.KEY_U, uinput.KEY_V, uinput.KEY_W, uinput.KEY_X, uinput.KEY_Y, uinput.KEY_Z,
+					 uinput.KEY_LEFTCTRL, uinput.KEY_FN, uinput.KEY_LEFTALT, uinput.KEY_F4, uinput.KEY_ENTER, uinput.KEY_KPPLUS, uinput.KEY_KPMINUS]
+		device = uinput.Device(keys_list)
+
+		for _ in range(2):
+			time.sleep(2.0)
+			device.emit_combo([uinput.KEY_LEFTCTRL, uinput.KEY_LEFTSHIFT, uinput.KEY_KPPLUS])
+			time.sleep(2.0)
+
+		common_image.image_screenshot(image_2)
+		if not common_image.image_pixel_difference(image_1,image_2):
+			print("Not zoom in.")
+
+		for _ in range(2):
+			time.sleep(2.0)
+			device.emit_combo([uinput.KEY_LEFTCTRL, uinput.KEY_LEFTSHIFT, uinput.KEY_KPMINUS])
+			time.sleep(2.0)
+
+		if common_image.image_pixel_difference(image_1, image_3):
+			print("Not zoom out.")
+
+		self.youtube_helper.new_conn(URL, page_load_element_id)
+		self.youtube_helper.wait_until_ytb_playing()
+		self.youtube_helper.set_ytb_video_quality(quality)
+
+		self.youtube_helper.check_ytb_video_frame_drop()
+
+		try:
+			self.media_helper.audio_routing()
+		except:
+			self.media_helper.audio_routing('USB_SPEAKER')
+
+	def tearDown(self):
+		"""
+		connecting back the LAN and checking.
+		"""
+		# clean up the images
+		# self.testexe.run_command(remove_image_1)
+		# self.testexe.run_command(remove_image_2)
+		# self.testexe.run_command(remove_image_3)
+		common.tear_down(self)
+
+
+if __name__ == '__main__':
+	unittest.main()
+

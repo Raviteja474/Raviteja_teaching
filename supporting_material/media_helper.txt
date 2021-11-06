@@ -1,0 +1,319 @@
+# -*- coding: utf-8 -*-
+# Copyright 2021 Intel Corporation All Rights Reserved.
+# Author: vayalax.narasimha.rao@intel.com
+
+#Description:
+# Mediahelper class - initialize chrome driver and launch chrome web url, audio routing on scpecific device
+# LocalVideo class - Play local audio and video media files in chrome browser and check functionality
+# Youtube class - Verifies the functionality of youtube video.
+
+import unittest
+from datetime import datetime
+import time
+import os
+import re
+from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+import sys
+sys.path.append("/usr/local/lib/python3.8/dist-packages/")
+sys.path.append(os.path.expanduser("~") + "/le-bats/")
+from common import testexe
+
+# Constants and variables
+speakers_dict = {'INTERNAL_SPEAKER': 'Description: sof-hda-dsp Speaker', 'USB_SPEAKER' : 'Description: USB  AUDIO   Analog Stereo'}
+list_audio_sinks = "pactl list sinks"
+PAGE_LOAD_TIMEOUT = 10
+LOCAL_DIR_PATH = os.path.expanduser("~") + "/le-bats/samples-media"
+FRAME_DROP_THRESHOLD = 10.0
+# Youtube elements
+ytb_corrupted_video_frames = 'return document.querySelector("video").getVideoPlaybackQuality()["corruptedVideoFrames"]'
+ytb_is_paused = "return document.querySelector('video').paused"
+ytb_pause = "document.querySelector('video').pause()"
+ytb_play = "document.querySelector('video').play()"
+ytb_is_video_ended = "document.querySelector('video').ended"
+ytb_current_time = "return document.querySelector('video').currentTime"
+ytb_video_duration = "return document.querySelector('video').duration"
+ytb_dropped_frame_count = "return document.querySelector('video').webkitDroppedFrameCount"
+ytb_decoded_frame_count = "return document.querySelector('video').webkitDecodedFrameCount"
+ytb_volume = "return document.querySelector('video').volume={0}"
+ytb_player_state = "video = document.querySelector('video'); return (video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2);"
+ytb_skip_add = "var SkipButton = document.getElementsByClassName('ytp-ad-skip-button-slot')[0]; if (SkipButton) { SkipButton.click() }"
+# Elements for set Youtube video quality
+ytb_settings = "document.getElementsByClassName('ytp-settings-button')[0].click()"
+ytb_quality = "document.getElementsByClassName('ytp-panel-menu')[0].lastChild.click()"
+qlty_selection = """qlty_selection = document.getElementsByClassName('ytp-menuitem');
+                    var selected_qlty_item;
+                    for (var i = 0; i < qlty_selection.length; i++) {
+                      if (qlty_selection[i].textContent == '%s') {
+                        selected_qlty_item= qlty_selection[i];
+                        break;
+                      }
+                    }
+                    selected_qlty_item.click()"""
+ytb_player_state_val = "return document.getElementById('movie_player').getPlayerState()"
+
+
+
+class MediaHelper(unittest.TestCase):
+    """Validate local video playbacks, youtube video playbacks, audio routing"""
+    def __init__(self, chrome_options=None):
+        self.chrome_options = chrome_options
+        if self.chrome_options:
+            self.chrome_driver = webdriver.Chrome(options=chrome_options)
+        else:
+            self.default_options = Options()
+            self.default_options.add_argument("--autoplay-policy=no-user-gesture-required")
+            self.chrome_driver = webdriver.Chrome(options=self.default_options)
+            self.local_conn = testexe.TestLocalExec()
+
+    def new_conn(self, url, page_load_element_id):
+        """ Open web url in chrome browser and wait until page loaded"""
+        print("Opening URL : %s " % url)
+        self.chrome_driver.get(url)
+        try:
+            element_present = EC.presence_of_element_located((By.ID, page_load_element_id))
+            WebDriverWait(self.chrome_driver, PAGE_LOAD_TIMEOUT).until(element_present)
+            print("Chrome url %s has loaded successfully" % url)
+        except TimeoutException:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), "Timed out waiting for page to load"))
+
+    def get_sink_name_state(self, speaker):
+        speaker_cmd = 'pactl list sinks | grep -iB3 \"' + speaker + '\"'
+        output = self.local_conn.output_command(speaker_cmd)
+        state = re.search(r'\s(State):\s(.*)', output)
+        sink_name = re.search(r'\s(Name):\s(.*)', output)
+        return ((state.group(2).strip() if state else ''), (sink_name.group(2).strip() if sink_name else ''))
+
+    def audio_routing(self, speaker='INTERNAL_SPEAKER'):
+        """Audio routing on specific device"""
+        (state, sink_name) = self.get_sink_name_state(speakers_dict[speaker])
+        if state == 'RUNNING':
+            print('Audio is routing through %s' % speaker)
+        else:
+            print('Setting %s as default' % speaker)
+            set_sink(sink_name)
+            time.sleep(5)
+            (state, sink_name) = self.get_sink_name_state(speakers_dict[speaker])
+            if state != 'RUNNING':
+                print('Audio is not routing through %s' % speaker)
+            else:
+                print('Audio is routing through %s' % speaker)
+
+
+class LocalVideo(MediaHelper):
+    """ Play local video and check all the controls play, pause,
+    corruption, frame drop..etc"""
+
+    def __init__(self, media_file, path=None):
+        super().__init__()
+        self.media_file = media_file
+        if path:
+            self.media_url = "file://%s" % os.path.join(path, media_file)
+        else:
+            self.media_url = "file://%s" % os.path.join(LOCAL_DIR_PATH, media_file)
+
+    def get_video_current_time(self):
+        """Return video current time"""
+        return self.chrome_driver.execute_script("return getCurrentTime();")
+
+    def get_video_duration(self):
+        """Return total duration of video"""
+        return self.chrome_driver.execute_script("return getDuration();")
+
+    def get_player_state(self):
+        """Return video player status True - video is playing, False- not playing"""
+        return self.chrome_driver.execute_script("return isPlayerPlaying();")
+
+    def is_player_paused(self):
+        """Return video player status True - video is playing, False- not playing"""
+        return self.chrome_driver.execute_script("return isPlayerPasued();")
+
+    def is_player_ended(self):
+        """Return True if video playing is ended"""
+        return self.chrome_driver.execute_script("return isPlayerEnded();")
+
+    def get_framedrop_percent(self):
+        """Return video frame drop percentage"""
+        return self.chrome_driver.execute_script("return frameDropPercentage();")
+
+    def play(self):
+        """Play the video"""
+        if not self.get_player_state():
+            self.chrome_driver.execute_script("play();")
+            time.sleep(2)
+        if not self.get_player_state():
+            self.fail("FAIL: {0} : {1}".format(datetime.now(),"Failed to play video/audio"))
+        print("Video/Audio is playing..")
+
+    def pause(self):
+        """Pass the video"""
+        return self.chrome_driver.execute_script("pause();")
+
+    def is_corruption_detected(self):
+        """Return True if video is corrupted"""
+        return self.chrome_driver.execute_script("return corruptionDetected();")
+
+    def set_volume(self, volume):
+        """Set volume range 0.1 - 1"""
+        return self.chrome_driver.execute_script("return setDefaultPlaybackVolume('%s');" % volume)
+
+    def mute(self):
+        """Mute audio"""
+        self.chrome_driver.execute_script("mute();")
+
+    def un_mute(self):
+        """Un-mute audio"""
+        self.chrome_driver.execute_script("un_mute();")
+
+    def play_local_video(self, media_src_file):
+        """Load video file and play video"""
+        print("Opening url in browser: %s" % self.media_url)
+        self.chrome_driver.get(self.media_url)
+        self.load_media_src = "loadMediaSource('{0}')".format(os.path.join(LOCAL_DIR_PATH, media_src_file))
+        self.chrome_driver.execute_script(self.load_media_src)
+        self.play()
+        time.sleep(2)
+
+    def check_video_frame_drop(self):
+        """Validate video frame drops"""
+        frame_drop_percent = self.get_framedrop_percent()
+        print("Frame Drop Percentage is %s" % frame_drop_percent)
+        if frame_drop_percent > FRAME_DROP_THRESHOLD:
+            err_msg = "Frame drops {0} observed in video, it is more than threshold {1}".format(frame_drop_percent,FRAME_DROP_THRESHOLD)
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), err_msg))
+            
+    def play_external_video(self, external_path , media_src_file):
+        """Load video file and play video"""
+        print("Opening url in browser: %s" % self.media_url)
+        self.chrome_driver.get(self.media_url)
+        self.load_media_src = "loadMediaSource('{0}')".format(os.path.join(external_path, media_src_file))
+        self.chrome_driver.execute_script(self.load_media_src)
+        self.play()
+        time.sleep(2)
+
+
+class Youtube(MediaHelper):
+    """Youtube playback controls"""
+
+    # It return integer value: -1 - unstarted, 0 - ended, 1 - playing,
+    # 2 - paused, 3 - buffering, 5 - video cued
+    def ytb_player_state(self):
+        ytb_status = self.chrome_driver.execute_script(ytb_player_state_val)
+        player_state = "undefined"
+        if ytb_status == 1:
+            player_state = "playing"
+        elif ytb_status == 2:
+            player_state = "paused"
+        elif ytb_status == 3:
+            player_state = "buffering"
+        elif ytb_status == 0:
+            player_state = "ended"
+        elif ytb_status == -1:
+            player_state = "unstarted"
+        print("Player state: %s" % player_state)
+        return player_state
+
+    def is_ytb_playing(self):
+        """Return True if youtube video is playing"""
+        return self.chrome_driver.execute_script(ytb_player_state) or self.ytb_player_state() == "playing"
+
+    def ytb_play_video(self):
+        """Play youtube video"""
+        if self.chrome_driver.execute_script(ytb_is_paused):
+            self.chrome_driver.execute_script(ytb_play)
+        if self.chrome_driver.execute_script(ytb_is_paused) or not self.is_ytb_playing():
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), "Failed to play youtube video"))
+        print("Youtube video is playing")
+
+    def ytb_pause_video(self):
+        """Pause youtube video"""
+        self.chrome_driver.execute_script(ytb_pause)
+        if not self.chrome_driver.execute_script(ytb_is_paused):
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), "Failed to pause youtube video"))
+        print("Youtube video is paused")
+
+    def get_ytb_video_duration(self):
+        """Return youtube video duration"""
+        return self.chrome_driver.execute_script(ytb_video_duration)
+
+    def get_ytb_video_current_time(self):
+        """Return youtube video current time"""
+        return self.chrome_driver.execute_script(ytb_current_time)
+
+    def is_ytb_video_paused(self):
+        """Return True if youtube video paused"""
+        return self.chrome_driver.execute_script(ytb_is_paused)
+
+    def set_ytb_volume(self, volume):
+        """Set youtube volume range 0.1 - 1"""
+        return self.chrome_driver.execute_script(ytb_volume.format(volume))
+
+    def ytb_corrupte_frames(self):
+        """return corrupted video frames count"""
+        return self.chrome_driver.execute_script(ytb_corrupted_video_frames)
+
+    def check_ytb_video_frame_drop(self):
+        """Validate youtube video frame drop"""
+        decoded_frame_count = self.chrome_driver.execute_script(ytb_decoded_frame_count)
+        dropped_frame_count = self.chrome_driver.execute_script(ytb_dropped_frame_count)
+        dropped_frame_percent = 0.0
+        if decoded_frame_count != 0:
+            dropped_frame_percent = 100.0 * (dropped_frame_count / decoded_frame_count)
+        else:
+            print("No frame is decoded. Set drop percent to 100.")
+            dropped_frame_percent = 100.0
+            print(
+                "Decoded frames=%f, dropped frames=%f, percent=%f"
+                % decoded_frame_count,
+                dropped_frame_count,
+                dropped_frame_percent,
+            )
+        print("Youtube video frame drop percent %s " % dropped_frame_percent)
+        if dropped_frame_percent > FRAME_DROP_THRESHOLD:
+            err_msg = "Frame drops {0} observed in video, it is more than threshold {1}".format(dropped_frame_percent, FRAME_DROP_THRESHOLD)
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), err_msg))
+
+    def wait_until_ytb_playing(self, timeout=30):
+        """Check youtube playing status until timeout"""
+        start = time.time()
+        playing = False
+        try:
+            while (time.time() - start) <= timeout:
+                if self.is_ytb_playing():
+                    playing = True
+                    print("Youtube video is playing")
+                    break
+                time.sleep(2)
+            self.assertTrue(playing, "Youtube video is not playing")
+        except Exception as e:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), e))
+
+    def set_ytb_video_quality(self, quality):
+        """Set youtube video quality ex- "1080P60 HD, 1440p60 HD"""
+        print("Setting youtube video quality %s" % quality)
+        self.chrome_driver.execute_script(ytb_settings)
+        time.sleep(5)
+        self.chrome_driver.execute_script(ytb_quality)
+        time.sleep(5)
+        self.chrome_driver.execute_script(qlty_selection % quality)
+        self.wait_until_ytb_playing(60)
+
+    def skip_add(self):
+        """Skip add on youtube video"""
+        i = 1
+        while i < 60:
+            if self.ytb_player_state() == "unstarted":
+                print("Skipping add")
+                self.chrome_driver.execute_script(ytb_skip_add)
+                self.wait_until_ytb_playing()
+            else:
+                break
+            time.sleep(1)
+            i += 1
+
+
+

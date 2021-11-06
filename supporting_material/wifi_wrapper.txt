@@ -1,0 +1,160 @@
+# -*- coding: utf-8 -*-
+# Copyright 2021 Intel Corporation All Rights Reserved.
+# Author: ravitejax.pamujula@intel.com
+
+import re
+import sys
+import subprocess
+import os
+
+sys.path.append("/usr/local/lib/python3.8/dist-packages/")
+sys.path.append(os.path.expanduser("~")+r"/le-bats/common/")
+
+from testexe import *
+
+testLocalExec = TestLocalExec()
+
+
+def disable_proxies():
+    """
+    This will disable proxies
+    """
+    pass
+
+
+def enable_proxies():
+    """
+    This will enable proxies
+    """
+    pass
+
+
+def get_LAN_WiFi_names():
+    """
+    This will give LAN and WiFi info
+    """
+    cmd_config = "ifconfig"
+    output = testLocalExec.output_command(cmd_config)
+    LAN_name = 'en'+re.search(r'en(.*?): flags', output).group(1)
+    print("Radio is on...")
+    radio_on_cmd = "nmcli radio wifi on"
+    testLocalExec.run_command(radio_on_cmd)
+    time.sleep(10)
+    cmd_config = "iwconfig"
+    output = testLocalExec.output_command(cmd_config)
+    wifi_name = 'wl'+re.search(r'wl(.*?) ', output).group(1)
+    print(f"LAN_name {LAN_name} and wifi_name {wifi_name}")
+    return LAN_name, wifi_name
+
+
+def connect_wifi(wifi_name, SSID, password, authentication=None):
+    """
+    This function will connects wifi with/without authentication
+    """
+    if not authentication:
+        print("Connecting Wifi without authentication and radio on.")
+        connect_wifi_cmd = "sudo nmcli dev wifi connect " + SSID + " password " + password
+        testLocalExec.output_command(connect_wifi_cmd)
+        print("WiFi Connected.")
+
+    else:
+        print("Connecting Wifi with authentication.")
+        add_wifi = "sudo nmcli c add type wifi con-name "+SSID+" ifname "+wifi_name+" ssid "+SSID
+        print(f"Adding wifi {add_wifi}")
+        testLocalExec.run_command(add_wifi)
+        authenticate_wifi = "sudo nmcli c modify " + SSID + " wifi-sec.key-mgmt " + authentication + " wifi-sec.psk " + password
+        print(f"Authenticating wifi {authenticate_wifi}")
+        testLocalExec.run_command(authenticate_wifi)
+        connect_wifi_cmd = "sudo nmcli c up " + SSID
+        print(f"Connecting wifi {connect_wifi_cmd}")
+        testLocalExec.run_command(connect_wifi_cmd)
+        print("Security WiFi Connected.")
+
+
+def is_internet_connected():
+    """
+    This method try to ping www.google.com and returns the http status code.
+    """
+    pass
+
+
+def radio_off():
+    """
+    This function will switch off wifi
+    """
+    print("Radio getting OFF...")
+    radio_off_cmd = "nmcli radio wifi off"
+    testLocalExec.run_command(radio_off_cmd)
+    time.sleep(10)
+
+
+def radio_on():
+    """
+    This function will switch off wifi
+    """
+    print("Radio getting OFF...")
+    radio_off_cmd = "nmcli radio wifi on"
+    testLocalExec.run_command(radio_off_cmd)
+    time.sleep(10)
+
+
+def connect_LAN(LAN_name):
+    """
+    This method will connect to LAN.
+    """
+    print("Trying to connect LAN.")
+    cmd_connect_LAN = "sudo ifconfig "+LAN_name+" up"
+    testLocalExec.run_command(cmd_connect_LAN)
+    print("LAN connected.")
+
+
+def disconnect_LAN(LAN):
+    """
+    This method will disconnect the LAN. Get the device name.
+    """
+    print("Trying to disconnect LAN.")
+    cmd_disconnect_LAN = "sudo ifconfig "+LAN+" down"
+    testLocalExec.run_command(cmd_disconnect_LAN)
+    print("LAN disconnected.")
+
+
+def disconnect_wifi(ssid, wifi_name, authentication=None):
+    """
+    This method will disconnect the WiFi. Get the device name.
+    """
+    if authentication:
+        print("Trying to disconnect authenticated Wifi.")
+        cmd_internet = "sudo nmcli c down "+ssid
+        testLocalExec.run_command(cmd_internet)
+    else:
+        print("Trying to disconnect Wifi.")
+        cmd_internet = "nmcli d disconnect "+wifi_name
+        testLocalExec.run_command(cmd_internet)
+
+
+def is_LAN_conncected(LAN_name):
+    """
+    This method will inform whether LAN connected or not
+    """
+    cmd_is_LAN_conncected = "sudo ethtool "+LAN_name
+    output = testLocalExec.output_command(cmd_is_LAN_conncected)
+    if r"Link detected: yes" in output:
+        print("LAN connection verified. Working fine.")
+        return True
+    else:
+        print("LAN connection is not detected.")
+        return False
+
+
+def is_wifi_connected():
+    """
+    This method will inform whether WiFi connected or not
+    """
+    cmd_is_wifi_conncected = "iwconfig"
+    output = testLocalExec.output_command(cmd_is_wifi_conncected)
+    if r"ESSID:off/any" in output:
+        print("Wifi connection not detected.")
+        return False
+    else:
+        print("Wifi connection detected.")
+        return True

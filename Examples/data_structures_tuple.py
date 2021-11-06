@@ -4,6 +4,9 @@
 var_1 = ()
 print(type(var_1))
 
+var_7 = (1,2,3,4,)
+print(var_7)
+
 # not recommendable
 var_4 = ("Ravi")
 print(var_4)
@@ -18,6 +21,7 @@ print(var_2[0])
 
 
 list_1 = [1, 2, 3, 4, 5]
+# in-built tuple method
 var_3 = tuple(list_1)
 print(var_3)
 
@@ -63,3 +67,47 @@ tup_2 = tup_1*3
 tup_3 = tup_1+tup_1
 print(tup_2)
 print(tup_3)
+
+print("____________________________________________________________________________________________")
+
+tuple_5 = (9)
+
+for i in range(5):
+    tuple_5 = (tuple_5,)  # ((9,),)  (((9,),),)
+    print(tuple_5)
+
+
+def ravi_info_method():
+    print("calling some_method")
+    # returning multiple inputs (packing)
+    return ("Raviteja", 28, "Buchi")
+
+def ravi_info_method_nt():
+    print("calling some_method")
+    # returning multiple inputs (packing)
+    return "Raviteja", 28, "Buchi"
+
+# handling multiple returns and unpacking below.
+name, age, location = ravi_info_method()
+# checking return type of the method
+print(type(ravi_info_method()))
+print(f"name: {name}, age: {age}, location: {location}")
+
+# returned 3 values and unpacked only 3 values
+name, age, location = ravi_info_method_nt()
+# checking return type of the method
+print(type(ravi_info_method()))
+print(f"name: {name}, age: {age}, location: {location}")
+print("_____________________________________________________________________________________________________")
+
+# returned 3 values and unpacked only 2 values
+# error: ValueError: too many values to unpack (expected 2)
+# name,age = ravi_info_method()
+
+
+# returned 3 values and unpacked only 1 values
+name = ravi_info_method()
+print(name)
+
+
+# returned n --> unpacking 1 value(assign returned values as tuple) or n values(assign returned values individually)

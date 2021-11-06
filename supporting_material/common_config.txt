@@ -1,0 +1,3 @@
+PYTHON_DIST_PKG = "/usr/local/lib/python3.8/dist-packages/"
+# COMMON_CONFIG_PATH = "/home/chrome-adl-p-01/le-bats/common/"
+COMMON_CONFIG_PATH = "/home/chrome-adl-p-01/le-bats/"

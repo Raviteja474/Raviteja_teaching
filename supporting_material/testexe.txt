@@ -1,0 +1,145 @@
+# -*- coding: utf-8 -*-
+# Copyright 2021 Intel Corporation All Rights Reserved.
+# Author: vayalax.narasimha.rao@intel.com
+
+import paramiko
+import unittest
+import subprocess
+from datetime import datetime
+import time
+
+# Contants and varaiables
+PING_COMMAND = "ping %s -c1"
+TWO_SECONDS_DELAY = 2
+
+
+class TestRemoteExec(unittest.TestCase):
+    """Execute shell commands remotely over SSH"""
+    def __init__(self, username, password, remoteIp):
+        self.username = username
+        self.password = password
+        self.ipAddress = remoteIp
+        self.port = 22
+        try:
+            self.client = paramiko.client.SSHClient()
+            self.client.load_system_host_keys()
+            self.client.connect(self.ipAddress, self.port, self.username, self.password)
+        except Exception as e:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), e))
+
+    def run_command(self, command):
+        """ Execute a command on DUT"""
+        print("Executing command: %s"% command)
+        try:
+            self.client.exec_command(command)
+        except Exception as e:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), e))
+
+    def output_command(self, command):
+        """ Execute command on DUT and return output"""
+        output = ""
+        print("Executing command: %s"% command)
+        try:
+            _, stdout, stderr = self.client.exec_command(command, get_pty=True)
+            errMsg = "FAIL: {0} : {1} {2} {3}".format(datetime.now(), "No output for ", command, stderr)
+            output = stdout.read().decode("utf-8").strip('\n')
+            self.assertTrue(output, errMsg)
+        except Exception as e:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), e))
+        return output
+
+    def input_command(self, command, inputs=[]):
+        """ Execute command on DUT, add if any inputs to the command
+        and return final output"""
+        print("Executing command: %s"% command)
+        output = ""
+        try:
+            stdin, stdout, _ = self.client.exec_command(command)
+            for inpt in inputs:
+                stdin.write(inpt + '\n')
+            stdin.flush()
+            output = stdout.read().decode("utf-8")
+        except Exception as e:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), e))
+        return output
+
+    def close(self):
+        try:
+            self.client.close()
+        except Exception as e:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), e))
+
+
+class TestLocalExec(unittest.TestCase):
+    """Execute command on local system"""
+    def __init__(self, dut_ip=None):
+        self.ip_address = dut_ip
+
+    def run_command(self, command):
+        """ Execute a command on local system"""
+        print("Executing command: %s"% command)
+        try:
+            subprocess.run(command, check=True, shell=True)
+        except Exception as e:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), e))
+
+    def output_command(self, command):
+        """ Execute command on local system and return output"""
+        result = ""
+        print("Executing command: %s"% command)
+        try:
+            output = subprocess.run(command, stdout=subprocess.PIPE, encoding="utf-8", check=True, shell=True)
+            errMsg = "FAIL: {0} : {1} {2}".format(datetime.now(), "No output for ", command)
+            result = output.stdout.strip('\n')
+            self.assertTrue(result, errMsg)
+        except Exception as e:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), e))
+        return result
+
+    def getstatusoutput(self, command):
+        """ Execute command and return status code and output"""
+        output = ""
+        status = 0
+        try:
+            output = subprocess.check_output(command, shell=True)
+        except subprocess.CalledProcessError:
+            status = 256
+        return status, output
+
+    def ping(self):
+        """ Returns True if ping is success otherwise False """
+        print("Pinging %s" % self.ip_address)
+        status, output = self.getstatusoutput(PING_COMMAND % self.ip_address)
+        if status:
+          return False
+        return True
+
+    def wait_connect(self, timeout=60):
+        """Wait until given timeout for DUT become reachable"""
+        start = time.time()
+        connect = False
+        try:
+            while (time.time() - start) <= timeout:
+                if self.ping():
+                    connect = True
+                    break
+                time.sleep(TWO_SECONDS_DELAY + 3)
+            self.assertTrue(connect, "DUT is not pingable")
+        except Exception as e:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), e))
+
+
+    def wait_unreachable(self, timeout=60):
+        """Wait until given timeout for DUT become not reachable"""
+        start = time.time()
+        disconnect = False
+        try:
+            while (time.time() - start) <= timeout:
+                if not self.ping():
+                    disconnect = True
+                    break
+                time.sleep(TWO_SECONDS_DELAY + 3)
+            self.assertTrue(disconnect, "DUT is pingable")
+        except Exception as e:
+            self.fail("FAIL: {0} : {1}".format(datetime.now(), e))
+

@@ -1,0 +1,103 @@
+import datetime
+import os
+import re
+import subprocess
+import time
+
+DEBUG_SCRIPT = "/home/intel/le-bats/common/debug_log_collector.sh"
+
+
+def test_method():
+    print("Just for testing.........")
+
+# Returns a list of available sinks
+def get_all_sinks(self):
+    if os.getuid() == 0:
+        cmd = "sudo -u '#1000' XDG_RUNTIME_DIR=/run/user/1000 pactl list sinks | grep Name:"
+    else:
+        cmd = "pactl list sinks | grep Name:"
+
+    try:
+        output = subprocess.run(cmd, capture_output=True, check=True, shell=True)
+    except subprocess.CalledProcessError as error:
+        self.fail("FAIL: {0} : {1}".format(datetime.datetime.now(), error))
+
+    match_list = re.findall('Name: \S+\n', output.stdout.decode("utf-8"))
+    self.assertTrue(match_list, "FAIL: {0} : {1}".format(datetime.datetime.now(), "No sink entry available!"))
+
+    all_sinks = []
+    for ml in match_list:
+        all_sinks.append(ml.replace("Name: ", "").rstrip("\n"))  # Remove leading "Name: " and trim trailing "\n"
+
+    print("\nAvailable sinks: " + str(all_sinks))
+
+    return all_sinks
+
+
+# Returns the default sink
+def get_default_sink(self):
+    #all_sinks = get_all_sinks(self)
+    #default_sink = all_sinks[0]
+    cmd = '''pactl info | grep "Default Sink"'''
+    try:
+        output = subprocess.run(cmd, capture_output=True, check=True, shell=True)
+    except subprocess.CalledProcessError as error:
+        self.fail("FAIL: {0} : {1}".format(datetime.datetime.now(), error))
+    default_sink = str(output.stdout.decode('utf-8')).replace("Default Sink: ","").rstrip("\n")
+    self.assertTrue(default_sink, "FAIL: {0} : {1}".format(datetime.datetime.now(), "No sink available!"))
+
+    print("Default sink: " + default_sink)
+
+    return default_sink
+
+
+# Takes a sink name as imput and sets it as the default sink
+def set_sink(sink):
+    if os.getuid() == 0:
+        cmd = "sudo -u '#1000' XDG_RUNTIME_DIR=/run/user/1000 pactl set-default-sink {0}".format(sink)
+    else:
+        cmd = "pactl set-default-sink {0}".format(sink)
+
+    try:
+        subprocess.run(cmd, capture_output=True, check=True, shell=True)
+    except subprocess.CalledProcessError:
+        raise
+
+    time.sleep(2)  # Wait for few seconds for the audio sink to be set
+
+
+def turnoff_wifi():
+    print("Turning off wifi..")
+    cmd = "nmcli radio wifi off"
+    try:
+        subprocess.run(cmd, capture_output=True, check=True, shell=True)
+    except subprocess.CalledProcessError:
+        raise
+
+
+def tear_down(self, path = "/home/intel/le-bats/tests-automated/debug_log"):
+    if hasattr(self, '_outcome'):  # Python 3.4+
+        result = self.defaultTestResult()  # These two methods have no side effects
+        self._feedErrorsToResult(result, self._outcome.errors)
+    else:  # Python 3.2 - 3.3 or 3.0 - 3.1 and 2.7
+        result = getattr(self, '_outcomeForDoCleanups', self._resultForDoCleanups)
+    error = get_reason(self, result.errors)
+    failure = get_reason(self, result.failures)
+    ok = not error and not failure
+
+    if not ok:
+        # typ, text = ('ERROR', error) if error else ('FAIL', failure)
+        # msg = [x for x in text.split('\n')[1:] if not x.startswith(' ')][0]
+        # print("\n%s: %s\n     %s" % (typ, self.id(), msg))
+        print("TEST FAILED! Generating debug logs.. Please wait..")
+        if not os.path.exists(path):
+            os.mkdir(path)
+        try:
+            subprocess.run("bash {0}".format(DEBUG_SCRIPT), capture_output=True, check=True, shell=True, cwd = path)
+        except subprocess.CalledProcessError:
+            raise
+
+
+def get_reason(self, exc_list):
+    if exc_list and exc_list[-1][0] is self:
+        return exc_list[-1][1]

@@ -1,0 +1,66 @@
+# -*- coding: utf-8 -*-
+# Copyright 2021 Intel Corporation All Rights Reserved.
+# Author: ravitejax.pamujula@intel.com
+
+from PIL import Image
+
+import cv2
+import pyautogui
+#import uinput
+import numpy as np
+import time
+
+
+def image_screenshot(image_obj):
+    """
+    Used to take screenshot of the screen
+    """
+    image = pyautogui.screenshot()
+    image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+    cv2.imwrite(image_obj, image)
+
+
+def image_pixel_difference(image1, image2):
+    """
+    Accepts two images and returns True if images match more than 99%
+    """
+    match_count = 0
+    mismatch_count = 0
+    im1 = Image.open(image1)
+    px1 = im1.load()
+    print(f"Image {image1} Height :{im1.height}, Width :{im1.width}, total pixels :{im1.height*im1.width}")
+
+    im2 = Image.open(image2)
+    px2 = im2.load()
+    print(f"Image {image2} Height :{im2.height}, Width :{im2.width}, total pixels :{im2.height * im2.width}")
+
+    if im1.height == im2.height and im1.width == im2.width:
+        print("Both image dimensions are same")
+        height = im1.height
+        width = im1.width
+    else:
+        height = min(im1.height, im2.height)
+        width = min(im1.width, im2.width)
+        print(f"Both have different dimensions width {width} and height {height}")
+
+    for h in range(height):
+        for w in range(width):
+            r1, g1, b1 = px1[w, h]
+            r2, g2, b2= px2[w, h]
+            if r1 == r2 and g1 == g2 and b1 == b2:
+                match_count += 1
+            else:
+                mismatch_count += 1
+
+    print(f"Total match count {match_count} and mismatch count {mismatch_count}")
+    if mismatch_count > 0:
+        print("Images are not matched.")
+        match_percentage = (match_count / (im1.height * im1.width)) * 100
+        print(f"{match_percentage} percentage matched for {image1}")
+        if match_percentage >= 99:
+            return True
+        else:
+            return False
+    else:
+        print(f"Match percentage is 100%")
+        return True
