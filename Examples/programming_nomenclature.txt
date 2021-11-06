@@ -56,16 +56,16 @@ identifier = constant+ variable
 module = ends with .py
 
 library = professional developers and we are able to import ;import time, import re
-identation  = tab, 4 spaces, every level should have one tab 
+indentation  = tab, 4 spaces, every level should have one tab
 
-intialise, assign
+initialise, assign
 iteration(loop)
 
 execution flow
 method
 
 naming convention= yes
-lowercase(variable), uppaercase(constant), snake case (userName , user_name) =yes
+lowercase(variable), uppercase(constant), snake case (userName , user_name) =yes
 function = module level ,
 
 escape characters =  yes \n \t
@@ -79,7 +79,7 @@ constant =yes
 
 loop =yes
 
-condtion = yes
+condition = yes
 
 program = yes
 
@@ -105,9 +105,9 @@ interpreter = line by line
 
 execution, program run, machine code, byte code
 
-IDE= Integrated Developement environment; pycharm
+IDE= Integrated Development environment; pycharm
 
-module =.py, package=lbrary
+module =.py, package=library
 
 
 

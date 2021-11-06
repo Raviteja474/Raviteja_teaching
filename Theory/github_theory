@@ -1,0 +1,47 @@
+Github??
+
+It is repository(where we will store code/files) to push/maintain/publish/review/pull code.
+
+why??
+
+We need share our development code with other team members, so we need to publish(push) our code.
+
+How?
+
+Please install github account and install git software in your machine .See SOP(standard operating procedure) document for more details.
+
+cloning: downloading source code
+
+Right click in any fresh folder and select "git bash here" and give below command.
+git clone https://github.com/Raviteja474/Raviteja_teaching.git
+
+after every class:
+git pull origin main
+
+
+branch: individually developed code
+pull request/merge request : Requesting approval to merge our changes with master/main branch
+approve: give yes to merge changes
+rejection: says No and ask developer to re-work
+merge: merging working branch/branch with main/master branch
+
+push: pushing/committing  our changes to branch
+pull: taking the code from branch
+clone: first time downloading the code
+
+How to create your own branch:
+__________________________________________________________________________
+git clone https://github.com/Raviteja474/Raviteja_teaching.git
+git pull origin main
+
+git branch branch_name
+********************do your changes*****************************
+git diff --> it shows the difference
+git status --> it shows the difference
+
+git add . (Adding your changed files)
+git commit -m "Date_"
+git push origin branch_name
+___________________________________________________________________________
+
+

@@ -111,7 +111,7 @@ print(person_6[-3::2])
 # -1 as starting index , -11 ending index with step size 1
 print(person_6[::-1])
 print("________________________________________________________________________________")
-# sublists
+# sub lists
 person_7 = ["Raviteja", 28, "M.Tech", "Buchi", "ECE", 29, 121, "test", 121, 312, 9.0,1.14,8]
 print(person_7[5:9])
 # default step size +1 person_7[-5:-9]  equals to person_7[-5:-9:1]

@@ -1,9 +1,9 @@
 
 functions: inner functions, lambda
 
-subprocess with windows command
-
 paramiko, winrm
 
 file handling: notepad, openpyxl
+
+decode and encode
 
