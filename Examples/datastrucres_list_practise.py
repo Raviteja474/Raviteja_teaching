@@ -118,5 +118,3 @@ print(person_7[5:9])
 print(person_7[-5:-9])
 
 print(person_7[-6:12])
-
-

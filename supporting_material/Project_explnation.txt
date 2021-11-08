@@ -1,0 +1,53 @@
+
+Aim: Developement test execution framework - Your script should run 300 Tests/1500 testcases on 30 computers with GIVEN SPECIFICATIONS
+Framework:  Organizing different individual components/touch points working in serial manner.
+Products:  Memory based products, HDD, SSD, SRAM, DRAM
+Vocabulary: Firmware/image   lightswitch/configuration_file(specifications)  bootloader/build(program that run when booting happens)
+
+
+
+300 test files (1500 test cases)--> SSD product validation  --> 1425/1500(95 percent pass)
+Test-pool: group of computers(30 computers); SSD attach to test
+CI/CD validation: Developers
+Continous validation: customer(end-user), per week once
+WW: work week
+
+Flashing = installing
+
+Assert build = testing code/ non- standard code (Developer code)
+product vaidation build = standard code (End-user code)
+
+
+30 systems,  Idle: 13, In-progress: 17
+
+Desktop/Test_execution/run.py:(Test-trigger file)
+_____________________________________________________________________________________________________________________________________
+FwPath : Y:/Recent_firmware/ww51  (Folder)
+Fwversion: Assert/ProductionValidation --> AA.bin/PV.bin(it is a file; contains zipped 3000 c programs )
+
+Lightswitch : Y:/Recent_config/ww51_Folder
+Lsversion: Medium Endurance(Mahesh computer)/High Endurance (Amazon datacenter)  -->   ME.bin/HE.bin
+
+Bootloader: Y:/Recent_config/ww50  -->  BL.bin   ------------> OS module, re module
+
+Test_path(where tests are saved): Y:/Q_Test/Memory/SSD/   ----> paramiko (computer--> system 1)
+
+Firmware_activation{'test': "test_firmware_timeout_test", "no_logs": "False", "copy_logs":"Y:/SSD_execution_logs/WW51/", "continue_on_fail" : "no"}
+___________________________________________________________________________________________________________________________________
+signature :
+Test_name {"sub_test":"sub_test_name",  arguments 1,2,3, ...................}
+
+___________________________________________________________________________________________________________________________________
+
+Modules:  re, os, requests, subprocess, winrm, paramiko
+
+
+
+
+
+
+
+
+
+
+
