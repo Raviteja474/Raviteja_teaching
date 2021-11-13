@@ -8,3 +8,4 @@ VISWESWAR_URL = r'C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples\EAM
 PAYMENT_INFO_URL = r'C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples\EAMCET_conselling\info'
 FEES_INFO_URL = r'C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples\EAMCET_conselling\college_info.xlsx'
 EAMCET_NOTICATION_URL = r'C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples\EAMCET_conselling\EAMCET_Notification'
+# C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples\EAMCET_conselling

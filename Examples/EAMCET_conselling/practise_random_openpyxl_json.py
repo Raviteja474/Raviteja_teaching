@@ -59,7 +59,7 @@ wb= openpyxl.load_workbook(constants.FEES_INFO_URL)
 # finding the active sheet from excel file
 sheet_obj = wb.active
 # reading the cell value
-cell_obj = sheet_obj.cell(row = 1,column= 1)
+cell_obj = sheet_obj.cell(row=1, column=1)
 # printing the cell value
 print(cell_obj.value)
 
@@ -94,3 +94,4 @@ while True:
         time.sleep(1)
     else:
         break
+
