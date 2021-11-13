@@ -1,42 +1,43 @@
-def password_check(passwd):
-    SpecialSym = ['$', '@', '#', '%']
-    val = True
+# password minimum 8, 1 lowercase, 1 upper case , 1 number, 1 special character
 
-    if len(passwd) < 6:
-        print('length should be at least 6')
-        val = False
+# approach 1: ASCII characters
+# ravitE@14
 
-    if len(passwd) > 20:
-        print('length should be not be greater than 8')
-        val = False
+password = input("Enter your input?")
 
-    if not any(char.isdigit() for char in passwd):
-        print('Password should have at least one numeral')
-        val = False
+# Always define default values to avoid NameError.
+lowercase_flag = False
+highercase_flag = False
+numeric_flag = False
+special_char_flag = False
 
-    if not any(char.isupper() for char in passwd):
-        print('Password should have at least one uppercase letter')
-        val = False
+for character in password:
+    # checking
+    if len(password)<8:
+        print("Give password atleast 8 charcters.")
+        break
+    # if any of the character is lowercase, we will make flag true.
+    if character.islower():
+        print("lowercase_flag became True for character", character)
+        lowercase_flag = True
 
-    if not any(char.islower() for char in passwd):
-        print('Password should have at least one lowercase letter')
-        val = False
+    # if any of the character is uppercase, we will make flag true.
+    elif character.isupper():
+        print("highercase_flag became True for character", character)
+        highercase_flag = True
 
-    if not any(char in SpecialSym for char in passwd):
-        print('Password should have at least one of the symbols $@#')
-        val = False
-    if val:
-        return val
+    # if any of the character is numeric, we will make flag true.
+    elif character.isnumeric():
+        print("numeric_flag became True for character", character)
+        numeric_flag = True
 
+    elif character in ["@", '!']:
+        print("special_char_flag became True for character", character)
+        special_char_flag = True
 
-def main():
-    passwd = input("Enter your password??")
-    if password_check(passwd):
-        print("Password is valid")
-    else:
-        print("Invalid Password !!")
+# password will be qualified if all below 4 flags(always boolean value) true
 
-
-# Driver Code
-if __name__ == '__main__':
-    main()
+if lowercase_flag and highercase_flag and numeric_flag and special_char_flag:
+    print("password is qualified.")
+else:
+    print("password is not qualified.")

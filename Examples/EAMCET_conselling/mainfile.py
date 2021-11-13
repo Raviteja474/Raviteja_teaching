@@ -20,8 +20,15 @@ import constants
 # excel file = college seat allotment details.
 
 print("EAMCET NOFICATION************************************")
+# with context manager you don't need to explicitely close the file, used for memory management.
+# open method open any file txt/json/xlsx
+# read mode
+# as alias name or file object
+
 with open(constants.EAMCET_NOTICATION_URL, "r")as f:
+    # file_object.readlines with create list of contents in total file
     lines = f.readlines()
+    # printing line by line
     for line in lines:
         print(line)
 
@@ -33,6 +40,8 @@ APPLICATION = "APEMCT2021"
 # load student info and add application number, default file mode read
 def get_student_json_info(file_location,mode="r"):
     with open(file_location, "r") as j:
+        # we don't need to load text file but as json having a particular data structure i,e dictionary
+        # load method will convert string of values from .json file to dictionary in python file
         student_info = json.load(j)
         # 19@@ giving application number ending with 4 random numbers
         application_id = APPLICATION + str(random.randrange(1000,9999))
