@@ -1,0 +1,4 @@
+student: Mahesh Padavala son of: Anjayya Padavala bearing adhar card number: 73014 and paid fees: 75000
+Thanks for paying fees.
+Yours 
+College Management

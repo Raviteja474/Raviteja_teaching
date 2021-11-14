@@ -9,3 +9,4 @@ PAYMENT_INFO_URL = r'C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples\
 FEES_INFO_URL = r'C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples\EAMCET_conselling\college_info.xlsx'
 EAMCET_NOTICATION_URL = r'C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples\EAMCET_conselling\EAMCET_Notification'
 # C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples\EAMCET_conselling
+STORE_RECORDS = r'C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\Examples\EAMCET_conselling\records\\'

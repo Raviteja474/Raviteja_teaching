@@ -1,0 +1,4 @@
+student: Avinash Pamujula son of: Ganeshbabu Pamujula bearing adhar card number: 73012 and paid fees: 50000
+Thanks for paying fees.
+Yours 
+College Management

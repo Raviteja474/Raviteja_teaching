@@ -20,7 +20,7 @@ import constants
 # json file = student details
 # excel file = college seat allotment details.
 
-print("EAMCET NOFICATION************************************")
+print("EAMCET NOTIFICATION************************************")
 # with context manager you don't need to explicitely close the file, used for memory management.
 # open method open any file txt/json/xlsx
 # read mode
@@ -36,6 +36,8 @@ with open(constants.EAMCET_NOTICATION_URL, "r")as f:
 print("Adding application number to students.")
 
 APPLICATION = "APEMCT2021"
+
+seats_available_info = {"ECE":True, "EEE":True, "CSE":True, "IT":True,"MECH":True, "CIVIL":True}
 
 
 # load student info and add application number, default file mode read
@@ -77,38 +79,61 @@ def get_preference_list(student_info):
     return student_info
 
 
-def get_branch_allocation(branch, avinash_info, bharath_info, mahesh_info, raviteja_info, vishnu_info, visweswar_info):
-    print(f"counselling for branch {branch}")
+def get_branch_allocation(studnet_info):
 
-    # accessing avinash_preference list based on key prefernce_list from student information.
-    avinash_preference = avinash_info['prefernce_list']
-    # Finding what is his prefernce number for this branch.
-    avinash_index = avinash_preference.index(branch)
-    print(f"Avinash preference is {avinash_index} for {branch}.")
+   print(f"Student: {studnet_info['Name']} with prefernce list : {studnet_info['prefernce_list']}")
+    # searching branch in preference list of candidate.
+   for branch in studnet_info['prefernce_list']:
+       # if still seat available , allocate to this candidate.
+       if seats_available_info[branch]:
+           # adding branch_joined key and with value of the "branch" to dictionaty
+           studnet_info["branch_joined"] = branch
+           # Make unavaialable this branch to next student as it is taken by this student.
+           seats_available_info[branch] = False
+           # student allocated branch, no need to search , so break it.
+           break
 
-    bharath_preference = bharath_info['prefernce_list']
-    bharath_index = bharath_preference.index(branch)
-    print(f"Bharath preference is {bharath_index} for {branch}.")
 
-    mahesh_preference = mahesh_info['prefernce_list']
-    mahesh_index = mahesh_preference.index(branch)
-    print(f"mahesh preference is {mahesh_index} for {branch}.")
+def fee_payment(student_info):
 
-    raviteja_preference = raviteja_info['prefernce_list']
-    raviteja_index = raviteja_preference.index(branch)
-    print(f"raviteja preference is {raviteja_index} for {branch}.")
+    # Preserve payment receipt text file and create json file for the student once his father pays the fee.
+    branch_joined = student_info["branch_joined"]
+    fees = branch_fees[branch_joined]
+    print(f"Mr. {student_info['Father_name']},  please pay the fees amount of {fees}.")
+    # please see below complex code as well.
+    # print(f"Mr. {student_info['Father_name']},  please pay the fees amount of {branch_fees[student_info["branch_joined"]]}.")
 
-    vishnu_preference = vishnu_info['prefernce_list']
-    vishnu_index = vishnu_preference.index(branch)
-    print(f"vishnu preference is {vishnu_index} for {branch}.")
+    print("Amount paid. Please wait until we generate online receipt")
 
-    visweswar_preference = visweswar_info['prefernce_list']
-    visweswar_index = visweswar_preference.index(branch)
-    print(f"visweswar preference is {visweswar_index} for {branch}.")
+    # with open(constants.FEES_INFO_URL, encoding= "utf16") as f:
+    #     lines = f.readlines()
     # 19@@
+    # UnicodeDecodeError: 'utf-16-le' codec can't decode bytes in position 618-619: illegal encoding
+
+    # Forming the complex string as we are geeting error , so with concatenation of strings we formed resultant(big) string.
+
+    content = 'student: '+ student_info['Name']+' son of: '+ student_info['Father_name'] +' bearing adhar card number: '\
+              + student_info['Adhar']+' and paid fees: '+str(fees)+'\n'+ "Thanks for paying fees.\nYours \nCollege Management"
+    # Forming text file name in records folder with student name with .txt extension.
+    file_name = constants.STORE_RECORDS+student_info['Name']+'.txt'
+    # creating text file in write mode and writing the content.
+    with open(file_name, 'w') as f:
+        f.write(content)
+
+
+def preserve_records(student_info):
+    print(f"Stroring information of {student_info['Name']}.")
+    # # Forming text file name in records folder with student name with .json extension.
+    file_name = constants.STORE_RECORDS+student_info['Name']+'.json'
+    with open(file_name, 'w') as f:
+        # first argument is a dictionary which we need to store.
+        # second argument is a file object in which we will store data.
+        # third argument indent will tell show up space we need to give.
+        json.dump(student_info, f, indent=4)
 
 
 # passing json file location and opening it in read mode in default method argument
+# 19@@ write better code.
 avinash_info = get_student_json_info(constants.AVINASH_URL)
 print(avinash_info)
 bharath_info = get_student_json_info(constants.BHARATH_URL)
@@ -186,30 +211,76 @@ wb = openpyxl.load_workbook(constants.FEES_INFO_URL)
 # finding the active sheet from excel file
 sheet_obj = wb.active
 # reading the cell
-for row_value in range(2, 7):
+for row_value in range(2, 8):
+    # branches are in column 1
     cell_obj = sheet_obj.cell(row=row_value, column=1)
     # printing the cell value
     print("Adding ",cell_obj.value)
     branches.append(cell_obj.value)
 
 print(f"All available branches in GTNN {branches}")
-for branch in branches:
-    get_branch_allocation(branch, avinash_info, bharath_info,mahesh_info,raviteja_info,vishnu_info,visweswar_info)
 
+print("__________________________________FEE information____________________________________________________")
 # storing all branches and fees info to dictionary from an excel file
-branche_fees = {}
+branch_fees = {}
 wb = openpyxl.load_workbook(constants.FEES_INFO_URL)
 # finding the active sheet from excel file
 sheet_obj = wb.active
 # reading the cell
-for row_value in range(2, 7):
+for row_value in range(2, 8):
+    # branches are in column 1
     cell_branch = sheet_obj.cell(row=row_value, column=1)
-    # printing the cell value
+    # branches are in column 1
     print("cell_branch ",cell_branch.value)
-
+    # fees details are in column 2
     cell_fees = sheet_obj.cell(row=row_value, column=2)
     print("cell_fees ",cell_fees.value)
-    branche_fees[cell_branch.value] = cell_fees.value
+    branch_fees[cell_branch.value] = cell_fees.value
 
-print(branche_fees)
+print("Printing branch fee information:",branch_fees)
+
+print("______________________________________sorting students based upon rank__________________________")
+
+ranks_list = []
+# iterating over multiple student and storing their ranks in lis
+for student in [avinash_info, bharath_info, mahesh_info, raviteja_info, vishnu_info, visweswar_info]:
+    ranks_list.append(student['EAMCET_rank'])
+
+print(f"Unsorted ranks are: {ranks_list}")
+ranks_list.sort()
+# sort the list in ascending order. Lower rank should go to counselling first followed by higher rank studnets.
+print(f"Sorted ranks are: {ranks_list}")
+
+sorted_student_info = []
+
+# we are trying to create list with student info like below
+# [rank 1 student dictionary, rank 2 student dictionary, rank 3 student dictionary, rank 4 student dictionary,
+# rank 5 student dictionary, rank 6 student dictionary]
+
+# here ranks_list in ascending order
+for rank in ranks_list:
+    for student_info in [avinash_info, bharath_info, mahesh_info, raviteja_info, vishnu_info, visweswar_info]:
+        # adding to lower rank student dictionary as a element to the list sorted_student_info
+        if rank == student_info['EAMCET_rank']:
+            sorted_student_info.append(student_info)
+
+print(f"Sorted students based on rank: {sorted_student_info}")
+
+print("____________________________seat counselling___________________________________________________________")
+
+for student_info in sorted_student_info:
+    # This method will allocate branches based on rank
+    get_branch_allocation(student_info)
+    print(student_info)
+
+print("____________________________seat counselling___________________________________________________________")
+
+for student_info in sorted_student_info:
+    # This method will store fee payment receipt
+    fee_payment(student_info)
+
+for student_info in sorted_student_info:
+    # This method will store total student information in json file
+    preserve_records(student_info)
+
 

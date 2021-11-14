@@ -1,0 +1,4 @@
+student: Vishunu Pamujula son of: Ganeshbabu Pamujula bearing adhar card number: 73016 and paid fees: 60000
+Thanks for paying fees.
+Yours 
+College Management
