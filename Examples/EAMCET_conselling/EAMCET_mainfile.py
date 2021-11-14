@@ -35,8 +35,10 @@ with open(constants.EAMCET_NOTICATION_URL, "r")as f:
 
 print("Adding application number to students.")
 
+# common prefix will be there for all students for application number
 APPLICATION = "APEMCT2021"
 
+# setting up default string for set available info
 seats_available_info = {"ECE":True, "EEE":True, "CSE":True, "IT":True,"MECH":True, "CIVIL":True}
 
 
