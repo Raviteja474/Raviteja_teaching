@@ -112,8 +112,17 @@ result = [i*j for i in range(5) for j in range(11) if i>0 and j>0]
 print(result)
 
 
-matrix = [[1,6,7],[7,6,5], [3,2,7]]
-for row in range(len(matrix)):
-    for column in range(matrix[row]):
+aList = [4, 8, 12, 16]
+aList[1:4] = [20, 24, 28]
+print(aList)
 
 
+aList = [4, 8, 12, 16, 19, 25, 30, 45, 50]
+# replace 5 elements 2:7(2,3,4,5,6)
+# 5th and 6th index no values, so they will take out
+aList[2:7] = [20, 24, 28]
+print(aList)
+
+
+list1 = ['ayz', 'bara', 'cYnative', 'cYnativa']
+print (max(list1))
