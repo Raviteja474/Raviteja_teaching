@@ -22,7 +22,7 @@ class Person():
     def print_peron_info(self):
         print(f"Name: {self.name}, age: {self.age}, gender: {self.gender}")
 
-#creating an object and intializing the values through init method.
+# creating an object and intializing the values through init method.
 avinash = Person("Avinash Pamujula", 26, "Male")
 # calling instance method through OBJECT ONLY.
 avinash.print_peron_info()

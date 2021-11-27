@@ -19,12 +19,62 @@ we can create multiple objects to a same class
 
 object= instance= reference
 
- instance methods = non-class methods = non-static methods
+ instance methods = non-class methods = non-static methods; with self as first parameter
  non-instance methods = class methods = static methods
 
- constructor = intializer = init method
+ constructor = initializer = init method
 
- Ameoba -->  Fish  --> Dalphin --> shark --> whale
+ Amoeba -->  Fish  --> Dolphin --> shark --> whale
                 --> dinosaur --> crocodile
                 --> cats --> tiger , lion
-                --> mammal --> monkey --> chipanzee--> human  --> Umamahesh, Niramla, Ravi
+                --> mammal --> monkey --> chimpanzee--> human  --> Umamahesh, Niramla, Ravi
+
+
+ OOPS:  Object oriented programming
+
+ 1. Inheritance - varasatvam
+ python: class will inherit it's parent class
+ Man class will inherit chimpanzee class.
+
+ subclass = child class
+ parent class = base class = super class
+
+ # 19@@ a method should take from only existing class, how?
+
+ 2. Polymorphism - multiple forms
+ Object will behave differently based on your way/number of inputs.
+
+ Eg: can_see = True, he will enjoy nature.
+ can_see = False, He is a blind.
+ Types:
+ Dynamic polymorhism= overriding = run time polymorphism
+ static polymorhism = overloading = compile time polymorphism
+
+ 3. Abstraction - expressing total content with small portion of sentences
+ Hiding implementation to end user and displaying the result only.
+ Forcing user to implment that.19@@
+
+ abstract method = non-concrete method
+ non-abstract method = concrete method
+
+ 4. encapsulation - bundling/binding many tiny elements into one
+
+ idea of wrapping data and the methods that work on data within one unit
+
+ private members, protected members
+
+
+# TypeError: Class3.m() missing 1 required positional argument: 'self'
+# u need to call that using object only.
+
+# implemtation =some valid statement except "pass"
+
+
+
+
+
+
+
+
+
+
