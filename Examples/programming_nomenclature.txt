@@ -25,24 +25,6 @@ bit ,byte(8), word(16), nible(4)
 
 2**64 OS = 1TB= 1000GB= 1000000MB= 1000000000KB= 1000000000000 B
 
-0
-1
-
-00
-01
-10
-11
-
-000
-001
-010
-011
-100
-101
-110
-111
-
-
 looping /iterating 
 
 for , while loop
@@ -82,7 +64,6 @@ loop =yes
 condition = yes
 
 program = yes
-
 
 Error, exception
 
