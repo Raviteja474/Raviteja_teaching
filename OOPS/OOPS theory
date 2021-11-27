@@ -1,0 +1,25 @@
+# class = how a object should be/blueprint(class Person defines how a person should be)
+
+# object = physical presence(Avinash should follow Person class)
+
+Eg:1 class laptop
+    object lenovo, dell, Thinkpad
+    object properties/ attributes: display,CPU, Hard disk
+
+Eg:2 class Person
+    object Avinash, Ganesh, Bharath
+    object properties/ attributes: legs,hands, eyes
+
+Eg:3 class Building design
+    object Tajmahal design, charminar design
+    object properties/ atributes: paint, bricks, steel
+
+class contains methods and variables normally but not mandatory
+we can create multiple objects to a same class
+
+object= instance= reference
+
+ instance methods = non-class methods = non-static methods
+ non-instance methods = class methods = static methods
+
+ constructor = intializer = init method
