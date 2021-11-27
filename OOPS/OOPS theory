@@ -23,3 +23,8 @@ object= instance= reference
  non-instance methods = class methods = static methods
 
  constructor = intializer = init method
+
+ Ameoba -->  Fish  --> Dalphin --> shark --> whale
+                --> dinosaur --> crocodile
+                --> cats --> tiger , lion
+                --> mammal --> monkey --> chipanzee--> human  --> Umamahesh, Niramla, Ravi

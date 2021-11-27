@@ -31,7 +31,8 @@ avinash.print_peron_info()
 Person.class_method()
 print(Person.can_play)
 
-# variable, method
+
+# combinations
 # 1. instance variable
 # 2. non-instance/class variable
 # 3. instance method
