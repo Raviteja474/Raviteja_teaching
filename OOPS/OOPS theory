@@ -1,6 +1,6 @@
 # class = how a object should be/blueprint(class Person defines how a person should be)
 
-# object = physical presence(Avinash should follow Person class)
+# object = physical presence(Avinash should follow Person class) that contains data(variables/methods)
 
 Eg:1 class laptop
     object lenovo, dell, Thinkpad
@@ -69,7 +69,8 @@ object= instance= reference
 
 # implemtation =some valid statement except "pass"
 
-
+issubclass
+isinstance
 
 
 

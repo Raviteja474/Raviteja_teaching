@@ -7,6 +7,9 @@ chinnayya = ChinnayyaPadavala()
 # calling instance method in reference with object
 chinnayya.occupation()
 
+# abstract class
+# anjayya = Anjayya()
+# print(anjayya)
 # calling class variable
 print(Subramanyam.adhar)
 
