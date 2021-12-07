@@ -53,8 +53,11 @@ else :
     b=7
 print(b)
 
-# if a ==5 then assign b=8 , if not b=9, ternary operator
+# if a ==5 then assign b=8 , if not b=9, ternary operator, concise way of writing if and else
+# b = value1 if condtion else value2
+# if condition success b =value1 , if it failes b=value2
 b = 8 if a == 5 else 9
+
 print(b)
 
 x=10

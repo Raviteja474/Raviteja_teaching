@@ -26,6 +26,10 @@ print("EAMCET NOTIFICATION************************************")
 # read mode
 # as alias name or file object
 
+
+# serialization/marshalling = dict-> json(dump)
+# de serialization/unmarshalling = json-> dict(load)
+
 with open(constants.EAMCET_NOTICATION_URL, "r")as f:
     # file_object.readlines with create list of contents in total file
     lines = f.readlines()
