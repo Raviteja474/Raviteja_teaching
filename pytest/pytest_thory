@@ -1,0 +1,156 @@
+How to run a suite in pytest?
+
+If a module name starts or ends with "test", when we give pytest command in that directiry it will run all
+ qualified modules.4
+
+ test_* or *_test
+
+If we don't follow naming convention, we need to right click and select run pytest
+
+_____________________________________________________________________________________
+
+= 1 failed, 1 passed, 1 error
+
+_______________________________________________________________
+Non-verbose  : pytest
+.F= pass, F- fail
+
+...F = 3 pass, 1 Fail
+
+pytest = Normal ouput
+_____________________________________________________
+
+pytest -v   : run all/mulitple files in the directory with test_* or *_test
+
+test_square.py::test_sqrt PASSED
+test_square.py::testsquare FAILED
+
+
+
+_____________________________________________________________________
+
+pytest test_compare.py -v: if you want to run single file then we can like this
+
+__________________________________________________________________
+
+1. hotel management payment_method
+test_hotel.py - 15 TC
+2.hospital management payment_info
+test_hospital.py  - 13 TC
+3. college student_fee
+test_college.py - 14 TC
+
+pytest -k <substring> -v
+
+pytest -k payment -v  : -k represent sub test
+_________________________________________________________________________________________
+running group of testcases based on marker if all TCs are serving the same purpose.
+
+Temparature 42>, >50, >70
+
+1. All developers won't use same naming conventions, that's why instead of renaming the methods,
+we are going to mark them using some marker name
+
+@pytest.mark.marker_name
+
+DRAM 150, 12 TC
+
+SRAMn 160 , 14 TC
+
+SSD  170,  15 TC
+
+HDD  180 , 2 TC
+
+
+pytest -m marker_name -v
+
+
+2 passed, 5 deselected, 2 warnings in 0.04s
+_________________________________________________________________________________________
+when a variable in a sub TC, is not fixture we willl get following error.
+
+file C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\pytest\test_sample.py, line 6
+  def test_sqrt(num):
+E       fixture 'num' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+___________________________________________________________________________________________________________________
+
+IF YOU WANT TO SEND SOME PARAMETERS TO ALL SUB TC, WE SHOULD DEFINE A FIXTURE.
+
+@pytest.fixture
+def input_value():
+   input = 39
+   return input
+   ________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C:\Users\SUMANTH\Desktop\pytest_example>pytest
+================================================= test session starts =================================================
+platform win32 -- Python 3.9.7, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: C:\Users\SUMANTH\Desktop\pytest_example
+collected 0 items
+
+================================================ no tests ran in 0.01s ================================================
+
+C:\Users\SUMANTH\Desktop\pytest_example>pytest
+================================================= test session starts =================================================
+platform win32 -- Python 3.9.7, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: C:\Users\SUMANTH\Desktop\pytest_example
+collected 1 item
+
+test_pytest example.py E                                                                                         [100%]
+
+======================================================= ERRORS ========================================================
+________________________________________ ERROR at setup of test_divible_by_11 _________________________________________
+file C:\Users\SUMANTH\Desktop\pytest_example\test_pytest example.py, line 12
+  def test_divible_by_11(number):
+E       fixture 'number' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+C:\Users\SUMANTH\Desktop\pytest_example\test_pytest example.py:12
+=============================================== short test summary info ===============================================
+ERROR test_pytest example.py::test_divible_by_11
+================================================== 1 error in 0.02s ===================================================
+
+C:\Users\SUMANTH\Desktop\pytest_example>

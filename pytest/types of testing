@@ -1,0 +1,95 @@
+
+
+SDLC
+
+STLC
+
+
+Hospital Mangement
+
+1. Admission
+Age: whether these functions working or not
+name:
+issue:
+2. Diagnosis
+3. report handling
+4. treatment
+5. Dischage with no payment due
+___________________________________________________________________________________________________________________________
+Test suite/ Test script/Test module = multiple test cases
+test scenario/ scenario/test case /sub test = individual test functions
+
+
+test data = the arguments/values we are passing to testing function(INPUT)
+
+positive test data: data which makes the test pass
+negative test data: data which makes the test fail
+
+# positive testing: making sure function working fine with expected/postive inputs
+# negative testing : making sure function NOT working fine with UNexpected/naegative inputs
+
+# unit testing: Checking each function is behaving/returning expected data/output for valid input.
+__________________________________________________________________________________________________________________________
+Integration testing:
+combining each developed scripts together and checking end-to-end scenarios.
+
+Avinash = addition   = def test_addition
+Bharath = substraction  = def test_operation
+Visu = Mulitplication = def test_multiplication
+Mahesh = division = = def test_operation; substraction method overrides
+
+end-to-end testing: extensive testing on every component
+_______________________________________________________________________________________________________________________
+
+black testing: we are not interested about internal implementaion , just checking whether test case is working or not.
+Eg: Booking IRCTC ticket, it's not working from 11.30PM-12PM
+
+white testing: we are interested about internal implementaion , just checking whether test case is working or not.
+Eg: Booking IRCTC ticket, it's not working from 11.30PM-12PM, because IRCTC server upgrade will happen in that time. So no service avaialble for
+end user.
+________________________________________________________________________________________________________________________
+
+Regression testing:
+Testing for every change we committed to make sure test working with current version. If fails, we need to investigate on delta/differnce.
+
+Intel Friday 11.59 PM
+
+Dec 12, 5000 lines , test pass; Version 1
+Dec 13, 5012 lines , test pass; version 2
+Dec 14, 5082 lines , test fail; version 3
+
+_________________________________________________________________________________________________________________________
+
+smoke test: Checking very very basic functionality/components
+
+eg: checking website is launching or not.
+
+__________________________________________________________________________________________________________________________
+
+Alpha(A) testing: Acceptance testing
+Developer testing when work is completed to make sure whether it can be delivered to client or not.
+
+Beta testing: After alpha testing and delivery, end user/client will check whether it is working fine or not.
+EG: Avinash windows delivery to client
+_________________________________________________________________________________________________________________________
+
+
+System testing: When we checked and finalized that if it is working fine in one system , to make sue the stability we will
+execute same in another system to make sure the stability.
+Eg: python program should run on windows and linux as well.
+
+___________________________________________________________________________________________________________________________
+
+stress testing :unfavorable conditions to the system and check how they perform in those conditions.
+The intention is to find highest bearable workload for the given system.
+Eg: copying 250 GB file from one location to another location using python program.
+____________________________________________________________________________________________________________________________
+
+Performance testing : used to test performance parameters like speed and effectiveness of the program.
+
+eg: jmeter, iometer , upload and download speed for wifi
+
+_______________________________________________________________________________________________________________________
+
+Object oriented testing: pytest
+_______________________________________________________________________________________________________________________
