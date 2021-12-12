@@ -76,6 +76,11 @@ E       fixture 'num' not found
 >       use 'pytest --fixtures [testpath]' for help on them.
 
 ___________________________________________________________________________________________________________________
+when we want to deal with mulitple fixtures we are not going to mention in same test suite
+because we may want to use those fixture in any othre test suites as well.
+
+Fixtures in conftest.py are in global scope so any test suite can use this.
+______________________________________________________________________________________________________________
 
 IF YOU WANT TO SEND SOME PARAMETERS TO ALL SUB TC, WE SHOULD DEFINE A FIXTURE.
 
@@ -83,12 +88,19 @@ IF YOU WANT TO SEND SOME PARAMETERS TO ALL SUB TC, WE SHOULD DEFINE A FIXTURE.
 def input_value():
    input = 39
    return input
-   ________________________________________________
+___________________________________________________________________
+when we want to deal with multiple inputs for single sub TC, we will use parameterize with following syntax
+
+@pytest.mark.studentverify
+@pytest.mark.parametrize("rollno,percentage", [(1485455,95),(2,36),(3,35),(4,24),(51,101)])
+
+___________________________________________________________________________________________________________________
+
+@xfail @ skip
 
 
 
-
-
+___________________________________________________________________________________________________
 
 
 

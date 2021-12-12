@@ -1,0 +1,76 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.0, pytest-6.2.5, py-1.11.0, pluggy-1.0.0 -- C:\Program Files (x86)\python\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\pytest
+collecting ... collected 18 items / 13 deselected / 5 selected
+
+test_sample.py::test_student_pass[1485455-95] FAILED                     [ 20%]
+test_sample.py::test_student_pass[2-36] PASSED                           [ 40%]
+test_sample.py::test_student_pass[3-35] PASSED                           [ 60%]
+test_sample.py::test_student_pass[4-24] FAILED                           [ 80%]
+test_sample.py::test_student_pass[51-101] FAILED                         [100%]
+
+================================== FAILURES ===================================
+________________________ test_student_pass[1485455-95] ________________________
+
+rollno = 1485455, percentage = 95
+
+    @pytest.mark.studentverify
+    @pytest.mark.parametrize("rollno,percentage", [(1485455,95),(2,36),(3,35),(4,24),(51,101)])
+    def test_student_pass(rollno,percentage):
+       print(rollno,percentage)
+>      assert 1<=rollno<=1000
+E      assert 1485455 <= 1000
+
+test_sample.py:42: AssertionError
+---------------------------- Captured stdout call -----------------------------
+1485455 95
+___________________________ test_student_pass[4-24] ___________________________
+
+rollno = 4, percentage = 24
+
+    @pytest.mark.studentverify
+    @pytest.mark.parametrize("rollno,percentage", [(1485455,95),(2,36),(3,35),(4,24),(51,101)])
+    def test_student_pass(rollno,percentage):
+       print(rollno,percentage)
+       assert 1<=rollno<=1000
+>      assert 35<=percentage<=100
+E      assert 35 <= 24
+
+test_sample.py:43: AssertionError
+---------------------------- Captured stdout call -----------------------------
+4 24
+__________________________ test_student_pass[51-101] __________________________
+
+rollno = 51, percentage = 101
+
+    @pytest.mark.studentverify
+    @pytest.mark.parametrize("rollno,percentage", [(1485455,95),(2,36),(3,35),(4,24),(51,101)])
+    def test_student_pass(rollno,percentage):
+       print(rollno,percentage)
+       assert 1<=rollno<=1000
+>      assert 35<=percentage<=100
+E      assert 101 <= 100
+
+test_sample.py:43: AssertionError
+---------------------------- Captured stdout call -----------------------------
+51 101
+============================== warnings summary ===============================
+test_sample.py:26
+  C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\pytest\test_sample.py:26: PytestUnknownMarkWarning: Unknown pytest.mark.temp - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/mark.html
+    @pytest.mark.temp
+
+test_sample.py:38
+  C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\pytest\test_sample.py:38: PytestUnknownMarkWarning: Unknown pytest.mark.studentverify - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/mark.html
+    @pytest.mark.studentverify
+
+test_sample_2.py:12
+  C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\pytest\test_sample_2.py:12: PytestUnknownMarkWarning: Unknown pytest.mark.temp - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/mark.html
+    @pytest.mark.temp
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================== short test summary info ===========================
+FAILED test_sample.py::test_student_pass[1485455-95] - assert 1485455 <= 1000
+FAILED test_sample.py::test_student_pass[4-24] - assert 35 <= 24
+FAILED test_sample.py::test_student_pass[51-101] - assert 101 <= 100
+=========== 3 failed, 2 passed, 13 deselected, 3 warnings in 0.07s ============

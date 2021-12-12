@@ -1,0 +1,26 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.0, pytest-6.2.5, py-1.11.0, pluggy-1.0.0 -- C:\Program Files (x86)\python\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\pytest
+collecting ... collected 8 items
+
+test_sample_3.py::test_1 XFAIL                                           [ 12%]
+test_sample_3.py::test_2 XPASS                                           [ 25%]
+test_sample_3.py::test_3 SKIPPED (unconditional skip)                    [ 37%]
+test_sample_3.py::test_4 SKIPPED (unconditional skip)                    [ 50%]
+test_sample_3.py::test_5 PASSED                                          [ 62%]
+test_sample_3.py::test_6 PASSED                                          [ 75%]
+test_sample_3.py::test_7 FAILED                                          [ 87%]
+
+================================== FAILURES ===================================
+___________________________________ test_7 ____________________________________
+
+    def test_7():
+>       assert 1>10
+E       assert 1 > 10
+
+test_sample_3.py:29: AssertionError
+=========================== short test summary info ===========================
+FAILED test_sample_3.py::test_7 - assert 1 > 10
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+======== 1 failed, 2 passed, 2 skipped, 1 xfailed, 1 xpassed in 0.05s =========

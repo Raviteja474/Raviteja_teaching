@@ -30,3 +30,14 @@ def test_equality1(input):
 # sub test5
 def test_equality2(input):
    assert input==25
+
+
+
+# marker_name user defined
+# parameterize default/library support
+@pytest.mark.studentverify
+@pytest.mark.parametrize("rollno,percentage", [(1485455,95),(2,36),(3,35),(4,24),(51,101)])
+def test_student_pass(rollno,percentage):
+   print(rollno,percentage)
+   assert 1<=rollno<=1000
+   assert 35<=percentage<=100
