@@ -1,0 +1,85 @@
+
+Buitin exceptions
+_________________________________________________________________________________________________________________________
+Error: when we saw errors in compile time
+Eg: syntax, not refered object, name error, unspecified indentation error
+
+Exception:  when we saw errors in run time(after executing)
+eg:keyerror, valueerror, indexerror, type error
+
+We have 3 blocks/stages/phases in exception handling
+
+1.try = When we suspect our code has code issues then we will write them in try block
+2.except = when we face issues in try block then exception block will be called, if not it will reached.
+3.finally = irrespective error or not this block will called.; cleanup activity block.
+
+Advantages:
+1. Exception block will only trigger when we have issues with try block so non-error scenarios will not have impact.
+2. We can continue to run even after exception
+
+try must , except must, finally optional
+
+_______________________________________________________________________________________________________________________
+
+Parent exception:
+
+super class of all exceptions
+
+Eg: Exception
+
+Child exception:
+
+sub class of parent exception
+
+Eg: NameError, IndexError, ZeroDivisionError
+
+=> Every exception in inbuilt
+________________________________________________________________________________________________________________________
+
+try:
+   try statements
+except child_exception_1 as e:
+    exception-1 statements
+except child_exception_2 as e:
+    exception-2 statements
+except parent_exception:
+    parent statements
+
+
+AT ANY POINT OF TIME, IRRESPECTIVE OF NUMBER OF CHILD EXCEPTIONS AND ONE PARENT EXCEPTION, ONLY ONE EXCEPTION WILL CALLED.
+___________________________________________________________________________________________________________________________
+try , CE 1, CE2, CE3, PE, else, finally
+CE2:
+try, CE2, finally
+
+
+try , CE 1, CE2, CE3, PE, else, finally
+no error:
+try, else, finally
+
+try , CE 1, CE2, CE3, PE, else, finally
+CE3:
+try, CE3, finally
+
+
+try , CE 1, CE2, CE3, PE, else, finally
+not able to find exception:
+try, PE, finally
+
+
+=> else and except are mutually exclusive.
+Eg: head and Tails
+_____________________________________________________________________________________________________________________________
+
+Customized exceptions(raise)
+
+
+
+
+
+
+
+
+
+
+
