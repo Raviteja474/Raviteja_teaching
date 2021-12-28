@@ -1,0 +1,30 @@
+
+
+__init__ method is a instance method /constructor method
+
+__new__ = object create
+__init__= object values INTIALIZE/constructor
+__call__
+
+self.__init__()  No
+from child class Parent.__init__() ;class method
+
+
+instance method = based on object
+
+
+
+__init__
+
+b= Classb()
+
+class method = based on class
+
+abstraction
+polymorphism
+
+encapsulation private method doubt
+_______________________________________________________________________
+
+RAM --> DRAM, SRAM
+Drive --> HDD, SSD
