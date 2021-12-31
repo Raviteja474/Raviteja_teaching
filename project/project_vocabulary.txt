@@ -1,0 +1,68 @@
+client : Micron Technologies
+Address: XX
+Team: Test execution team
+Domain: Memory
+
+Memory based products: 
+RAM- DRAM, SRAM
+ROM- HDD,SSD
+
+___________________________________________________________________________________________________
+Toshibha, Intel, Western digital(WDC/WD), sandisk, skhynix, Micron, Samsung --> Memory based products
+
+1. end-user = amazon/flipkart
+2. Customer(OEM- original Equipement Manufacturer): Lenovo, Dell, Hp, THinkpad, Acer
+3. Data center = facebook, Amazon, Alibaba, Google, Microsoft, 
+
+generic tests(applicable to customer)*customer specific tests
+_______________________________________________________________________________________________________
+Team structure:
+
+1. Firmware team: 50
+Firmware: Any electronic device will work based on firmware/binary/firmware program
+Eg: Washing machine, TV, AC
+programming language: Embedded C, C
+Storage protocols(specification pdf based on which they will develop) Eg: NVMe, PCIe, MI
+
+
+2. Firmware Validation team :30
+work: They will write test cases -5000 in embedded python/python to validate the firmware developed by Firmware team.
+programming language: Embedded python, python
+Storage protocols(specification pdf based on which they will develop) Eg: NVMe, PCIe, MI
+
+
+3. Test execution/Framework Automation Team: 5
+work: Need to develop an environment that can run/pick validation scripts based upon OEM(customer) and generate the results,logs,reports and raise the bugs.
+Framework name: MSVP : Mutli System validation platform
+
+os/platform: Windows, Azure, (linux)
+
+windows vs Azure
+
+conval = conval validation
+a) Framework Automation/Test execution Automation
+why?
+Need to develop an environment
+Skills:  Resume mentioned skills
+
+conval : Need to Continuously validate a set of test cases applicable for given memory product based on generic/customer requirement and generate logs, inspect the logs and give a consolidated conval report.
+
+Need fix our exisiting scripts in case of programming errors
+Need to develope new scripts if new requirement comes
+
+b) Manual Testing
+
+Report the bug: If Test script fails, need to report to validation/FW team using jira dashboard
+19@@
+
+
+4. System setup team/hardware
+--> They will ready systems for execution with all hardwares in place.
+
+_______________________________________________________________________________
+
+
+
+
+
+

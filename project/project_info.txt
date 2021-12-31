@@ -1,0 +1,55 @@
+Aim:
+Need to run validation tests on provided firmwares from FW team BASED ON INPUTS IN CONVAL TIGGER FILE on our system pool and generate total conval execution results. This will help Fw team and validation to solve their regression issues.
+
+Technologies we are using: python pytest 
+
+prerequisites
+_________________________________________________________________________________________________________________
+
+1. conval Environment stability suite file (pytest subtest)
+a. change cmd to txt 
+b. nmap to know about what are the systems available with port 9001
+c. checking python existing or not and depency files are existing or not
+d. check network share is accessible to everyone from every machine
+e. check whether data pocket is loss or not
+f. check whether file is fully copied or not
+g. installing the python in all machines
+h. check whether log files are copied to network share
+i. check whether we are able to generate report or not
+
+trigger process
+_________________________________________________________________________________________________________________
+
+2. Machine availabilty(nmap) system pool to collect 
+
+3. Trigger
+
+process: 
+
+conval_trigger.txt --> conval_trigger_finished.txt
+
+Info read:
+need to mention optional and mandate arguments to test trigger 
+customer
+
+
+need to match firmwares, lightswitch for the customer top copied
+
+Actual begins here
+_________________________________________________________________________________________________________________
+
+4.copy dependency files(validation tests, firmwares, lightswitch), installing softwares(winrm/ subprocess)
+
+a. QTest and  python 
+b. files dependency copy 
+
+
+5.Qtest 
+
+a.cd /Desktop/QTest_info  & QTest start --> will execute test one after other
+b.Once test exexution over,logs will be preserved preservation to network share.
+
+6.Report generation
+a. reading logs
+b. excel report generation
+_________________________________________________________________________________________________________________
