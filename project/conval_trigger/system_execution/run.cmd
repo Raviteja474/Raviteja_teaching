@@ -1,4 +1,7 @@
-product>Eagle, Epic
-customer>Dell, Lenovo
+product>SSD
+version>Elan
+customer>HP
+system_logs>True
+stop_on_fail>True
 
 

@@ -15,6 +15,11 @@ Toshibha, Intel, Western digital(WDC/WD), sandisk, skhynix, Micron, Samsung --> 
 3. Data center = facebook, Amazon, Alibaba, Google, Microsoft, 
 
 generic tests(applicable to customer)*customer specific tests
+
+Total tests = 5000
+generic tests = 3000
+Dell = 4000 = 3000+1000
+Microsoft = 3700 = 3000+700
 _______________________________________________________________________________________________________
 Team structure:
 
@@ -53,7 +58,7 @@ Need to develope new scripts if new requirement comes
 b) Manual Testing
 
 Report the bug: If Test script fails, need to report to validation/FW team using jira dashboard
-
+19@@
 
 
 4. System setup team/hardware
@@ -61,8 +66,41 @@ Report the bug: If Test script fails, need to report to validation/FW team using
 
 _______________________________________________________________________________
 
+customers: Toshibha, Intel, Western digital(WDC/WD), sandisk, skhynix, Micron, Samsung
+product: DRAM, SRAM, SSD, HDD
+product version: Epic, Eagle, ELAN
+___________________________________________________________________________________________________
+Test life cycle
+_________________________________
+
+1. Pre conditioning: On which date,time,file name, which IP, capacity system,  which firmware, which config, Need to check SSD connected or not, Need to flash firmwares and configs using API based on trigger file
+
+@System_info
+2. Setup: Need to set registers and check the firmware support for the validation feature.
+3. workload: Actual test validation based on spec.
+4. teardown: whatever modifications we have done, we need to set back those to setup phase.
+
+5. post conditioning: Need to check SSD connected or not, if not collect system logs.
+
+_________________________________
+host machine = Test PC
+local machine = laptop
+
+
+
+nmap(Available systems, nmap, subprocess, re)--> request API post(bypass with static json file) --> request API get  --> system Ips
+
+windows  --> windowscredentials.json
+azure  --> azurecredentials.json
+linux  -> some other team 
+
+ip
+credentials
+
+
+nmap -p 9001 42
 
 
 
 
-
+raviteja.json  10 20 30 40 raviteja.py

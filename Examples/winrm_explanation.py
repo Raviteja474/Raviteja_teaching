@@ -1,9 +1,16 @@
 import winrm
+import paramiko
+
 
 # winrm = windows remote machines
 # winrm used to give a command on any remote machine.
 # 19@@
-port = winrm.protocol.Protocol(endpoint="http://20")
+# session = winrm.Session()
+port = winrm.protocol.Protocol(endpoint="http://server:5985/wsman",
+                               transport="ntlm",
+                               username="ravit",
+                               password="ravitE!2",
+                               server_cert_validation="ignore")
 
 shell = port.open_shell()
 

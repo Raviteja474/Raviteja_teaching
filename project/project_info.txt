@@ -1,55 +1,64 @@
+
+Purpose:
+Conval will help the FW team and validation to solve their regression issues.
+
 Aim:
-Need to run validation tests on provided firmwares from FW team BASED ON INPUTS IN CONVAL TIGGER FILE on our system pool and generate total conval execution results. This will help Fw team and validation to solve their regression issues.
+Need to execute validation tests on MSVP framework(hardware setup must for this) based on conval trigger file inputs on our system pool(multiple test PCs) and generate total conval execution results at the end.
 
-Technologies we are using: python pytest 
+_______________________________________________
+prerequisites:
+_________________________________________________________________________________________________________________
+trigger location: Desktop/Trigger/conval_trigger.txt
 
-prerequisites
+Trigger-> change .XXX to .txt
+Need to mention mandatory and optional arguments in the trigger file.
+_________________________________________________________________________________________________________________
+1.Environment stability suite file (pytest subtests)
+_______________________________________________________________________________________________________________
+
+a. checking dependency files(Validation test cases or libraries, firmware, config files) are existing or not in text pc(OS)
+b. check whether network share is accessible from trigger machine(subprocess)
+c. check whether data pocket is loss or not(subprocess) to make stsable connection
+d. check installation of  python in trigger machine(subprocess)
+_______________________________________________________________________________________________________________
+
+trigger process:
+_________________________________________________________________________________________________________________
+2.a.Consume Micron API and get the idle systems for example 7 systems here.(requests, get)
+
+2.b.Need to identify  dependency files(validation tests, firmwares, config) using threading in parallel based on inputs from trigger file
+
+Total: 50
+
+Dell : 30+5= 35 TC-->7 machines
+
+1 machine 1-7 TC , Dell FW, DellElan config
+2 machine 8-14 TC , Dell FW, DellElan config
+3 machine 15-21 TC , Dell FW, DellElan config
+4 machine 22-28 TC , Dell FW, DellElan config
+5 machine 29-25 TC , Dell FW, DellElan config
+
+2.cBasd on that firmwares, configs, validation tests will be copied(paramiko) to test PCs from "Desktop/Trigger/" to location cd /Desktop/MSVP_info
+
+_________________________________________________________________________________________________________________
+Execution
+_______________________________________________________________________________________________________________
+
+3. Check whether MSVP.exe and  python installed on host machines(winrm)
+
+4. Flashing FW and config using Micron internal libraries.
+
+5. Runnig the tests:
+
+a. cd /Desktop/MSVP_info  & MSVP start --> will execute test one after other MSVP.exe(winrm)
+b. Preconditioning, setup, workload, teardown, post conditioning should run for every validation test case.
+a. check network share is accessible to every machine(winrm)
+b. Once test execution over,logs will be copied to network share.(winrm), make sure all logs created to all subtests(winrm)
 _________________________________________________________________________________________________________________
 
-1. conval Environment stability suite file (pytest subtest)
-a. change cmd to txt 
-b. nmap to know about what are the systems available with port 9001
-c. checking python existing or not and depency files are existing or not
-d. check network share is accessible to everyone from every machine
-e. check whether data pocket is loss or not
-f. check whether file is fully copied or not
-g. installing the python in all machines
-h. check whether log files are copied to network share
-i. check whether we are able to generate report or not
-
-trigger process
-_________________________________________________________________________________________________________________
-
-2. Machine availabilty(nmap) system pool to collect 
-
-3. Trigger
-
-process: 
-
-conval_trigger.txt --> conval_trigger_finished.txt
-
-Info read:
-need to mention optional and mandate arguments to test trigger 
-customer
-
-
-need to match firmwares, lightswitch for the customer top copied
-
-Actual begins here
-_________________________________________________________________________________________________________________
-
-4.copy dependency files(validation tests, firmwares, lightswitch), installing softwares(winrm/ subprocess)
-
-a. QTest and  python 
-b. files dependency copy 
-
-
-5.Qtest 
-
-a.cd /Desktop/QTest_info  & QTest start --> will execute test one after other
-b.Once test exexution over,logs will be preserved preservation to network share.
-
-6.Report generation
-a. reading logs
-b. excel report generation
+6.Report generation from trigger machine
+_______________________________________________________________________________________________________________
+a. reading logs(file handling, post conditioning test fail/pass)
+b. excel report generation(openpyxl)
+c. Need to create jiras for failure cases.(jira dashboard)
 _________________________________________________________________________________________________________________
