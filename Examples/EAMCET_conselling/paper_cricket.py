@@ -28,4 +28,5 @@ total_2 = play_paper_cricket()
 print(f"{user_2} total : {total_2}")
 
 # ternary
+# if statement output ,  condition , else else statement output
 print("User 1 won!!") if total_1>total_2 else print("User 2 won!!")

@@ -1,10 +1,12 @@
 import logging
 import constants
+import abc
+from abc import ABC
 
 logging.basicConfig(level=logging.INFO)
 
 
-class Device:
+class Buy:
 
     def __new__(cls, media_type, speed, *args, **kwargs):
         if media_type =="ROM":
@@ -18,11 +20,14 @@ class Device:
             else:
                 return DRAM(media_type,speed)
 
+class Device(ABC):
     def about(self):
         logging.info(f'I will store the data.')
+    @abc.abstractmethod
+    def purpose(self):
+        pass
 
-
-class RAM():
+class RAM(Device):
 
     def purpose(self):
         logging.info(f'I will store volatile data.')
@@ -49,9 +54,9 @@ class SRAM(RAM):
         logging.info(f'It costs 6000.')
 
 
-class ROM():
-
-    def purpose(self):
+class ROM(Device):
+    # TypeError: Can't instantiate abstract class SSD with abstract method purpose; must implement method
+    def purpose1(self):
         logging.debug(f'I will store non-volatile data.')
 
 class HDD(ROM):
