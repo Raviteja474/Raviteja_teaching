@@ -3,12 +3,12 @@ import constants
 import abc
 from abc import ABC
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 
 class Buy:
 
-    def __new__(cls, media_type, speed, *args, **kwargs):
+    def __new__(cls, media_type="RAM", speed="Low", *args, **kwargs):
         if media_type =="ROM":
             if speed == "High":
                 return SSD(media_type,speed)
@@ -56,7 +56,7 @@ class SRAM(RAM):
 
 class ROM(Device):
     # TypeError: Can't instantiate abstract class SSD with abstract method purpose; must implement method
-    def purpose1(self):
+    def purpose(self):
         logging.debug(f'I will store non-volatile data.')
 
 class HDD(ROM):

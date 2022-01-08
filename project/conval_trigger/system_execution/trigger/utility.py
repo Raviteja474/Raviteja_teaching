@@ -19,7 +19,7 @@ def read_conval_file(conval_file_path):
     :param coval_file_path:
     :return:
     """
-
+    pass
 
 def flash_config(config_path):
     """
