@@ -1,5 +1,5 @@
 import time
-
+#@19@@ teardown
 def run_tests(obj):
     print(f"creatig object : {type(obj)}")
     print("precondition start")
