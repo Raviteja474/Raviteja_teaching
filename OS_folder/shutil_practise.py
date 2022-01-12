@@ -10,7 +10,7 @@ destination = r'C:\Users\ravit\Desktop\Teaching\Raviteja_teaching\raviteja2'
 # source to destination
 # don't preservers metadata
 # dest = shutil.copy(source, destination)
-# preservers metadata
+# preservers metadata(created, file permissions)
 dest = shutil.copy2(source, destination)
 
 # Print path of newly

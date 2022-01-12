@@ -35,9 +35,18 @@ def test_equality2(input):
 
 # marker_name user defined
 # parameterize default/library support
+# pytest -m studentverify -v
 @pytest.mark.studentverify
 @pytest.mark.parametrize("rollno,percentage", [(1485455,95),(2,36),(3,35),(4,24),(51,101)])
 def test_student_pass(rollno,percentage):
    print(rollno,percentage)
    assert 1<=rollno<=1000
    assert 35<=percentage<=100
+
+# Every test input is independent from others , if you go with for loop with iterations
+# it will throw error,in case of single failure
+# test_sample.py::test_student_pass[1485455-95] FAILED                                                                                                                                                        [ 20%]
+# test_sample.py::test_student_pass[2-36] PASSED                                                                                                                                                              [ 40%]
+# test_sample.py::test_student_pass[3-35] PASSED                                                                                                                                                              [ 60%]
+# test_sample.py::test_student_pass[4-24] FAILED                                                                                                                                                              [ 80%]
+# test_sample.py::test_student_pass[51-101] FAILED

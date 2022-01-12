@@ -1,0 +1,65 @@
+-- duck typing
+
+static typing --> c and java ; declaration u need mention data type
+dynamic typing --> no need to mention data type, when u r asssigning based on value it will assume the type(data type).
+i = 1; int
+i = 9.7; flaot
+i= "avi"; str
+
+a = class_a()
+ len(a) on any Python object that defines a .__len__()
+ https://realpython.com/lessons/duck-typing/
+
+When you use duck typing, you do not check types at all. Instead, you check for the presence of a given method or attribute.
+
+
+
+-- duck typing
+
+static typing --> c and java ; declaration u need mention data type
+dynmic typing --> no need to mention data type, when u r asssigning based on value it will assume the type(data type).
+i = 1; int
+i = 9.7; flaot
+i= "avi"; str
+
+a = class_a()
+ len(a) on any Python object that defines a .__len__()
+ https://realpython.com/lessons/duck-typing/
+
+  When you use duck typing, you do not check types at all. Instead, you check for the presence of a given method or attribute.
+
+-- regex (what we call the characters in re )
+
+
+-- pytest parametrized
+
+-- parallel testing
+
+-- Namespaces
+
+-- while,break,continue keywords(when we are going to use while loop rather than for loop) when using the while condition why we use continue ,break
+-- shutil() method
+-- walk() method
+
+fell_down= False
+distance = 25
+
+while distance_covered>25:
+	distance_covered = distance_covered+1
+	.......................
+	if fell_down:
+		break
+pay_money()
+
+
+for distance_covered(0,26,1):
+	...statements
+	if fell_down:
+			break
+pay_money()
+
+1 folder   ---> folder 1.1 -- > files 3
+           ---> folder 1.2 --> files 4
+		   ---> folder 1.3 --> folder 1.3.1 --> files 8
+						   --> folder 1.3.2 --> files 7,9
+						   --> files 10
