@@ -1,21 +1,40 @@
 --------------------------------------------"""Capgemini interview questions"""------------------------------------------------------  
 
-what is the framework you are using and what is the test scenario you are doing in dat to day ??
-what is the test flow in your framework and for example I have a submit button to click on a U.I what is the flow, how you will go ahead in your framework ??
+what is the framework you are using and what is the test scenario
+
+you are doing in day to day deliverables??
+
+jira,agile, communicate
+AHM - all Head meet
+
+
+
+what is the test flow in your framework and for example I have a submit button to click on a U.I what is the flow,
+how you will go ahead in your framework ??
+
 what is the tests you are doing ??
 what that cover in your testcases ??
+
+
 what is the application you are testing ??
+
+
 Brief about the application you are testing ??
 what are you working in python ??
 what are you validating ??
-what are you doing in your testcases ??
-How are the results generated after testing ??
-what is the criteria to fail a testcase ??
+what are you doing in your testcases ??  --> environmental staibilization
+
+How are the results generated after testing ??  --> openpyxl
+
+what is the criteria to fail a testcase ??  --> precondtion, setup(skip), workload,run(fail), teardown(fail), post condition
+
+how did you approach if test fails?
+
 print "validation done", write a decorator to this statement ??
 How to remove duplicates in an array ??
 How to print only duplicates characters ??
 How you prioritze testcases in pytest ??
-you have a testcase where it which you have to run on multiple browsers in same testcase you have to run on firefox and chrome, how wiil you do it ??
+you have a testcase where it which you have to run on multiple browsers in same testcase you have to run on firefox and chrome, how will you do it ??
 you want to pass a password and username in your test method, how will you do it?
 what errors you executing a testcase ??
 I have a submit button to click on a webpage in a testbox username and password is there, I will give the username and don't give the password and finally I have written to click submit button, so what are happen ??
@@ -25,17 +44,34 @@ ________________________________________________________________________________
 
 
 Briefly introduce about yourself and which are the projects you havebeen working on ??
-cuurently you are working with micron right ??
-so what you are train to in this particular work ??
+
+curently you are working with micron right ??
+
+
+how you are train  yourself to in this particular work ??
+
+SOP, K.T
+
 what kind of test cases that you are train to automate ??
+
 Give me an example of a testcase ??
+
 what is the thing you are testing ??
+
 what you are train to test  or automate ??
+
 what you are train to test for this micron company ??
+
 what automation you are train to do ??
+
 you have to test something, i have to understand what you are train to test ??
+
 what qtest is testing ??
-How would you rate yourself in python ??
+
+How would you rate yourself in python?? 3.75/5
+
+1.25 -->  Meta programming, thread synchronization
+
 what are the key difference between python 2.0 and 3.0 ??
 what is the difference between range and xrange ??
 what is the difference between iterator and generator ?? and which is memory efficient ??
@@ -46,27 +82,46 @@ how do you define a private namespace ??
 what is the basic difference between list and tuple ??
 Do you know what is list comprehension and give a n example ??
 what is the epic use of list comprehensions ??
+
 you have any questions ??
+
+screening  --> LWD, ASAP
+Technical  --> smooth talk, sugar coated words, feedback
+Managerial --> smooth talk, sugar coated words, feedback
+HR --> recording
 
 ________________________________________________________________________________________________________________________________________
 
 --------------------------------------------"""Wipro interview questions"""------------------------------------------------------ 
 
 How are you ??
-From which location you are ??
+
+what is your work location ??
+
 how was the climate here and corona how is there ??
-how are the day today ??
+
+how is your day ??
+
 what/any programming you did today ??
+
 which tool you are used to automate ??
+
 what is the version of pytest and it is the updated one ??
+
 which IDE you are using ??
+
 you know about robot framework ??
+
 what you are automating ??
 can you write a small script to open a browser and close it using pytest ??
 Do you know about regex ??
+
 Do you know map and what map do ??
+
 what is the difference between map and filter ??
+
 do you know class and please tell the unbound method ??
+
 what is the difference between object and class ??
 what is the difference between public method and private method ??
 can I use private method in another class ??
@@ -78,30 +133,38 @@ ________________________________________________________________________________
 --------------------------------------------"""IBM interview questions"""---------------------------------------------------
 
 you are in mphasis or you are searching for company ??
-How much percentage of you work you spent into writing testcases or you get prereturned testcases ??
+How much percentage of you work you spent into development or you get pre-written testcases ??
 what exactly you work here ??
+
 what is the role exactly you are doing in the project ??
+
 whre you execute the testcase is it some CI pipeline which are picking up these testcases directly or you have some manual driver or where you have to push the testcases ??
 how you execute testcases so you have any accesble file which you run it or you have some CI pipelines which you invoked given, regression are given, timeline will invoke automatically or where execution starts ??
 once you use commandline execution doe sit have some batch which runs ??
+
 what is the commandline which you give ??
+
 why you are using commandline and what is the advantage ?
+
 what advantage while using commandline over a tool ??
+
 what is your project that you worked on ??
-hoe the end users are working ??
+how the end users are working ??
+alpha, Beta
+
 Give you overview of project ??
 what is the source or target and what is about your workflow ??
 whais is your project and for which what you are automate ??
 In your project what is the functionalities ??
 It is mobile application or web application I want to know about that ??
 If it is a web applicationthe what it do ??
-you have basic kowledge on testing, sql, agile, software develpment life cycle process ??
+you have basic kowledge on testing, sql, agile, software develpement life cycle process ??
 Expalin testing life cycle process ??
 tell me where you write testcases ??
 can you open the notepad and draw the archetecture of framework ??
 have you heard about maven ??
 why we use pip ??
-I have to update specific version of notejs using pip how can you do it ??
+I have to update specific version of nodejs using pip how can you do it ??
 After installation using pip what is -g and -h ??
 
 
