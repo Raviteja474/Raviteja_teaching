@@ -62,3 +62,189 @@ a. reading logs(file handling, post conditioning test fail/pass)
 b. excel report generation(openpyxl)
 c. Need to create jiras for failure cases.(jira dashboard)
 _________________________________________________________________________________________________________________
+
+
+
+postman  : tool which give data to api and take data from api.
+
+web page: frontend
+
+web page testing: selenium
+
+api(web serice/URL): python requests+flask
+
+api consume /get
+
+how to create an api(flask)
+
+api testing: postman
+
+________________________________________________________________________________________
+
+json -->  postman
+xml
+
+
+how to query an API via Postman
+
+
+key(param)
+get 1007575608
+
+get:
+uRL?param1=value1&param2=value12
+
+
+https://www.facebook.com?mail=pamujula.raviteja9@gmail.com&pswd=9440745124
+
+https://jsonplaceholder.typicode.com/users   api end point
+
+https://www.google.co.in/search?q=eenadu+paper+telugu&ei=aozwyyk3hlcbsempspkuyas&ved=0ahukewici7sa5871ahwwtwwghtc5c7kq4dudca4&uact=5&oq=eenadu+paper+telugu&gs_lcp=cgdnd3mtd2l6eamybqgaeiaemguiabcabdifcaaqgaqybqgaeiaemguiabcabdifcaaqgaq6bwgaeecqsam6bwgaeladeem6cwgaeiaeeledeimboguiabcrakoeceeyaeoeceyyafc7b1ihd2czewgbcaj4aiabwagiacuikgedmc43maeaoaebyaekwaeb&sclient=gws-wiz
+
+
+
+Design patterns singleton and factory
+DUT object and test object
+
+
+Assign(S) ->accept --> open(S) --> start progress -- > in progress(S) --> done --> implementaion(S) --> submission --> testing(S) --> UT  --> complete
+
+Linux:
+
+[1/26 11:50 AM] Pamujula Raviteja
+https://youtu.be/nOdIyrA2l5A
+
+[1/26 11:50 AM] Pamujula Raviteja
+https://youtu.be/fJz3JTEtJJA
+
+
+nmap
+link:
+
+
+
+grep : string match
+https://stackoverflow.com/questions/1603109/how-to-make-a-python-script-run-like-a-service-or-daemon-in-linux
+
+
+virtualbox -> linux containers  8 GB, 1000 GB
+1 GB RAM, 125 GB --> virtual box linux
+
+sudo yum install python
+
+
+windows --> OS DualX
+
+deamon  thread --> multithreading daemon threads
+Dead lock
+daemon thread
+Gloabal flag
+notify, notify all
+
+
+sample1.py sample2.py and sample3.py  -->.exe
+
+
+https://dev.to/eshleron/how-to-convert-py-to-exe-step-by-step-guide-3cfi
+
+device mountting --> Device manager , disk drives --> attached device
+
+
+C: Deskotp/ MSVP_app:
+
+Framework -->  MSVP_application.exe
+automation --> MSVP_automation.exe
+Testsuite --> MSVp_testsuite.exe
+Driver --> MSVP_driver.exe
+
+corrosponding FW, config config
+
+.bat file
+
+
+
+Raritan:
+________________________________________________________________________________________
+
+administrative network tool --> hardreboot, restart, remote access ,
+
+http://raritan.com?ip=107.99.42.53  open with selenium
+
+{"107.99.42.18":["windows","administrator":"win123"],"107.99.42.53":["Azure","administrator":"azure123"]}
+
+
+table
+
+Drive temparature>53
+unsafe shutdown > 28-01-2022
+disk capacity >95
+RAM usage>95
+Media errors> 10%
+
+
+if above conditions pass then we should qualify the system.
+________________________________________________________________________________________
+
+
+1-50 sys 1
+51-100 sys 2
+101-150 sys 3
+151-200 sys 4
+201-250 sys 5
+
+
+sample1.py sample2.py and sample3.py  -->.exe
+execution_info.json
+1-250(MSVP.exe) sys 1    {"start_indiex":1, "ending_index": 50}
+1-250(MSVP.exe)  sys 2   {"start_indiex":51, "ending_index": 100}
+1-250(MSVP.exe)  sys 3   {"start_indiex":101, "ending_index": 150}
+1-250(MSVP.exe)  sys 4   {"start_indiex":151, "ending_index": 200}
+1-250(MSVP.exe) sys 5    {"start_indiex":201, "ending_index": 250}
+
+______________________________________________________
+
+how to do u resolve merging conflicts
+
+source 100 98 99
+
+Avi 98,99 Eagle some changes (branch 1)
+
+Bharath 98,99 some changes(branch 2)
+
+Merge conflicts ? developers sync
+
+rebasing --> tortoise git tool
+______________________________________________________
+
+def preconditon(func):
+
+	registers collect
+	def inner():
+
+	return func
+
+#19@@
+def post conditon(func):
+
+	registers collect
+	def func():
+
+	return func
+
+
+
+@preconditon
+def setup
+
+
+@postconditon
+def teardown
+______________________________________________________
+
+Manual testing:
+
+Regression testing : Fw dumps
+Integrtion: driver+test suite+applications
+Grey box testing: First level analysis
+
+1. Conval ran , reports , jira raise , dumps collet, logs collect , device manager , device mount

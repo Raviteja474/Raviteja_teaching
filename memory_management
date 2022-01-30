@@ -1,0 +1,55 @@
+python memory management
+________________________________________________________________________
+consumers - script file, pyc , python software, objects,
+
+Memory allocation can be defined as allocating a block of space in the computer memory to a program.
+
+garbage collection - unreferenced data
+
+integer - 4 bytes = 32 bits = 2^31*2=
+
+32 bits = 00101010 = 2**32  = (2**31)*2 = 2**31 postive+ 2**31 negative
+
+1024 bits = -512 to +511
+
+32 bit
+int:    value = 4 bytes
+float:  value = 8 bytes
+
+64 bit
+int:    value = 8 bytes
+float:  value = 8 bytes
+
+
+sequential:
+[2,4,6]
+
+3*8 = 24 bytes
+
+1000 byte --> 1008  --> 1016 -->1024 sequential memory management
+
+1000 bytes -->1008   2012-->2020  2901-->2909  --> dynamic memorry management
+
+Python uses the dynamic memory allocation which is managed by the Heap data structure. Memory Heap holds the
+ objects and other data structures that will be used in the program. Python memory manager manages the allocation or
+de-allocation of the heap memory space through the API functions.
+
+memories in python(Registers/Cache)
+______________________________________________________________________________
+stack = will save sequence of operations , undo operation
+heap = objects and other data structures
+program counter = next statement to be executed
+
+___________________________________________________________________________
+
+linear = in-efficient
+
+binary =         tree stucutures
+                       GP -GM
+        P1-M1          P2-M2          P3-M3
+      H1-C1  H2-C2    C3-W3   C4     C5 C6-H6
+
+_____________________________________________________________________________
+
+with - context mangager which take care file memory leakage
+__del__  object garbage collection after done with class

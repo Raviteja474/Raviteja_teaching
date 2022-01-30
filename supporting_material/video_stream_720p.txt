@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-# Copyright 2021 Intel Corporation All Rights Reserved.
-# Author: ravitejax.pamujula@intel.com
+
 
 import sys
 import subprocess

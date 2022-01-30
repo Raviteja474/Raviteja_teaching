@@ -1,0 +1,64 @@
+decorator functionality ?
+
+setup  --> drive smart parametes, register values(precondtion)
+
+teardown --> drive smart parametes, register values(post condition)
+
+protected , private access specificers (we can access both the methods in public & protected out of the class then what's the difference)
+
+explain about garbage collection and memory management in python
+
+when and what will the execution team push the code in to github
+
+method overloading is not possible in python why?
+_____________________________________________________________________________________
+java
+
+def sum_of_numbers(name_1,name_2):
+    return name_1+name_2
+
+def sum_of_numbers(name_1,name_2,name_3):
+    return name_1+name_2+name_3
+
+
+sum_of_numbers(2,3)
+sum_of_numbers(2,3,4)
+__________________________________________________________________________________________________
+
+
+overloading :
+
+python :
+
+default argument
+
+def sum_of_numbers(name_1,name_2,name_3=0,name_4=0):
+    return name_1+name_2+name_3+name_4
+
+*args, *kwargs
+
+def sum_of_numbers(*args):
+    implementaions
+
+
+    elf, raviteja
+
+lamda character count
+
+
+"I am indian"
+
+
+__del___
+
+file integretiy
+\
+ouput, err, returncode = winrm.func()
+b""
+
+try:
+	statement
+except:
+  self.fail
+
+  itertools

@@ -1,0 +1,39 @@
+Blockers,5 challenges/5 recently solved
+______________________________________________________
+
+NMAP avaialble(CLI)  --> Flask , will generate API --> requests
+
+1. Automation python using requests we are consume
+2. Manual tests, Postman ; http 200
+
+Yes -> THere is a change in json keys
+
+No->3. Mail thread NMAP team report
+
+4. NMAP --> intersubnets are not reachable
+5. Network intersubnet access
+
+
+
+winrm , paramiko
+
+Remote services
+ping  is sucess
+remote connection objects
+
+
+selenium
+http://wlp2s01.com?systemdetails
+
+http://wlp2s01.com?systemdetails?ip=107.99.42.53
+
+Admin Micron@123
+
+table
+
+Drive temparature>53
+unsafe shutdown > 28-01-2022
+disk capacity >95
+RAM usage>95
+Media errors> 10%
+______________________________________________________

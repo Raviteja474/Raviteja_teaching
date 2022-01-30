@@ -1,0 +1,67 @@
+
+
+
+
+
+
+Web frameworks: web applications
+
+Eg: Django(heavy weight, late process, more fatures),  Flask (light weight)
+
+loose coupling: less hard coding and more flexible
+
+tight coupling : more hard coding and less flexible
+________________________________________________________________________________________
+
+Django- python based multi layer application architecture
+
+MVT Design pattern - Model , view , Template
+
+
+
+Model- DB - Backend - Postgrel
+
+view -  Front end - Angularjs, reactjs
+
+Template - (controller/ python) - controller, python (decorator)
+
+________________________________________________________________________________________
+
+
+API - Application Programmable Interface
+
+
+purpose: TO get a job
+
+Deadline: Mar 15
+
+Milestone: Feb 1, Feb 15, Mar1 , Mar 15
+
+SWOT-
+
+Strength = theory, verbal skills
+Weekness = coding, 10% wpm
+Oppurtunity = Raviteja(4), Bharath, sumanth W2, Chandra ,
+Threat = Health
+
+
+________________________________________________________________________________________
+
+Benifits: data agressive, we can process(CRUD) on data
+
+cx_oracle python module --> Mahesh-->
+
+oracle DB,
+
+SQL
+
+CRUD--> create ; how to create a table and create rows
+
+Read;   how to read all rows  and selected rows
+
+Update;  how to update columns and rows
+
+Deletion; how to delete rows, columns and table
+
+
+________________________________________________________________________________________
