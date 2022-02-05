@@ -1,0 +1,63 @@
+"It's a world cup match between India and pakistan. Pakistan win the toss and elected to field first. India started their inning's first, Rahul & Rohit are supposed to bat first and the match was started.
+Rahul (W) taken by Hasan Ali,(c) by Shadab Khan , he scored 29(48)- 14 boundaries in which 2-6's, 2-4's;
+Rohit (w) taken by Shaheen Afridi, he scored 35(24) - 12 boundaries in which 11-6, 1-4;
+Kohli (lbw) by Shaheen Afridi, he scored 23(58)- 8 boundaries in which 5-6's, 3-4's;
+Pant (w) taken by Shadab Khan,(c) by Shadab Khan, he scored 25(30) - 3 boundaries in which 2-6's, 1-4;
+Hardik (runout) by Hasan Ali, he scored 12(25) - 4 boundaries in which 2-6's, 2-4's;
+Jadeja (w) taken by Shajid Khan,(runout) by Shadab Khan, he scored 21(69)- 10 boundaries in which 8-6's, 2-4's;
+Thakur (w) taken by Hasan Ali ,(c) by shajid Khan, he scored 9(16)- 3 boundaries in which 2-6's, 1-4;
+Sami (notout) has scored 12(15)- 2 boundaries in which 1-6, 1-4
+
+
+
+using Regex,
+I need highest-boundaries player and highest sixes?
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+2. using Regex pls check the given number is a mobile number or not?
+
+0002456328
+6548973156
+9586478935
+8453219873
+7569842325
+
+----------------------------------------------------------------------
+
+3. using Regex check the given input is a palindrome or not?
+
+sumanth
+dad
+dad
+dad
+madam
+malayalam
+arjun
+
+-----------------------------------------------------------------
+
+
+4. Gmail using Regex?
+sumanth@gmail.com
+sumanth568@gmail.com
+sumanth.l@gmail.com
+sumanth-l123gmailcom
+sumanth_j693@gmail.com
+293sumanth_j693@gmail.com
+293sumanth_j693@568gmail.com
+293sum@nth_j693@568gmail.com
+sumanth.ketharaju243@gmail.com
+1hello@gmail.com
+Hello1@gmail.com
+hello#$@.com
+hello~@gmail.com
+hello@gmail.world
+hello_world@gmail.com
+
+
+-------------------------------------------------------------
+5. Password using Regex?
+
+password should contain ---> maximum 23 letters , minimum 8 letters, 1 special character,
+								password should not match with username with minimum 5 letters

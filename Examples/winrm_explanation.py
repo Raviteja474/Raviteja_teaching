@@ -20,12 +20,14 @@ out, err, status = port.get_command_output(shell,command)
 
 import winrm
 
-# host = 'YourWindowsHost'
-# domain = 'YourDomain'
-# user = 'YourDomainUser'
-# password = 'YourPassword'
-#
-# session = winrm.Session(host, auth=('{}@{}'.format(user,domain), password), transport='ntlm')
-#
-# result = session.run_cmd('ipconfig', ['/all']) # To run command in cmd
+host = 'YourWindowsHost'
+domain = 'YourDomain'
+user = 'YourDomainUser'
+password = 'YourPassword'
 
+session = winrm.Session(host, auth=('{}@{}'.format(user,domain), password), transport='ntlm')
+
+result = session.run_cmd('ipconfig', ['/all']) # To run command in cmd
+
+leave work flow-> comp off,comp off number
+number

@@ -1,0 +1,164 @@
+how can we identify the available machines using request module by get() method
+
+1. NMAP  --> It will give All machines in which MSVP port is enabled
+
+command: link
+for ip in ips:
+    ip  port-starting(single) port-ending
+
+2. API  Generation -->  return dict   --> json
+return JSON
+
+input: json file
+3. request --> output: dict
+{"107.99.42.18":["windows","administrator":"win123"],"107.99.42.53":["Azure","administrator":"azure123"]}
+
+_______________________________________________________________________________________________________________
+
+.exe file how we run in multiple pc's (how we are going to mention the specific testcases to run in specified machines)
+
+
+do you worked with QTest in python
+QTest  -->   pytest+jenkins(CICD)
+open source
+
+Avinash: Explore
+1. Single test
+2. pycharm parameters , command line arguments
+__________________________________________________________________________________________
+what is rerun
+
+Fail, u want to make sure issue is consistent(reproduce)
+1. Device enumeration drop
+2. Network latencies
+3. Previous test might affect present test
+
+U will run this test in isolation
+____________________________________________________________________________________________
+Regression
+
+Driver  5.0.0
+Test suite 5.0.0
+Application 5.0.0
+
+
+Driver  4.9.0
+Test suite 5.0.0
+Application 5.0.0
+
+
+Driver  5.0.0
+Test suite 4.9.0
+Application 5.0.0
+
+Driver  5.0.0
+Test suite 5.0.0
+Application 4.9.0
+___________________________________________________________________________________________
+does the msv is seperate application/framework
+
+Chrome Application/software
+
+Framework: How many members are in india
+excel FB(100 usernames, 100 password), selenium , chrome, value inspect, python count
+
+Framework: programming language+ Application+ environment
+MSVP framework: Driver+Test suite+ Application
+_____________________________________________________________________________________________
+how can we link python and MSV framework
+
+
+_____________________________________________________________________________________________
+if test cases are written in c,c++, do you execute the testcases in different server
+
+No, Validation team used to write testcases in c++ previously.
+
+1. We don't have remote servers , we have only test PCs
+
+Remote server:  IRCRTC ticket, which computer processed your ticket? which computer presently store your ticket details?
+Load balancing: 1000 servers, 10,00,000
+purpose: These are intended for high traffic.
+
+Protocol Validation
+U know IP, U device, same server.
+__________________________________________________________________________________________
+
+you are working with storage right, can you tell me what kind of work do with the storage
+
+1. We won't work on Storage validation scripts
+2. We will do Framework Automation
+3. We will help validation team to run their scripts in conval
+
+__________________________________________________________________________________________
+how can you say that tuple of list is efficient
+[1,2]
+([1,2])-->
+
+1. Tuple:
+more readable and less writable
+when there are scope for changes then it will less memory efficient.
+2.list
+more writable and lesser readable
+extra buffer-72b
+
+>>> import sys
+>>> sys.getsizeof(tuple(iter(range(10))))
+128
+>>> sys.getsizeof(list(iter(range(10))))
+200
+
+--> When u don't want to change a particular data structure and want to use it frequently
+___________________________________________________________________________________________
+what is namespace in python and why we use it
+py1  list_1
+
+py2  list_1
+
+list_1
+
+py1.list_1; without conflicts you want to access variables
+
+to solve conflict variable names;  then the scope will define which variable it is according to LEGB
+
+namespaces = unique name
+__________________________________________________________________________________________
+in slicing we are using negative index or -1 in python, why do we use that
+
+I am indian, I love my country$
+25 len , 24 last --> based on length
+-1 --> last variable
+
+[1,2,4,6,7,8,9,11,42]
+
+method:1 len()= 9, print(ele:8)
+method:2 print(ele:-1)
+______________________________________________________________________________________
+python has specifiers/access specifiers, any example
+
+access specifiers: protected , public , private
+
+____________________________________________________________________________________
+there is garbage collection in python, can you explain how it works
+
+reference count
+manual manual garbage collection
+
+dealloaction: =None, del
+
+allocation =1003, deallocations =2, threshold =1000
+1003-2>1000; GC will trigger
+
+import gc
+When the number of allocations minus the number of deallocations is greater than the threshold number,
+the garbage collector is run.
+____________________________________________________________________________________
+have you used pytest, you are having experience in pytest framework, what are
+basic rules to write the testcases for pytest framework
+
+pytest commands explain
+subtest:
+
+Explain all command signratures
+____________________________________________________________________________________
+
+MSV Architecture
