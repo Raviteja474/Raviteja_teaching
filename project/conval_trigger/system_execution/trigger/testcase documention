@@ -1,0 +1,34 @@
+utility file
+
+1. 8000 port hosting api and returning corrospoinding dictionary
+dict= {....................................................}
+def host_api():
+
+test_postive_host_api
+positive test case: working URL , are we getting JSON
+
+self.asserEqual(type(host_api()),dict)
+
+test_negative_host_api
+nagative test case: working URL , are we getting JSON
+
+self.asserNotEqual(type(host_api()),dict)
+
+
+self.AssertNotNone(raritan_function())
+
+
+
+conval trigger
+
+def extract_product
+
+
+self.asserEqual(extract_product("Product<Dell"),"Dell")
+
+self.asserNotEqual(extract_product("Product<Dell Lenovo"),"Dell Lenovo")
+
+
+winrm , timeout=80
+
+
