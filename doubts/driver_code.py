@@ -3,10 +3,11 @@
 # Driver code will call actual code
 #actual code
 import driver_code_import
-
-def method_1():
-    print("method_1")
+class Test:
     print(__name__)
+    def method_1(self):
+        #print("method_1")
+        print(__name__)
 
 if __name__ == "__main__":
-    method_1()
+    Test().method_1()

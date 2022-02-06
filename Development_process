@@ -1,0 +1,85 @@
+Scratch Dev
+________________________________________________________________________________________
+1. Team lead, manager --> Validation leads, manager
+                          FW lead, manager
+
+Requirement gathering
+Issues assign to developers based on bandwidth
+
+Intial understanding, analysis and need clarity
+
+Clarification session
+
+Requirement+UT documents
+
+Get approval from FW Manger, Validation Manger
+
+Develop
+
+pull request: Attach Developed scripts+ UT results+ pylint reports+ coverage
+
+Review comments(refactor code and push to working branch)/approved
+
+Pushed to master
+
+
+Enhancement
+________________________________________________________________________________________
+Eg: Already developed for windows, need to extend the support to Azure
+
+Clarification sync
+Requirement+UT documents
+
+Get approval from FW Manger, Validation Manger
+
+Develop
+
+pull request: Attach Developed scripts+ UT results+ pylint reports+ coverage
+
+Review comments(refactor code and push to working branch)/approved
+
+Pushed to master
+
+
+
+Bandwidth management
+________________________________________________________________________________________
+
+
+Tuesday
+Wednesday
+Thursday -
+Friday First half
+
+Friday second half - conval
+
+1. Ensure basic sanity
+2. If basic sanity fails, intiate warroom
+
+we keep raising jiras(Grey box testing)
+
+
+Monday =   Monday morning complete reports
+Monday evening = Total FW jiras+ validation jiras+ Automation jiras
+
+
+
+Defect fix
+________________________________________________________________________________________
+Automation jiras = Issues triggered in conval
+
+Develop
+
+pull request: Attach Developed scripts+ UT results+ pylint reports+ coverage
+
+Review comments(refactor code and push to working branch)/approved
+
+Pushed to master
+
+
+Root cause Analysis: What is the mistake from script that induced the failure.
+
+CAPA(Corrective Action and Prevention Action):
+How you corrected and it future what are the measure need to taken to avoid this and update in SOP.
+
+

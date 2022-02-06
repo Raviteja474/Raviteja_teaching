@@ -29,5 +29,3 @@ session = winrm.Session(host, auth=('{}@{}'.format(user,domain), password), tran
 
 result = session.run_cmd('ipconfig', ['/all']) # To run command in cmd
 
-leave work flow-> comp off,comp off number
-number

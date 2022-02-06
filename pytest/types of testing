@@ -40,6 +40,8 @@ Mahesh = division = = def test_operation; substraction method overrides
 
 end-to-end testing: extensive testing on every component
 _______________________________________________________________________________________________________________________
+Grey
+
 
 black testing: we are not interested about internal implementaion , just checking whether test case is working or not.
 Eg: Booking IRCTC ticket, it's not working from 11.30PM-12PM
@@ -65,6 +67,8 @@ smoke test: Checking very very basic functionality/components
 eg: checking website is launching or not.
 
 __________________________________________________________________________________________________________________________
+
+Customer acceptance testing: 95% of test cases should pass.
 
 Alpha(A) testing: Acceptance testing
 Developer testing when work is completed to make sure whether it can be delivered to client or not.
@@ -93,3 +97,6 @@ ________________________________________________________________________________
 
 Object oriented testing: pytest
 _______________________________________________________________________________________________________________________
+
+Sanity: Sanity test will intended for most important and basic test checking.
+Whenever we have new release to qualify that, we will run sanity test.

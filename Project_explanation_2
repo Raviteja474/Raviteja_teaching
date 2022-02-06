@@ -1,0 +1,13 @@
+if var%1==var:
+    print()
+else:
+    # unreachable code
+    print()
+
+Coverage:
+
+prime number : 1,number
+
+coverage: 1 special case: number 1 is not prime
+
+Expectation is to cover all possible scenarios.

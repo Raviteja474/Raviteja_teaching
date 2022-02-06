@@ -97,10 +97,8 @@ linux  -> some other team
 ip
 credentials
 
-
+#nmap -p portnumber subnet
 nmap -p 9001 42
-
-
 
 
 raviteja.json  10 20 30 40 raviteja.py
