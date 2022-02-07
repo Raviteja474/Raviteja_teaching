@@ -1,11 +1,60 @@
 # author: Visu
-# date
-# Topic
+# date :07:02:2022
+# Topic: Coverage
 
-purpose
+purpose:
+python coverage is used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
 
 
-commands
+commands:	
+
+	run – Run a Python program and collect execution data.
+
+	combine – Combine together a number of data files.
+
+	erase – Erase previously collected coverage data.
+
+	report – Report coverage results.
+
+	html – Produce annotated HTML listings with coverage results.
+
+	xml – Produce an XML report with coverage results.
+
+	json – Produce a JSON report with coverage results.
+
+	lcov – Produce an LCOV report with coverage results.
+
+	annotate – Annotate source files with coverage results.
+
+	debug – Get diagnostic information.
+
 
 
 Example:
+
+def sum(num1, num2):
+    return num1 + num2
+
+
+def sum_only_positive(num1, num2):
+    if num1 > 0 and num2 > 0:
+        return num1 + num2
+    else:
+        return None
+		
+test.py#python file
+		
+from first import sum, sum_only_positive
+
+def test_sum():
+    assert sum(5, 5) == 10
+
+def test_sum_positive_ok():
+    assert sum_only_positive(2, 2) == 4
+
+def test_sum_positive_fail():
+    assert sum_only_positive(-1, 2) is None
+	
+	
+O/P:
+6 statements 2 run, 4missing ,0excluded
