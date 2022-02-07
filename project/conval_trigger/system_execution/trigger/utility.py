@@ -121,4 +121,21 @@ def send_files(destination_path, ip_adress="192.168.43.4"):
     """
     pass
 
-
+def device(device_details):
+    """ 
+    :param device_details: RAM -SRAM, DRAM, ROM - HDD, SSD
+    :return:
+    """
+    
+def customer(customer_requriments ):
+    """ 
+    :param device_details: performance, storage
+    :return:
+    """
+def stop_on_fail(False):
+     """ 
+    :param device_details:
+    default: False
+    :return: if test fails with an issue remaining test cases should run
+    """
+    
