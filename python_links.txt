@@ -1,80 +1,148 @@
-https://www.analyticsvidhya.com/blog/2021/10/introduction-to-file-operations-in-python/
-https://youtu.be/YfO28Ihehbk
-https://www.w3schools.com/python/python_ref_keywords.asp
-https://youtu.be/R-HLU9Fl5ug
-https://youtu.be/c_qNC1lL4qA
-https://youtu.be/U2ZN104hIcc
-https://youtu.be/fFY5103p5-c
-https://youtu.be/oSPMmeaiQ68
-https://youtu.be/z1-zfCvxybI
-https://youtu.be/7z6F-ibVsa8
-https://youtu.be/eGAyWvstKCI
-https://youtu.be/lSItwlnF0eU
-https://youtu.be/er752AxyziE
-https://youtu.be/Cb8JvTXqPcI
-https://www.geeksforgeeks.org/python-operators/
-https://youtu.be/WbwIoQYP6no
-https://github.com/Raviteja474/Raviteja_teaching
-https://youtu.be/K7uvd1Muc80
-https://www.programiz.com/python-programming/examples
-https://youtu.be/7YS6YDQKFh0
-https://youtu.be/ixEeeNjjOJ0
-https://youtu.be/T6uCFDRVoRE
-https://youtu.be/KzqSDvzOFNA
-https://youtu.be/rZjhId0VkuY
-https://youtu.be/3dt4OGnU5sM
-https://youtu.be/QVdf0LgmICw
-https://youtu.be/RQRCWDK9UkA
-https://youtube.com/shorts/I3FNiSo1Q9g?feature=share
-https://youtu.be/YfO28Ihehbk
-https://www.geeksforgeeks.org/multithreading-python-set-1/
-https://www.facebook.com/groups/python/permalink/1089665925207304/
-https://www.geeksforgeeks.org/get-post-requests-using-python/
-https://stackoverflow.com/questions/4859129/python-and-python-c-api-new-versus-init
-https://youtu.be/eirjjyP2qcQ
-https://youtu.be/Cx9XsS9fZpA
-https://youtu.be/dtvV2xKaVjw
-https://youtube.com/shorts/_8mJyrXbxCU?feature=share
-https://youtu.be/fJz3JTEtJJA
-https://www.geeksforgeeks.org/length-of-the-longest-substring-without-repeating-characters/
-https://www.linkedin.com/posts/rahul-garg-8969b0197_codingmode-activity-6890680961391038464-dB2y
+
+
+
+https://github.com/Raviteja474/Raviteja_teaching.git
+
+https://github.com/Maheshpadavala/python_programs.git
+
+https://github.com/pamujulabharath/Bharath_programs.git
+
+https://github.com/Avinash0113/GIT-DOC.git
+
+https://github.com/ashp902/Python_practice
+
+https://github.com/visweswarpamujula23/interviews.git
+
+
+https://www.analyticsvidhya.com/blog/2021/10/introduction-to-file-operations-in-python/		-	Introduction to File Operations in Python
+
+https://youtu.be/YfO28Ihehbk	-	Python for Beginners | Full Course
+
+https://www.w3schools.com/python/python_ref_keywords.asp	-	Python Keywords
+
+https://youtu.be/R-HLU9Fl5ug	-	Python: Data Structures - Lists, Tuples, Sets & Dictionaries tutorial
+
+https://youtu.be/c_qNC1lL4qA	-	How To Install Python Pip? | Install Pip On Windows | Python Training | Edureka
+
+https://youtu.be/U2ZN104hIcc	-	Python Tutorial: pip - An in-depth look at the package management system
+
+https://youtu.be/fFY5103p5-c	-	Pylint Tutorial – How to Write Clean Python
+
+https://youtu.be/oSPMmeaiQ68	-	Python Functions Tutorial | Working With Functions In Python | Python Training | Edureka
+
+https://youtu.be/z1-zfCvxybI	-	Variables, Datatypes and Typecasting | Python Tutorials For Absolute Beginners In Hindi
+
+https://youtu.be/7z6F-ibVsa8	-	How to install Beyond Compare On Windows 10 [ 2021 Update ] Use of Beyond Compare! Complete Guide
+
+https://youtu.be/eGAyWvstKCI	-	Introduction to Beyond Compare
+
+https://youtu.be/lSItwlnF0eU	-	Python Strings Tutorial | How To Use Strings In Python | Python Tutorial | Python Training | Edureka
+
+https://youtu.be/er752AxyziE	-	How TATA STEEL became the GREATEST Company in INDIAN History? | Business Case Study Ep2 Tata Series
+
+https://youtu.be/Cb8JvTXqPcI	-	BODMAS Rule
+
+https://www.geeksforgeeks.org/python-operators/		-	Python Operators
+	
+https://youtu.be/WbwIoQYP6no	-	Git Tutorial for Beginners
+	
+https://youtu.be/K7uvd1Muc80	-	This BUSINESS STRATEGY turned Wow Momo into a 1000Cr company? : Business strategy case study
+
+https://www.programiz.com/python-programming/examples	-	Python Examples
+
+https://youtu.be/7YS6YDQKFh0	-	Automate Excel With Python - Python Excel Tutorial (OpenPyXL)
+
+https://youtu.be/ixEeeNjjOJ0	-	Python File Handling | File Operations in Python | Learn python programming | Edureka
+
+https://youtu.be/T6uCFDRVoRE	-	Python JSON | Encoding and Decoding JSON Data with Python | Edureka
+
+https://youtu.be/KzqSDvzOFNA	-	Python Tutorial: Generate Random Numbers and Data Using the random Module
+
+https://youtu.be/rZjhId0VkuY	-	Dictionary In Python | Python Dictionary Tutorial | Python Certification Training | Edureka
+
+https://youtu.be/3dt4OGnU5sM	-	Python Tutorial: Comprehensions - How they work and why you should be using them
+
+https://youtu.be/QVdf0LgmICw	-	Python Tutorial: Variable Scope - Understanding the LEGB rule and global/nonlocal statements
+
+https://youtu.be/RQRCWDK9UkA	-	Python Lambda Function | Anonymous Function In Python | Python Tutorial | Edureka	
+
+https://www.geeksforgeeks.org/multithreading-python-set-1/	-	Multithreading in Python | Set 1	
+
+https://www.geeksforgeeks.org/get-post-requests-using-python/	-	GET and POST requests using Python
+
+https://stackoverflow.com/questions/4859129/python-and-python-c-api-new-versus-init		-	Python (and Python C API): __new__ versus __init__
+
+https://youtu.be/eirjjyP2qcQ	-	Python Tutorial: Datetime Module - How to work with Dates, Times, Timedeltas, and Timezones
+
+https://youtu.be/Cx9XsS9fZpA	-	Python - winrm ntlm auth
+
+https://youtu.be/dtvV2xKaVjw	-	Transfer a file from local server to remote server and vice versa using paramiko of python	
+
+https://www.geeksforgeeks.org/length-of-the-longest-substring-without-repeating-characters/	
+		
 https://stackoverflow.com/questions/27990094/finding-primes-with-modulo-in-python
+
 https://www.geeksforgeeks.org/python-count-occurrences-of-a-character-in-string/
+
 https://www.tutorialsteacher.com/python/public-private-protected-modifiers
-https://www.youtube.com/watch?v=t3fuSapseS4
+
+https://www.youtube.com/watch?v=t3fuSapseS4	-	Python Network Programming #5: Port Scanner Using NMAP
+
 https://www.geeksforgeeks.org/top-40-python-interview-questions-answers/
-https://www.programiz.com/python-programming
-https://www.geeksforgeeks.org/python-programming-language/
-https://www.programiz.com/python-programming/keyword-list
-https://www.youtube.com/watch?v=TSZJIxkB2QU
-https://www.programiz.com/python-programming/datetime/strftime
-https://www.tutorialspoint.com/numpy/numpy_string_functions.htm
-https://www.geeksforgeeks.org/types-software-testing/
-https://www.youtube.com/watch?v=pDLzK08MF08
-https://www.tutorialspoint.com/python-exception-base-classes
-https://www.py4u.net/discuss/229137
-https://stackoverflow.com/questions/4859129/python-and-python-c-api-new-versus-init
-https://youtu.be/Cx9XsS9fZpA
-https://youtu.be/dtvV2xKaVjw
-https://pypi.org/project/pywinrm/
-https://stackoverflow.com/questions/32680030/match-text-between-two-strings-with-regular-expression
-https://www.geeksforgeeks.org/directory-traversal-tools-in-python/
-https://www.geeksforgeeks.org/class-method-vs-static-method-python/?ref=rp
-https://www.geeksforgeeks.org/destructors-in-python/
-https://www.google.co.in/url?sa=i&url=https%3A%2F%2Fwww.quora.com%2FWhat-are-the-designation-hierarchies-of-various-I-T-companies-like-Accenture-IBM-Infosys-TCS-CTS-Tech-Mahindra-Wipro-and-HCL-Which-I-T-companies-are-good-in-terms-of-workload-salary-and-infrastructure&psig=AOvVaw3FNX-kA6S_-XzK0oqHRTU1&ust=1642325962238000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjS2I67s_UCFQAAAAAdAAAAABAD
-https://www.geeksforgeeks.org/memory-management-in-python/
-https://www.programiz.com/python-programming/property
-https://www.youtube.com/watch?v=o3tYiyE_OXE
-https://youtu.be/nOdIyrA2l5A
-https://www.geeksforgeeks.org/python-design-patterns/
-https://youtu.be/fJz3JTEtJJA
-https://youtu.be/nOdIyrA2l5A
-https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
-https://www.hackerrank.com/domains/fp
-https://www.geeksforgeeks.org/python-split-by-repeating-substring/
-https://signup.azure.com/signup?offer=ms-azr-0044p&appId=102&ref=azureinfra-vm&redirectURL=https:%2F%2Fazure.microsoft.com%2Fen-in%2Fget-started%2Fservices%2Fvirtual-machines%2F&l=en-in&correlationId=a0c786498fda430e8a77c61cc9a2d5c1
-https://www.geeksforgeeks.org/python-count-occurrences-of-a-character-in-string/
-https://www.tutorialsteacher.com/python/public-private-protected-modifiers
+
+https://www.programiz.com/python-programming	-	Learn Python Programming
+
+https://www.programiz.com/python-programming/keyword-list	-	List of Keywords in Python
+
+https://www.youtube.com/watch?v=TSZJIxkB2QU	-	15 CMD Commands Every Windows User Should Know
+
+https://www.programiz.com/python-programming/datetime/strftime	-	Python strftime()
+
+https://www.tutorialspoint.com/numpy/numpy_string_functions.htm	-	NumPy - String Functions
+
+https://www.geeksforgeeks.org/types-software-testing/	-	Types of Software Testing
+
+https://www.youtube.com/watch?v=pDLzK08MF08	-	Get Pluralsight One Year Premium Subscription for Free | Pluralsight Free Subscription
+
+https://www.tutorialspoint.com/python-exception-base-classes	-	Python Exception Base Classes
+	
+https://www.py4u.net/discuss/229137	-	Permission denied error when trying to shutil.copy folders from one destination to another?	
+
+https://pypi.org/project/pywinrm/	-	Python library for Windows Remote Management
+
+https://stackoverflow.com/questions/32680030/match-text-between-two-strings-with-regular-expression	
+
+https://www.geeksforgeeks.org/directory-traversal-tools-in-python/	-	Directory traversal tools in Python
+
+https://www.geeksforgeeks.org/class-method-vs-static-method-python/?ref=rp	-	Class method vs Static method in Python
+
+https://www.geeksforgeeks.org/destructors-in-python/	-	Destructors in Python
+
+https://www.google.co.in/url?sa=i&url=https%3A%2F%2Fwww.quora.com%2FWhat-are-the-designation-hierarchies-of-various-I-T-companies-like-Accenture-IBM-Infosys-TCS-CTS-Tech-Mahindra-Wipro-and-HCL-Which-I-T-companies-are-good-in-terms-of-workload-salary-and-infrastructure&psig=AOvVaw3FNX-kA6S_-XzK0oqHRTU1&ust=1642325962238000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjS2I67s_UCFQAAAAAdAAAAABAD	-What are the designation hierarchies of various I.T. companies like Accenture, IBM, Infosys, TCS, CTS, Tech Mahindra, Wipro, and HCL? Which I.T. companies are good in terms of workload, salary, and infrastructure?
+	
+https://www.geeksforgeeks.org/memory-management-in-python/	-	Memory Management in Python
+
+https://www.programiz.com/python-programming/property	-	Python @property decorator
+
+https://www.youtube.com/watch?v=o3tYiyE_OXE	-	Selenium with Python Full Course For Beginners
+
+https://youtu.be/nOdIyrA2l5A	-	From Postman to Python: Your First GET Request
+
+https://www.geeksforgeeks.org/python-design-patterns/	-	Python Design Patterns
+
+https://youtu.be/fJz3JTEtJJA	-	Creating a REST API using python-flask and test using postman #RESTful #flaskapi #API #postman
+
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes	-	List of HTTP status codes
+
+https://www.hackerrank.com/domains/fp	-	Hackerrank Functional Programming
+
+https://www.geeksforgeeks.org/python-split-by-repeating-substring/	-	Python | Split by repeating substring
+
+https://youtu.be/7BJ_BKeeJyM	-	100 Percent Test Coverage in Python
+
+https://www.youtube.com/watch?v=3PekU8OGBCA		-	Python Automation with PyAutoGUI | Full Course With Projects!
+	
+
 
 
 
