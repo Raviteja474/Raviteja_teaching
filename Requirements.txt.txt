@@ -95,3 +95,29 @@ visu.txt
 
 [raviteja.txt,sumanth.txt]
 ______________________________________________________________________
+
+pytest 6 subtests
+
+write python script that will run a stability file, if none of the tests fail, it should print 1 to 100........
+
+environment_stability_1.py   2 tests fail and 3 tests pass
+
+environment_stability_2.py  5 tests pass
+
+print 1 to 100
+
+"pytest environment_stability_1.py -v"  --> FAIL --> print test failed...
+
+"pytest environment_stability_1.py -v"  --> FAIL not found --> print 1 to 100....
+
+______________________________________________________________________
+
+pytest priority
+
+TC1, TC2, TC3, TC4  --> TC3, TC1, TC2, TC4
+
+___________________________________________________
+
+create a html file, where we should have one upload button, when we click on it , we should able to upload an excel file
+
+___________________________________________________________________

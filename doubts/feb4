@@ -39,21 +39,22 @@ Regression
 
 Driver  5.0.0
 Test suite 5.0.0
-Application 5.0.0
+firmware 5.0.0   Fail
 
+step:1
 
 Driver  4.9.0
 Test suite 5.0.0
-Application 5.0.0
+firmware 5.0.0   pass: MSVP driver issue
 
 
 Driver  5.0.0
 Test suite 4.9.0
-Application 5.0.0
+firmware 5.0.0  pass: MSVP validation team issue
 
 Driver  5.0.0
 Test suite 5.0.0
-Application 4.9.0
+firmware 4.9.0  pass: MSVP firmware issue
 ___________________________________________________________________________________________
 does the msv is seperate application/framework
 
