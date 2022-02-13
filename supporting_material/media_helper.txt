@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # Copyright 2021 Intel Corporation All Rights Reserved.
-# Author: vayalax.narasimha.rao@intel.com
 
 #Description:
 # Mediahelper class - initialize chrome driver and launch chrome web url, audio routing on scpecific device
