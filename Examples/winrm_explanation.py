@@ -2,6 +2,11 @@ import winrm
 import paramiko
 
 
+from collections import Counter
+
+# With sequence of items
+print(Counter(['B','B','A','B','C','A','B','B','A','C']))
+
 # winrm = windows remote machines
 # winrm used to give a command on any remote machine.
 # 19@@
