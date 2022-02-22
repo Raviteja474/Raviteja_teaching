@@ -110,6 +110,8 @@ print 1 to 100
 
 "pytest environment_stability_1.py -v"  --> FAIL not found --> print 1 to 100....
 
+
+output = subprocess.run(cmd)
 ______________________________________________________________________
 
 pytest priority
@@ -125,6 +127,7 @@ __________________________________________________________________
 print user name of your account
 
 
+
 C:\Users\ravit>hostname
 DESKTOP-9GPFB9P
 
@@ -135,13 +138,15 @@ open chrome
 
 www.facebook.com --> 3 sec
 www.google.com  --> 4 sec
-www.youtube.com  -->sec
+www.youtube.com  -->5 sec
 
 ___________________________________________________
 
 psutil --> use existing
 
-kill process 1/2
+chrome open, vlc media player playing
+
+U need to close this applications using python
 ___________________________________________________________
 WSR automation
 _______________________________________________________
