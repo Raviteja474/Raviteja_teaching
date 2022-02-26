@@ -1,0 +1,36 @@
+ROM Non volatile memory = with our data pesisits
+Intel SSD validation
+Nvme 1.4 spec , pcie spec
+
+work:
+Firmware Engineer after he develop the firmware, validation engineers will follow above specs and write testcases and
+validate the features.
+
+Connect SSD to gender card in linux machine and give commands in nmcli console.
+
+writeFirmware() = firmware will flash to RAM
+commitFirmware() = RAM to device
+restart() = Firmware will activate
+
+writeconfig() = writing configuration values of OEM
+
+drive = Nand logic logic , Ic are interconnected
+IC = integrated logic,
+Each capacitor store one bit of data
+
+2 TB, 4 Tb, 8 Tb, 16 Tb
+Sata?? No
+Nvme yes
+
+Script:
+Testcase fail, dump generate(pcie live dump), assert code print
+Each error in firmware will have unique number, that is called assert code.
+
+Layers:
+
+host --> device
+OS --> pcie registers --> controller  --> Nand flash
+
+command processing:
+64k queue
+submission queue  --> controller  --> completion queue

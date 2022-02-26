@@ -1,0 +1,85 @@
+What you are going to suspect in rerun?
+______________________________________________________
+Intention of rerun: To ensure the consistancy of the failure
+
+Run : test 1  , test 2(some operations on drive), failed TC3
+
+Fresh fw flash
+
+TC3 pass: individual run
+
+Previous tests may corrupt the drive
+
+Eg:
+Test 2 : Freeze firmware --> Unfreeze we must do
+Test 3: Update firmware
+
+______________________________________________________
+
+Some times device won't respond due to some command related issues
+______________________________________________________
+
+How do we conclude that the issue after conval is from the execution team(like precondition issue)?
+
+1.namp gives 0 available machines
+2. precondition and postconditon
+3. credential change
+4. raritan webpage changes
+5. Any code error in MSVP automation
+____________________________________________________________________________________________________________
+
+
+By using winrm we can open the python shell in the host pc, but how can we give the python commands?
+
+requiement.txt mentioned
+
+____________________________________________________________________________________________________________
+
+Testcase lifecycle
+
+1. precondtion
+2. Setup (before dut object constructor)
+3. main TC(run)
+4.teardown (after dut object destructor)
+5. postcondtion
+
+jan30 file refer
+_____________________________________________________________________________________________________________
+
+How are you automating the test script in host pc's?
+
+MSVP framework will take care
+
+HLTC number :1
+HLTC number :2
+_____________________________________________________________________________________________________________
+
+Explain where do you used inheritance in your project?
+
+ssd ---inherited by --> RAM ---inherited by --> DRAM
+                            ---inherited by --> SRAM
+
+ssd ---inherited by --> ROM ---inherited by --> SSD
+                            ---inherited by --> HDD
+_____________________________________________________________________________________________________________
+Do you have any idea how python storing the object in memory?
+
+heap memory
+
+https://www.geeksforgeeks.org/memory-management-in-python/
+_____________________________________________________________________________________________________________
+What is module and packages in python?
+
+ package will have  __init__.py    = Folder
+ directory  will not have  __init__.py    = Folder
+
+ module = python file
+_____________________________________________________________________________________________________________
+What is the protocol you are using for shell connection?
+
+shell connection will be opened to give any commands
+
+subprocess : local command
+winrm: remote command
+paramiko : SFTP between two machines
+_____________________________________________________________________________________________________________

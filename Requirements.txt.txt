@@ -160,7 +160,11 @@ Eg: watchdog sensor
 
 Automation tanks 90% --> motor off
 
+
+
 trigger_conval.py
+
+
 
 while True:
     if ... conval_trigger.txt; endswith/OS
@@ -194,5 +198,8 @@ firmware_transffer_file = get_firmware_transffer_file()
 MSV_application_file =
 config_file=
 
+command = port.run_command(shell,"cd <location> && python remote_execute.py")
 
+remote_execute.py
 
+________________________________________
