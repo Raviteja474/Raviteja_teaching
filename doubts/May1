@@ -1,0 +1,53 @@
+sudo python Testname.py
+
+
+MSVP  --> windows based MSVP command
+MSVP  --> LInux based MSVP command
+
+
+Windows filesystem : c/Desktop/MSVP/MSVP.exe
+Linux filesystem : root/Desktop/MSVP.exe
+
+
+Logs save: c:users/107.99.42.38/logs
+Linux Logs save: /root/config/107.99.42.38/logs
+
+
+Windows --> winrm connection establish
+linux --> ssh connection
+
+Paramiko module same--> doubt
+
+
+
+how you will do the automation for hardware devices.
+
+Driver team --> hardware devices
+speaker --> software (os) --> audio driver
+
+hardware --> driver --> software
+
+
+
+Regression  --
+
+1. Fw1  --> Test pass Apr 24
+1.1 FW2 --> Test fail May 1
+
+2. Test script -->  Test pass, C0737312 Apr 24  --> FW 1 ;
+         -->  Test fail May1, C07373234  --> FW 1
+
+3. Environment failure NPF  ---> Apr 24 FW 1, C0737312 pass
+             May1 FW 1, C0737312 fail  --> TWIDL/driver
+
+
+commit --> regression
+
+3000 lines --> jan 14 1450/2000 unit test/oral
+3200 lies --> jan 15  1470/2020 unit test
+3281 lines --> jan 16  1474/2025 existing test failed becuase of recently developed code(regression testing)
+
+
+{1: "Ravi", 2: {1:"Teja",2:"Vamsi"}}
+
+{1:Ravi, 2:}
