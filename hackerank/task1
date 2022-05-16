@@ -1,0 +1,38 @@
+variable
+item
+element
+data type
+definition
+implementation
+iteration
+condition
+return value
+indexing
+slicing
+indentation level
+global
+local
+scope
+version of code
+
+testing definitions
+
+
+7)List_1 = [1,2,3,4,5,6,7,8,9,10]
+
+list_2 = [x for x in list_1 if x%]
+
+List_1 = [1,2,3,4,5,6,7,8,9,10]
+
+list_2 = [x*x if x%2==0 else -x*x*x for x in List_1]
+print(list_2)
+
+
+lst=[1,22,'d','cd',5,-5,555]
+print(sorted(lst))
+
+[-1, 4, -27, 16, -125, 36, -343, 64, -729, 100]
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    print(sorted(lst))
+TypeError: '<' not supported between instances of 'str' and 'int'

@@ -1,0 +1,167 @@
+How to Analyze & ways to approach the assigned JIRA/issue (JIRA comment structure)(based on the previous comments in the
+JIRA how we are going to check)
+
+Bharath Assert statements
+
+Intial triage:
+What is the test suite, subtest name
+what is impact statement line number
+LS, firmware
+
+1. Try to reproduce(same capability, preferably same capacity)
+2. Test run history(This product, last pass?)
+3. Is there any script fix happened between last pass and today?
+    a. If yes, use old code check
+4. Check with previously passed firmware with latest fix?
+5. What is the TWIDL version between today and last pass?
+
+binary= build= NFR= Fw = bin
+why? It will describe how SSD should work
+Lightswitch = config file = xml file
+why? It will write customer specific tokens
+LS: customer, capacity?
+
+test plan --> yml
+
+
+Drive Preperation: on TWIDL
+1. Bootloader
+2. Firmware flash
+3. Light switch
+
+1 TB Generic Fw load:
+1. Bootloader info
+2. WW20.3, Generic firmware, assert/EI/production
+3. customer, capacity?
+
+9.6 TB, Dell, Error injection
+WW20.3 Dell Fw location
+ 1. Bootloader file, wspi()
+ 2. WW20.3 EI build ,
+    SATA -->wfw,cfw,warmReset
+    NVMe -> firmwareDownloadActivate(AA=3,FS=1)
+   3. Lightswitch location
+    9.6 TB, Dell LS -->writeFConfig()
+
+getSSD()
+ssd=devobj()
+ssd.unlock()
+ssd.wfw(r'y:/ww20.3/DVAA12.bin')
+ssd.cfw()
+ssd.warmReset()
+getSSD()
+
+
+llf- low level format
+edump- erase dump
+cdm - create defect map
+
+
+
+Why we are using failed log command file in the client machine to run the test in FAST(cmd file.retry)
+
+retry --> cmd
+FAST --> run a test
+        run a template
+
+
+By using TWIDL, what we are checking the commands manually, is there any standard commands, or based upon the requirement
+ are we using them
+(wfw(),cfw(),warmReset() in which scenarios we are using them)
+
+Do we need to check the code manually in TWIDL, using any print statements?
+print
+4 spaces
+
+In the client machine after changing the command file data how do we need to give the relevant tag name?
+NSGSE-212346_run_1
+NSGSE-212346_run_2_7.6TB
+NSGSE-212346_run_3_3.8TB
+NSGSE-212346_run_4_3.8TB_pita
+
+
+How the test severity is categorized like NRT, NRT0, NRT1, XFT --> refer wiki
+
+ severity -->       NRT0  NRT  XFT  --> vv high, high, medium
+  time -->          NRT0  NRT  XFT  --> medium, high, vv high,
+
+What are FW and driver and how they will communicate?
+Fw  --> drive non-volatile memory
+Drive = SSD
+Driver = TWIDL
+OS will communicate via driver with drive FW.
+
+What are a Mule drive and a normal drive?
+
+What is sandbox release? --> almost stabilized products
+Intel --> YVRR
+YVRR_CE  --> sandbox branch
+master --> Dev is under progress
+
+What is a light switch (LS)
+An xml file will have a set of tokens intended for particulat customer and sku(size)
+
+What is FW path, old binary, and new binary paths, and how can we check them?
+old_binary:  ww14 ; lower revision
+new_binary:  WW15 ; higher revision
+
+
+
+
+
+
+
+
+
+
+
+
+
+HDD --> moving part, durability issues, Read/write speed low
+
+
+SSD --> Solid state Device
+CTF = Charge Trapped flash
+
+SATA, NVMe,PCie , SCSI
+
+OF
+
+Programmed /written
+non-programmed/ empty
+
+1.6 TB = 1.6 * 1024 * 1024 * 1024 * 1024 * 8 = .. bits = .. transistors
+
+1 MB = 10^3 KB =1000 KB
+1 MiB = 1024 = 1024 KB
+
+NAND flash < NOR flash
+
+Process:
+Pre silicon
+Design validation(DV)
+post silicon
+product validation(PV)
+spec validation
+
+NVMe spec:  NVM Express Workgroup
+Intel
+Samsung
+Micron
+Sk hynix
+WD
+Seagate
+
+C++
+python
+
+Performance testing : IOmeter, FIO, Medussa
+
+Firmware flashing(installing), data integrity
+
+Performance(XFT)
+
+
+
+
+
