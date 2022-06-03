@@ -1,0 +1,73 @@
+
+if statement:
+	print("19@@, Set feature not supported")
+	
+	
+for ()
+		if statemtn:
+			print("20@@, Set feature not supported")
+			
+
+32 N
+
+1000 GB --> 30 GB/namespace
+
+NSID =0?
+
+			
+
+Room temp41, MXTMT = 75 drive format???
+
+
+1. Command support? (Identify structure)
+	Get feature -4
+
+
+firmwareDownloadActivate(avinash.bin, 1, 3)
+
+2. Data fill 
+def firmwareDownloadActivate(filename, FS, AA=1)
+	self.firmwareDownloadActivate = firmwareDownloadActivate()
+	self.firmwareDownloadActivate.NSID = 1
+	self.firmwareDownloadActivate.Filename = filename
+	self.firmwareDownloadActivate.CID = Automatic
+	self.AA = AA
+	
+	
+FirmwareDownloadActivate()
+
+
+
+parseDownloadMicrocodeStatus()
+	
+3. submit the command
+command --> driver --> SSD
+4. Response check
+--> parseLastNVMestatus()
+5. Get the data if it returns
+	buffer = 512 bytes
+	self.ssd.getResponse(buffer,self.firmwareDownloadActivate.CID )
+
+
+32 namespaces ; max NS support
+
+1 to 32 valid 
+
+
+32 --> 33 GB/NS; 1 to 32 valid , 0 invalid; here we created 32 namespaces
+20 --> 50 GB/NS; 1 to 20 valid, 21 to 32 invalid; here we created 20 namespaces
+
+
+Single controller
+20 --> 50 GB/NS; 1 to 20 valid, 21 to 32 invalid; here we created 20 namespaces
+
+1 -12NS --> controller attached
+
+Valid 1 to FFFFFFFFFF  --> 1-32 allocated -->1-20 active
+										 --> 21-32 inactive
+						--> 33- FFFFFFFFFF non-allocated
+invalid 0 , FFFFFFFFFF+1
+
+
+
+
