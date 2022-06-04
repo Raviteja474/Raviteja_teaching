@@ -1,0 +1,40 @@
+Prerequisites:
+Notepad++, git, pycharm community, python 3.7 or above
+
+_________________________________________________________________
+Part_1  4 weeks(June 4)
+
+Semiconductor basics - Diode, Transistor, FET, CMOS
+Memory products introduction and evolution
+SSD introduction,
+SSD Geometry, Die, Band, Page, Sector, LBA
+
+Programming language introduction , scope and usage
+Number system conversions
+python, SDLC, STLC,
+All concepts till oops
+__________________________________________________________________
+
+
+Part_2   4 weeks(July 1)
+
+NVMe spec 1.4
+
+Framework, Intel, Micro, Samsung contents
+Buffers, command formation
+
+OOPS, exception handling
+
+Real time-1
+__________________________________________________________________
+
+Part_3   4 weeks(Aug 1)
+
+NVMe MI 1.1b
+
+Real time-2
+
+decorators, multithreading
+
+__________________________________________________________________
+
