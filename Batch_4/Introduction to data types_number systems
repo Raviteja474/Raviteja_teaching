@@ -1,0 +1,74 @@
+1. Decimal system
+0 1 2 3 4 5 6 7 8 9
+10 11 12 13 14 15 16 17 18 19
+20 21 22 23 24 25 26 27 28 29
+
+157 = 1*100+5*10+7*1; face value , place value
+12 = 1*10+2*1
+14
+
+2. Binary = 0 or 1
+Task: Boolean algebra; all logical gates
+MSB = Most Significant bit
+LSB = Least Significant bit
+
+1-bit = 2**1 =2
+0
+1
+2-bit = 2**2 =4
+00
+01
+10
+11
+3-bit = 2**3 =8
+000
+001
+010
+011
+100
+101
+110
+111
+
+1-True
+0-False
+AND True table
+________________________________
+A  B  Result
+0  0   0
+0  1   0
+1  0   0
+1  1   1
+
+OR
+A  B Result
+0  0   0
+0  1   1
+1  0   1
+1  1   1
+
+
+Not(negation)
+A Result
+0 1
+1 0
+
+
+
+
+Nand = Not(AND)
+A  B   Result
+0  0   1
+0  1   1
+1  0   1
+1  1   0
+
+
+Nor = = Not(OR)
+
+2. Hexadecimal system = hexa+deci = 6+10 =16
+0 1 2 3 4 5 6 7 8 9 A B C D E F
+10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F
+
+
+
