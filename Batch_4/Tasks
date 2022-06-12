@@ -1,4 +1,6 @@
-1. Conversions
+Notepad++, git(web and system), pycharm community, python 3.7 or above, beyond compare, pip
+
+1+ Conversions
 bin--> dec
 10010  = 1*2^4+0*2^3+0*2^2+1*2^1+0*2^0 =16+2=18
 dec-->bin
@@ -9,3 +11,16 @@ hex--> bin
 dec-->hex
 hex-->bin
 bin-->hex
+base = how many numbers are there in that nunber system
+dec base = 10
+hex base =16
+bin base = 2
+hex-->dec =
+
+    =   value * base ^ place_of_value
+1A3B  =  1*16^3+ A*16^2+  3*16^1+  B*16^0
+       = 1*4096+ 10*256+ 3*16+11*1 =
+
+pycharm shortcuts
+
+requirements.txt<--pip

@@ -71,4 +71,50 @@ Nor = = Not(OR)
 10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F
 
 
+.c --> while running the program
+
+compile time
+a=2 b=3
+print(a+b)
+
+runtime  = After compilation , run time will start
+a = input()
+b= input()
+print(a+b)
+
+debug
+
+sample.java
+javac sample.java --> compile
+java sample.java --> run
+
+sample.py
+python sample.py -->run
+
+Integer  --> 2 , 4
+float --> 2.12, 3.454
+boolean --> True, False
+
+a=4
+print(a)
+a=6
+print(a)
+a=8
+print(a)
+
+In java
+static typing = while declaring variable variable number as integer type , you can't assign a flaot value to that
+int number = reader.nextInt();
+number =5;  No error
+number = 5.0; error
+
+dynamic typing = we will not declare any datatype/type during variable declarion
+var_1 = 5
+print(f"var_1 is: {var_1} and type is {type(var_1)}")
+var_1 = 5.12
+print(f"var_1 is: {var_1} and type is {type(var_1)}")
+var_1 = "Vaibhav"
+print(f"var_1 is: {var_1} and type is {type(var_1)}")
+var_1 = True
+print(f"var_1 is: {var_1} and type is {type(var_1)}")
 
