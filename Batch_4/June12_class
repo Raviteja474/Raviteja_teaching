@@ -6,5 +6,11 @@ bench machine/hostpc/test pc
 
 prerequisites
 1. Vendor specific driver(Intel, samsung, Micron)
-2. Supported OS
-
+2. Supported OS(windows 10)
+3. hardware
+    1. pcie slot
+    2. pcie adopter
+    3. PMU board(power management Unit), quartz
+    4. Interposer
+    5. Gender crad
+    6. SSD
