@@ -1,0 +1,72 @@
+workspace = Directory in which we are coding
+1.offline coding
+2. We can code on desired python version
+
+online python -- https://www.onlinegdb.com/online_python_compiler
+
+python download
+https://www.python.org/downloads/
+pycharm download
+https://www.jetbrains.com/pycharm/download/#section=windows
+
+
+python installation
+
+pycharm IDE install
+
+Beyond compare
+
+notepad++
+https://notepad-plus-plus.org/downloads/v8.4.2/
+
+1000 files
+
+
+Sushma  813-816  modify   --> approval 
+Ramya    982-86  modify   --> approval 
+Sowjanya  57-92  modify   --> approval 
+Avi   1-3 modify          --> approval 
+
+
+
+
+
+git account
+
+https://www.youtube.com/watch?v=QUtk-Uuq9nE
+
+git install , first program push
+
+https://git-scm.com/download/win
+
+
+ravit@DESKTOP-E11H9US MINGW64 /d/Raviteja_teaching/Batch_4 (main)
+$ git add .
+
+ravit@DESKTOP-E11H9US MINGW64 /d/Raviteja_teaching/Batch_4 (main)
+$ git commit -m "June14"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ravit@DESKTOP-E11H9US.(none)')
+
+ravit@DESKTOP-E11H9US MINGW64 /d/Raviteja_teaching/Batch_4 (main)
+$ ^C
+
+ravit@DESKTOP-E11H9US MINGW64 /d/Raviteja_teaching/Batch_4 (main)
+$ git config --global user.email "pamujula.raviteja@gmail.com"
+
+ravit@DESKTOP-E11H9US MINGW64 /d/Raviteja_teaching/Batch_4 (main)
+$ git config --global user.name "Your Name"
+
+ravit@DESKTOP-E11H9US MINGW64 /d/Raviteja_teaching/Batch_4 (main)
+$ git config --global user.name "Raviteja474"
