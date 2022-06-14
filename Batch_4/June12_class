@@ -14,3 +14,38 @@ prerequisites
     4. Interposer
     5. Gender crad
     6. SSD
+
+Inband  = standard test pc  = one OS to one drive
+sideband /outband  = Management Interface
+
+
+hardware:
+1.Aadark/Beagle(Management Interface)
+2.Security(opal)
+3. Quartz(Alternate to PMu board)
+4. PCI VDM
+    lecroy
+    xgig
+
+
+
+SSD drive
+
+1. Enumeration: your client driver able to recognize your SSD
+2. Block management:
+     1TB ---> 900 GB already, 50 GB
+     100 GB--> 50 GB
+     format  --> 980 GB
+
+3. 1000 GB, 100 GB user data,
+900 GB free data---> 50 GB dta
+--> flash fw, boot loader
+4. Data integrity
+
+
+Form factors:
+1. U.2 2.5 inches  --> laptop predominant
+2. U.3 -->advanced version of U.2
+3. M.2 --> smaller drives; used in tabs
+4. AIC  --> bigger in length
+5. EVT2
