@@ -1,0 +1,23 @@
+list = group of heterogenous data types
+
+homogeneous = [1,2,3]  --> array
+heterogeneous = ["vaibhav",3.4] -->list
+
+list1= ["Raviteja",28,5.8,74,]
+access: index
+selection : slicing
+
+dict1= {"Raviteja": "19-10-1993"}
+access: index--> No
+we can access with key
+{1: 'A', 2: 'B', 3: 'c'}
+key
+value
+item
+
+list2 = [2,3,[1,2,[86,21,[122,23],79]]
+
+college = ["Finance", "Placement",{"Address": "pincode 524305"},
+           {"ECE":{2:{"Ram":78},3:{"Ram":600},4:{"Ravi":591}},
+           "EEE":{2:{"Ram1":718},3:{"Ram2":300},4:{"Ravi7":101}},
+           "CSE":{2:{"Ram8":178},3:{"Ram12":110},4:{"Ravi5":110}},}]
