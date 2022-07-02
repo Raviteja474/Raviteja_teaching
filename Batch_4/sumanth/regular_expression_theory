@@ -1,0 +1,12 @@
+Avinash is son of Ganesh born on 01-01-1997 and his phone number is 9440798174 with mail id
+Vishnu is daughter of Ganesh born on 08/01/1999 and her phone number is 94407981
+Raviteja is son of Mahesh born on 02-01-1993 and his phone number is 9440797145
+Sushma is daughter of shubha born on 01-01-1990 and her phone number is 9440798145
+Sumanth is son of 12@@13 born on 1997 and her phone number is 9440798145
+Ravindra is son of Srinu born on 01-01-1999 and her phone number is 4541
+Bharath is son of Rao born on 01-01-1998 and her phone number is 9440798198
+
+names should be valid
+
+{"Avinash":["Ganesh",01-01-1997,9440798174],}
+{"Ravindra":["Srinu",01-01-1999,""],}
