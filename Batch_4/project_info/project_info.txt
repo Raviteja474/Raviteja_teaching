@@ -1,0 +1,153 @@
+Business Model:
+_________________________________________________________________________________
+Intel will manafacture SSD
+1. Users, common people
+Eg: Raviteja, Vaibhav
+2. OEM (original equipement manafacture)/Laptop manafacture companies
+Eg: Lenovo, Dell, Apple
+3. CSP(Cloud service platform)
+Eg: Oracle, Facebook
+4. Data centers
+Eg: Google, youtube
+_________________________________________________________________________________
+Terminology
+_________________________________________________________________________________
+Client = Micron Technology
+Conval = continuous validation
+
+_________________________________________________________________________________
+Differnce between software, hardware and firmware 
+_________________________________________________________________________________
+software = 1.A program which performs particular task based input from user.
+		   2.non-tangible(logical)
+		   3.dynamic(We can change it)
+		   4.Requires more system memory
+Eg: MS word, beyond compare, jira, git, 
+10 MB/20MB
+
+hardware = 1.A physical device/instrument which provides physical output to physical input
+		   2.tangible(physical)
+		   3. static nature
+		   4. No memory
+Eg: Generator, fan, dynamo, torchlight
+
+Firmware = 1. A piece code flashed into electronic device which regulates behavior and performance
+		   2.non-tangible(logical)
+		   3.lesser/relatively dynamic(We can change it)
+		   4.Requires less system memory 
+Eg: AC, washing machine, SSD, HDD, processor, Medical device
+3 MB/5 MB
+
+_________________________________________________________________________________
+Teams:
+_________________________________________________________________________________
+1.Firmware development team  => firmware file , .c  package it into (.bin)
+date: June 1 -->Jul 1 .bin
+2.Firmware protocol validation team  => Test suite (.py), package into .exe
+		1. CICD enable u don't need .exe
+date: June 1 --> jul 1 , skeleton
+	  concreate developement  Jul 1 July 15
+3.Driver/Framework team  ==> .c  -->.exe
+	4 releases /Year
+4.Framework automation team  ==>  automation task  .py
+	automation 
+5.System Testing team  ==> passed/failed reports, jiras
+_________________________________________________________________________________
+
+
+framework = 
+1. Run a python script from command line.
+2. Run a script in pycharm IDE
+	a. debug
+	b. suggestions
+	c. alignment 
+	d. warning , error in compile time only
+	
+Framework >> IDE>> command line
+
+Samsung: MSV (Multi system Validation Platform)
+Micron: QTest(Quality Test)
+Intel: FAST(Firmware Automation system Testing)
+	TWIDL (Tinker with Intel Driver Lab)
+		
+		
+Test PC/Host PC = A vendor specific framwork(Samsung MSVP/Intel FAST) is installed and vendor spcific hardware(Intel adapter/gender card  Samsung adpater/PMU/switch/ gendercard) is installed, so that we can run test suites.
+
+Local PC = developer personal laptop 
+
+
+_________________________________________________________________________________
+
+Storage validation team : 
+_________________________________________________________________________________
+purpose:
+You need to understand specification document, customer requirement and 
+check firmware behavior in accordance with this.
+how:
+You need develop python or C++ codes on your vendor framework
+Why so many tests?
+	we need to cover total nvme specification document
+	we should cover customer specification
+_________________________________________________________________________________
+Life cycle
+
+why we need multiple systems:
+1. 10000 TC , it will take almost 7 days to complete .
+2. 5000 TC on dell, 7000 TC on Lenovo, you can run in parellel.
+3. If you want to check on multiple capacities(1TB, 2 TB, 4 TB, 8 TB)
+4. If you want to check in differnt capabilities.
+5. Different platforms Linux/windows
+6. Drive might brick during run 
+_________________________________________________________________________________
+How your managing particular tests run?
+
+1-1000 --> test plan
+			criticality/run time
+.yml
+nrt0  = p1
+nrt   = p2
+xft   = p3
+
+1000
+
+dell_nrt0_firmware_update.yml 1-111
+dell_nrt_firmware_update.yml  111-222
+dell_xft_firmware_update.yml  222-333
+Lenovo_nrt0_firmware_update.yml  334-445
+Lenovo_nrt_firmware_update.yml  446-550
+Lenovo_xft_firmware_update.yml  551-689
+Amaozon_nrt0_firmware_update.yml  690-711
+Amaozon_nrt_firmware_update.yml   712-963
+Amaozon_xft_firmware_update.yml  964-1000
+
+.BDR
+_________________________________________________________________________________
+
+life cycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

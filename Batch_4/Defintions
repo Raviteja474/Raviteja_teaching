@@ -17,6 +17,6 @@ item
 datatype
 keyword
 identifier
-declaration
-definition
-implementation
+function declaration
+function definition
+function implementation
