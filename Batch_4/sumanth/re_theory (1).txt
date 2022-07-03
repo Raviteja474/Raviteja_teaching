@@ -1,0 +1,24 @@
+^ --> It matches Begining of string
+\ --> It is used to escape metacharactersa
+* --> It matches 0 or more Characters left to it(*)
++ --> It matches 1 or more Characters left to it(+)
+? --> It matches 0 or 1 Character left to it(?)
+[] --> It matches Characters in brackets
+{m, n} --> It matches range of numbers(Minimum, Maximum)
+{m} --> It matches exact number
+() --> Group
+. --> It matches any character except new line
+| --> It matches either or
+$ --> It matches ending of string
+------------------------------------------------------------------
+\A --> It matches Begining of string
+\b --> It matches word boundary with in a string
+\B --> It matches not a word boundary
+\d --> It matches only digits
+\D --> It matches only non digits
+\s --> It matches white space(space, tab, newline)
+\S --> It matches not white space
+\w --> It matches word character(Alpha numeric characters) ie..[a-zA-Z0-9_]
+\W --> It matches not a word character(Non Alpha numeric characters) ie..[^a-zA-Z0-9_]
+\Z --> It matches ending of string
+

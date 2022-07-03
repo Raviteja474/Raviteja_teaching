@@ -1,0 +1,24 @@
+string_1 = "batch4"
+string_2 = 'batch5'
+string_3 = """batch4
+              batch5"""
+string_1 = "bharath mobile's"
+string_5 = 'bharath "has"'
+string_6 = "bharath\"s mobile"
+sting_7 = '''enerating 108 LBA ranges
+nvmeDatasetManagement(AD=0, NSID=1, IDW=0, IDR=1, NR=107,                      
+  lbaBuffer=<InterfaceNVMe.NVMeDataSetManagementCommandTest.c_ubyte_Array_1728 
+  object at 0x7f8803d1def0>)                                                   #     0.00 s.  
+structLastNVMeStatus()                                                         #     0.00 s.  
+structLastNVMeStatus()      '''
+print("----------------indexing------------")
+# b a t c h 
+# 0 1 2 3 4 (positive index)
+# -4 -3 -2 -1 (negative index)
+print(string_1[1])
+print(string_1[5])
+print(string_2[-4])
+print("---------------slicing-------------")
+print(string_2[1:4])
+print(string_6)
+

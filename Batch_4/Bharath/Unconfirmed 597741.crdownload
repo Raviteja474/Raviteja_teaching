@@ -1,0 +1,8 @@
+string_1 = "india's is my country"
+# print(string_1[6:8])
+# print(string_1[-10:-8])
+# print(string_1[::])
+# print(string_1[:-7])
+# print(string_1[::-1])
+print(string_1[::2])
+print(string_1[23])

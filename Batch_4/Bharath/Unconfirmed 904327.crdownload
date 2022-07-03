@@ -1,0 +1,12 @@
+string_1 = "this is python"
+unque = []
+duplicates = []
+for ele in string_1:
+    if string_1.count(ele) == 1:
+        # duplicates.append(ele)
+        unque.append(ele)
+    else:
+        duplicates.append(ele)
+print(unque)
+print(duplicates)
+print(set(duplicates))

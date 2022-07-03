@@ -1,0 +1,9 @@
+strin_1 = "apple"
+string_2 = "is my fav"
+string_3 = 3
+# print(strin_1 + string_3)
+print(strin_1 * string_3)
+# print(strin_1 + " " + string_2)
+# print(string_2 * 2)
+print(False * strin_1)
+print(True + "strin_1")

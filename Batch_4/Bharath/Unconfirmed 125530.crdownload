@@ -1,0 +1,21 @@
+var_1 = 10
+for ele in range(1, 10):
+    print(f"i have {ele} apples.")
+    
+print(r"https://www.online-python.com/") 
+list_1 = [1,2,3,4,5,6]
+list_1.insert(0, 7)
+print(list_1)
+string_1 = "python"
+print(string_1.replace("pyt", "re"))
+string_2 = "   python    "
+print(string_2)
+print(string_2.strip())
+string_3 = "python is programming language"
+var_2 = string_3.split()
+print(var_2)
+print("*".join(var_2))
+string_4 = "234.23"
+print(string_4.isnumeric())
+sting_5 = "21"
+print(sting_5.isdigit())

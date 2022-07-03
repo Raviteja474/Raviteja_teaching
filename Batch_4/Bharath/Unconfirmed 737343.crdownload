@@ -1,0 +1,16 @@
+# methods in strings
+string_1 = "python string"
+strint_2 = "1234"
+string_3 = "ABCD"
+print(string_1.capitalize())
+print(string_1.count("t"))
+print(string_1.isalpha())
+print(strint_2.isdecimal())
+print(string_1.islower())
+print(string_3.isupper())
+print(string_3.lower())
+print(string_1.upper())
+print(string_1.title())
+print(len(string_3))
+string_4 ="india is my is country is"
+print(string_4.split("is"))
