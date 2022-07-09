@@ -1,0 +1,31 @@
+Error: compile time
+
+Exception: run time(logical)
+
+try: if you have suspicion about exceptions in your code.
+except: if your code encountered exceptions, it will catch
+else: except and else are mutually exclusive                       - OPTIONAL
+finally: it will execute whether your code have exceptions or not  - OPTIONAL
+
+
+# try(1) , except(2)
+Error- 1,2
+No Error-1
+
+# try(1) , except(2), finally(3)
+Error - 1,2,3
+No Error - 1,3
+
+# try(1) , except(2),  else(3), finally(4),
+Error - 1,2,4
+No Error - 1,3,4
+
+Parent - Exception
+
+# try(1), except child1(2,TypeError), except child2(3,ZeroDivisionError),
+except child3(4, IndexError), except parent(5,Exception),finally(6)
+
+1000/0  ==> 1, 3, 6
+"raviteja"+8  ==> 1,2,6
+Index error ==> 1, 4,6
+Unknown ==> 1,5,6

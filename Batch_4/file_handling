@@ -1,0 +1,45 @@
+#.txt
+logging = imported library
+import loggging
+
+5 logger level
+
+1. Debug  --> developer print
+2. Info   --> customer/end user print
+3. Warning  --> there might be error in future
+4. Error  --> when we error get we will print it
+5. Critical  --> biggest possible error
+
+
+print vs logging
+
+1. logging we can have mulitple levels of loggers, print don't have levels
+2. logging statements can be saved into text file.
+3. We can define our own logger level.
+
+120 statements
+100 debug ==> Raviteja
+15 statement ==> info
+2 warning ==> errors might come
+2 errors ==> actual errors
+1 critical ==> P1 /P2
+
+popular modes in logging
+r = read = you can read the contents of files
+w = write = you can write the contents into file
+
+open("log.txt",w)
+file exist ==> log.txt <-- contents
+file not exist --> error
+
+w+ = write plus = you can write the contents into the file, if file don't exist it will
+create the file
+file exist ==> log.txt <-- contents
+file not exist --> it will create file --> log.txt <-- contents
+
+a= append
+
+
+# xml
+# json
+
