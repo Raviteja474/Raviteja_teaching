@@ -2,10 +2,10 @@ import logging
 
 # Create and configure logger
 # 1. logname
-logging.basicConfig(filename="newfile.log",format='%(asctime)s %(message)s',
-                    filemode='w')
-
-# Creating an object
+# logging.basicConfig(filename="newfile.log",format='%(asctime)s %(message)s',
+#                     filemode='w')
+#
+# # Creating an object
 logger = logging.getLogger()
 
 # Setting the threshold of logger to DEBUG

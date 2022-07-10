@@ -1,0 +1,10 @@
+********************************************************************************
+Application : AP202U1403
+Name : Ramya
+District : Nellore
+Disclaimer for EAMCET Exam:Applicants must have cleared their 12th level exam from an AP/ Telangana accredited board or institution. Students applying must be at least 17 years old as of December 31, 2022. As of December 31, 2022, the upper age limit for all applicants is 22 years (25 years for SC/ ST). Students must have passed/appeared in Intermediate (12th) with PCM as an optional subject or an equivalent recognised by BIE Andhra Pradesh/ Telangana to be eligible for Pharma D. OR Students must have passed or be enrolled in the final year of a pharmacy diploma exam administered by SBTET in Andhra Pradesh or Telangana. Candidates must have received a grade of 45 per cent or above (40 per cent for reserved category candidates).Candidates must be 17 years old as of December 31, 2022, to be considered
+Maths-1: 31
+Maths-2: 30
+Physics: 23
+Chemistry: 28
+Ramya Total: 112

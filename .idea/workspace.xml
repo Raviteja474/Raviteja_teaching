@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec39a946-7ff8-4e21-a275-43ba65e65eac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Batch_4/Avinash_p/file_handling" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/Avinash_p/logging_example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/Avinash_p/practise_july09.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/Avinash_p/program.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Batch_4/beyond_compare/beyond_coding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Batch_4/beyond_compare/logs/random_practice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Batch_4/project_info/uncovered code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Batch_4/logging_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/Batch_4/logging_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Batch_4/project_info/project_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Batch_4/project_info/project_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Theory/Mahesh_Resume.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Theory/Mahesh_Resume.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,49 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.logging_example">
+  <component name="RunManager" selected="Python.uncovered code">
+    <configuration name="beyond_coding" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Raviteja_teaching" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Batch_4/beyond_compare" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Batch_4/beyond_compare/beyond_coding.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="logging_example (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Raviteja_teaching" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Batch_4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Batch_4/logging_example.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="logging_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Raviteja_teaching" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -58,7 +103,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="practise_july09" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="random_practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Raviteja_teaching" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,11 +111,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Batch_4/Avinash_p" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Batch_4/beyond_compare/logs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Batch_4/Avinash_p/practise_july09.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Batch_4/beyond_compare/logs/random_practice.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -79,7 +124,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="program" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="uncovered code" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Raviteja_teaching" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -87,11 +132,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Batch_4/Avinash_p" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Batch_4/project_info" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Batch_4/Avinash_p/program.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Batch_4/project_info/uncovered code.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -102,9 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.uncovered code" />
+        <item itemvalue="Python.beyond_coding" />
+        <item itemvalue="Python.logging_example (1)" />
+        <item itemvalue="Python.random_practice" />
         <item itemvalue="Python.logging_example" />
-        <item itemvalue="Python.practise_july09" />
-        <item itemvalue="Python.program" />
       </list>
     </recent_temporary>
   </component>
@@ -129,16 +176,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Batch_4/Avinash_p/program.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

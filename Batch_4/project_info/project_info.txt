@@ -38,6 +38,27 @@ Firmware = 1. A piece code flashed into electronic device which regulates behavi
 Eg: AC, washing machine, SSD, HDD, processor, Medical device
 3 MB/5 MB
 
+_____________________________________________________________
+Generic/Standard:
+It is universally accepted/ universally in practice across industry
+Eg: Generic requirements, we will have Nvme 1.4 spec, pcie 5.0 spec, sata 1.3 specs
+
+customer specific/adhoc:
+Every customer want to add/modify/omit particular features based on their product need
+hence we need to modifiy generic features.
+Eg: Dell PRD(Project Requirement Document)
+
+Feature support
+______________________________________________________________________________
+Generic = 2500
+MI support = 200
+Basic management = 100
+VPD support = 200
+
+Dell requirement: No MI support, 2500+100+200 = 2800
+
+HP: Basic management + MI support
+Generic+ MI support+ Basic managemnt+ VPD support =3000
 _________________________________________________________________________________
 Teams:
 _________________________________________________________________________________
@@ -73,8 +94,7 @@ Intel: FAST(Firmware Automation system Testing)
 		
 Test PC/Host PC = A vendor specific framwork(Samsung MSVP/Intel FAST) is installed and vendor spcific hardware(Intel adapter/gender card  Samsung adpater/PMU/switch/ gendercard) is installed, so that we can run test suites.
 
-Local PC = developer personal laptop 
-
+Local PC = developer personal laptop
 
 _________________________________________________________________________________
 
@@ -122,10 +142,64 @@ Amaozon_xft_firmware_update.yml  964-1000
 
 .BDR
 _________________________________________________________________________________
+Types of Delivery for validation team
+_________________________________________________________________________________
+Test Suite Development: New validation test suite
+    Owner: Customer/Manager
+    requirement:
+    1.coverage enhancement: If a feature support added recently from firmware, if the newly added feature don't
+    have coverage from test suite to validate, we need to develop new test suites.
+    2.coverage missing: Already spec compliance exist but validation team missed a portion of feature
+    missed by mistake
+    3.customer requirement deviate from Generic requirement
 
-life cycle
 
+Defect:
+    1. Test suite development team coding issues
+        a. data you have given during might not covered all conditions,code
+     How to avoid?
+        proper skip conditions
+    2. command library/ utility change
 
+Task: subpart of development
+    1.coverage missing: If a development takes less than half day, instead new development
+    we will receive task for this.
+    2. Other team collaboration: If you already setup and trying to help other team
+    members or other teams
+    3. Documentation: If you are documenting known issues information
+
+Porting: Already existing code exists for one OEM/product, if another OEM/product
+        going to implement it, we will port the codes.
+Eg: dell --> Amazon
+_________________________________________________________________________________
+Types of Delivery for system automation/ITE/ team:
+_________________________________________________________________________________
+100 units of work
+
+1. Automation tasks 60%
+
+2. Hardware pool Setups  10%
+
+    a.You should configure the total setups and dry run(1 test run to make sure hardware
+                                                        correct)
+    b.Configuring machines for validation/FW team
+    c.Unbrick the drive with Dediprog(drive recoverable tool)
+
+3. Conval ownership 10%
+    a.We need ready the systems
+    Eg: Dell conval -
+    15 test plans => Estimation execution time 100 hours = 10 machines*10 hours
+    1. They need to prepare 10 drives with Dell FW and connect 10 systems
+
+4. Issue reporting(Jira dashboard) 10%
+    a.Once conval(full run/cycle) is over, we need to
+    re-execute/run/kick failed test cases  in other machines to make sure issue consistency.
+    b. They will raise jira with logs and dumps
+
+5. Closures and Reports 10%
+    a. Once conval over share consolidated reports to stakeholders.
+    b. Once reported issue fixed, run the same test again and make sure it is passing
+    now with the current fix given by firmware engineer or validation team.
 
 
 
