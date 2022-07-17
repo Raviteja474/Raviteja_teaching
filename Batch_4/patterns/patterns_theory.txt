@@ -1,0 +1,123 @@
+formula  = left side blanks+ data + right side blanks
+
+lines = 5
+
+for i in range(1,lines+1):
+	print("* "*i+(lines-i)* "  ")
+	
+
+
+row 1 = 1 stas + 4 blank
+row 2 = 2 stas + 3 blank
+row 1 = 3 stas + 2 blank
+row 1 = 4 stas + 1 blank
+row 1 = 5 stas + 0 blank
+
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+
+
+* * * * *
+* * * *
+* * *
+* *
+*
+
+5 0
+4 1
+3 2
+2 3
+1 4
+
+for i in range(0,lines+1):
+	print("* "*(lines-i)+"  "*i)
+
+		 * 
+	   * * *
+	 * * * * *
+   * * * * * * *
+
+
+lines = 4
+
+3B,1S,3B
+2B,3S,2B
+1B,5S,1B
+0B,7S,0B
+
+for i in range(1,lines+1)
+	print("  "*(lines-i)+"* "*i+ "  "*(lines-i))
+	
+			 * 
+		   * * *
+		 * * * * *
+	   * * * * * * *
+	 * * * * * * * * *
+   * * * * * * * * * * * 
+ * * * * * * * * * * * * * 
+		 * * * * *                
+		 * * * * *    
+		 * * * * *
+		 * * * * *
+		 * * * * *
+		 * * * * *
+		 * * * * *
+		 
+(rows//2+1)+(rows//2)+ (rows//2-1) +(rows//2+1)
+	
+
+		 * 
+	   * * *
+	 * * * * *
+   * * * * * * *
+ * * * * * * * * *
+       * * *                 
+	   * * *      
+	   * * *
+	   * * *
+	   * * *
+	   
+		  
+5 rows  = 3 blanks + 3 stars+ 3 blanks  = 
+7 rows  = 4 blanks + 3 starts + 4 blanks
+9 rows =  6 blanks + 3 stars  + 6 blanks
+	   
+	
+	
+		 * 
+	   * * *
+	 * * * * *
+   * * * * * * *
+     * * * * *
+	   * * * 
+	     *
+		 
+for i in range(1,lines+1)
+	print(" "*(lines-i)+"* "*i+ "  "*(lines-i))
+		 
+
+		 
+		 
+
+
+*               *
+* *           * *
+* * *       * * *   
+* * * *   * * * *
+* * * * * * * * * 
+	 
+
+*
+  * 
+    *  
+       *  
+          *
+       *   
+    *
+  * 
+*  
