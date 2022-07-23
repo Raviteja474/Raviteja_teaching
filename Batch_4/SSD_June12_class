@@ -49,3 +49,76 @@ Form factors:
 3. M.2 --> smaller drives; used in tabs
 4. AIC  --> bigger in length
 5. EVT2
+
+Requirement:
+Write some basic tests on sanitize
+
+why sanitize?
+kind of formatting at admin level
+
+which spec?
+NVMe 1.4
+
+Is it supported in our SSD?
+1. check in Identify command to know whether feature is supported or not
+2. If there is no provision in the spec, check from your vendor driver libraries.
+eg: TWIDL
+
+How to know whether your drive sanitized or not?
+
+nvme write  --> 10000 LBA
+IO meter/Medussa/  --> 50 GB
+
+known pattern: Vaibhav
+			86 97 105 98 104  97 118
+			0x56 0x61 0x69 0x62  0x61  0x76  -->7 bytes
+
+you need to create buffer, VUC
+
+opcode ,C0, write = 0x55, HOST_TO_DEVICE,
+
+10000*512 bytes/7 bytes = 72,000
+
+After sanitize --> nvme read --> vaibhav should not be there.
+
+
+user data/data
+meta data
+
+
+(31:24)50 commads high, (23:16)60 command medium, (15:08)70 commands low prio, (7:3) reserved  (2:0)16=2^4 commads at a time
+
+DW11:
+
+31:24        23:16       15:08        7:0
+
+0000 0000   0000 0000   0000 0000   0000 0000
+
+00110010    00111100    01000110
+
+0x32          0X3C        0X46     0000 0100  = 0x323C4604
+xr
+(31:24)150 commads high, (23:16)160 command medium, (15:08)119 commands low prio, (7:3) reserved  (2:0)32 commads at a time
+
+31:24        23:16       15:08        7:0
+
+0000 0000   0000 0000   0000 0000   0000 0000
+
+DW10:
+0000 0000   0000 0000   0000 0000   0000 0000
+
+
+
+Set Feature ??
+
+Get Feature ??
+
+
+TV(SSD) --> remote
+
+Set the TV into Mute.
+Is TV muted or not?
+
+
+
+
