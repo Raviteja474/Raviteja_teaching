@@ -1,7 +1,42 @@
+why OOPS??
+
+Procedural vs oops language
+
+Examples
+
+Advantages
+
+OOPS concepts:
+
+Object
+1. Inheritance
+ parent class = base class = super class
+ subclass = child class = derived class
+2. Polymorphism
+
+3. Abstraction
+4. Encapsulation
+
+
+
+
+
+
 # class = how a object should be/blueprint(class Person defines how a person should be)
 
 # object = physical presence(Avinash should follow Person class)
 that contains data(variables/methods)
+
+1. static method
+     @classmethod, @staticmethod,
+2. non-static method
+    first parameter self
+3. Static variable
+    global scope, class method
+4. non-static variable
+    variables in non-static method
+
+
 
 Eg:1 class laptop
     object lenovo, dell, Thinkpad
@@ -48,8 +83,8 @@ object= instance= reference
  Eg: can_see = True, he will enjoy nature.
  can_see = False, He is a blind.
  Types:
- Dynamic polymorhism= overriding = run time polymorphism
- static polymorhism = overloading = compile time polymorphism
+ Dynamic polymorphism= overriding = run time polymorphism
+ static polymorphism = overloading = compile time polymorphism
 
  3. Abstraction - expressing total content with small portion of sentences
  Hiding implementation to end user and displaying the result only.
