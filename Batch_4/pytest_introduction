@@ -1,0 +1,147 @@
+pytest = unittest framework
+
+Java frameworks : Hiberante, spring,
+.Net Frameworks: c#
+
+python unittesting frameworks:
+pytest(dominant), unittest
+
+Environment setup:
+1. python install, module installation, your system should be able to debug the client code(configuraions)
+Ask project configuration document
+
+Unittesting =
+Testing a unit(basic block/lowest possible piece of code)
+mostly unit testing will done on functions
+
+Framework =
+1. How I need to input
+2. How my input will be processed
+3. Where I need to get my output
+
+Eg: Indian judicial system
+Investigation --> enquiry  --> penalization
+police        --> Judge    --> Jail officials
+input         --> processing --> output
+
+API testing = Selenium testing
+
+
+
+1000 users creating manually --> manual API testing
+use of selenium example:
+Create 1000 users in facebook
+
+test suite/file
+test case/sub test
+
+
+pip install pytest == 2.9.1
+pip install pytest --> latest
+
+convention for test suite:
+test_*.py or *_test.py
+
+1. test_calculation.py valid
+2. calculation_test.py valid
+3. test_installtion.py valid
+
+raviteja_debugging.py invalid
+test1.py invalid
+1_test_.py invalid
+
+test_*.py or *_test.py --> implicit(automatic)
+test_*.py or *_test.py --> explicit(We need to mention)
+
+# assert True
+# assert False --> AssertionError
+assert 10>3
+assert "I am Raviteja"
+assert not 3>10
+assert 3>10
+# AssertionError
+
+function convention: function name should start with test
+test*
+
+results:
+test_square.py .F
+
+Observation 1: one . is pass
+Observation 2: one F is fail
+WRONG ASSUMPTION: Test execution will stop once failure occur --->
+
+...F --> pass, pass, pass , fail
+
+How to run
+Open command prompt in the directory, and type below commands
+directory:
+_____________________________________________________________________________
+a. pytest ---> it will run all test suites(files), below 3 files will run
+1. test_calculation.py
+2. calculation_test.py
+3. test_installtion.py
+4. strings_program.py
+_____________________________________________________________________________
+b. pytest <test_name>
+Eg: pytest calculation_test.py --> only this suite will execute
+
+output:
+test_square.py .F
+_____________________________________________________________________________
+verbose = more explanation
+
+c. pytest <test_name> -v
+eg: pytest calculation_test.py -v
+
+output:
+test_square.py::test_sqrt PASSED
+test_square.py::testsquare FAILED
+_____________________________________________________________________________
+
+test architecture:
+
+1. Setup/precondition
+2. run/workload
+3. teardown/rollback
+
+Eg:
+https://nvmexpress.org/wp-content/uploads/NVM-Express-Base-Specification-2.0b-2021.12.18-Ratified.pdf
+
+5.16.1.18 Feature Identifiers Supported and Effects (Log Identifier 12h)
+
+
+1. Setup/pre condition
+5.17.2.1 Identify Controller Data Structure (CNS 01h)
+261 byte Log Page Attributes (LPA):
+5 bit the Feature Identifiers Supported and Effects log page (Log
+Identifier 12h); and
+
+2. run/workload
+
+Requirement validation
+
+3. teardown/rollback
+
+if you have done any changes , revert back
+
+Scenarios
+1. pass --> Setup(P), run(P), teardown(P)
+2. Fail --> Setup(F), teardown(P)
+3. Fail --> Setup(P), run(F), teardown(P)
+4. Fail --> Setup(P), run(P), teardown(F)
+5. Fail --> Setup(P), run(F), teardown(F)
+
+
+
+Eg: Video call
+1. Nokia 1100
+setup
+--> camera exist or not --> False
+run --> will not be called
+teardown will call
+
+2. Realme note
+
+
+

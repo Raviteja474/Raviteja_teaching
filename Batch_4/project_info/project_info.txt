@@ -202,6 +202,16 @@ ________________________________________________________________________________
     now with the current fix given by firmware engineer or validation team.
 
 
+Environment setup:
+1. python install, module installation, your system should be able to debug the client code(configuraions)
+Ask project configuration document
+
+Code walk through:
+When someone joins to the team, buddy(mentor) will introduce you
+1. Framework understanding
+2. review process
+3. different portals with access and usage
+
 
 
 
