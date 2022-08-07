@@ -103,10 +103,22 @@ object= instance= reference
 # TypeError: Class3.m() missing 1 required positional argument: 'self'
 # u need to call that using object only.
 
-# implemtation =some valid statement except "pass"
+# implementation =some valid statement except "pass"
 
+10 built in methods
 issubclass
 isinstance
+
+Abstract(Non-implement) vs concrete(Fully implemented)
+
+abstract method: will have only pass statement
+--> there will not be any meaningful implementation
+
+concrete method
+--> we will have meaningful implementation
+
+Abstract class --> atleast one abstract method
+
 
 
 

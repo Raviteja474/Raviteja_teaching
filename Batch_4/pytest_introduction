@@ -145,3 +145,66 @@ teardown will call
 
 
 
+import pytest
+
+@pytest.mark.parametrize("num, output",[(1,11),(2,22),(3,35),(4,44)])
+def test_multiplication_11(num, output):
+   assert 11*num == output
+
+test_multiplication_11(1,11)
+test_multiplication_11(2,22)
+test_multiplication_11(3,35)
+test_multiplication_11(4,44)
+
+# 65,90 --> 26   list of 7-digit 1000 names;  ASWERTG
+# 1000 names = random
+# vaibhav = 86+65+   = 481 --> prime number
+# 1 TC, parameterize 1000 values
+
+
+why we run or skip?
+--> It's categorization
+Eg: windows based tests , no need run on linux
+
+@pytest.mark.windows_tests
+def test_1
+.....
+
+@pytest.mark.linux_tests
+def test_2
+.....
+
+@pytest.mark.windows_tests
+def test_3
+...
+
+@pytest.mark.linux_tests
+def test_4
+...
+
+@pytest.mark.windows_tests
+@pytest.mark.linux_tests
+def test_5
+...
+
+pytest -m windows_tests -v  -->  test_1, test_3,test_5
+pytest -m linux_tests -v  -->  test_2, test_4,test_5
+
+
+@pytest.fixture
+def input_value():
+   input = 39
+   return input
+
+def test_divisible_by_3(input_value):
+   assert input_value % 3 == 0
+
+def square(value):
+   return value*value
+
+test_divisible_by_3(39) ---> WRONG; if your function qualified as a valid subtest,
+you can pass the arguments only with fixtures.
+square(15)=225 ---> CORRECT, NORMAL FUNCTION; because this name
+didn't started with "test"
+
+

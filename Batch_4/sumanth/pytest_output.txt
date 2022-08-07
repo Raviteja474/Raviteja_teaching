@@ -1,0 +1,690 @@
+Microsoft Windows [Version 10.0.19044.1826]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\pavinasx>cd PycharmProjects
+
+C:\Users\pavinasx\PycharmProjects>cd sample
+
+C:\Users\pavinasx\PycharmProjects\sample>cd pytest_examples
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items
+
+test_sample.py ..                                                        [ 50%]
+test_strings.py ..                                                       [100%]
+
+========================== 4 passed in 0.10 seconds ===========================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items
+
+test_sample.py::test_add_int PASSED                                      [ 25%]
+test_sample.py::test_add_folat PASSED                                    [ 50%]
+test_strings.py::test_add_string PASSED                                  [ 75%]
+test_strings.py::test_product_string PASSED                              [100%]
+
+========================== 4 passed in 0.11 seconds ===========================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k add
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items / 1 deselected / 3 selected
+
+test_sample.py ..                                                        [ 66%]
+test_strings.py .                                                        [100%]
+
+=================== 3 passed, 1 deselected in 0.07 seconds ====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k product
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items / 3 deselected / 1 selected
+
+test_strings.py .                                                        [100%]
+
+=================== 1 passed, 3 deselected in 0.06 seconds ====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k string
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items / 2 deselected / 2 selected
+
+test_strings.py ..                                                       [100%]
+
+=================== 2 passed, 2 deselected in 0.07 seconds ====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k int
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items / 3 deselected / 1 selected
+
+test_sample.py .                                                         [100%]
+
+=================== 1 passed, 3 deselected in 0.06 seconds ====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k int or float
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 0 items
+
+======================== no tests ran in 0.01 seconds =========================
+ERROR: file not found: or
+
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k int float
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 0 items
+
+======================== no tests ran in 0.02 seconds =========================
+ERROR: file not found: float
+
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k int or pytest -k float
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 0 items
+
+======================== no tests ran in 0.02 seconds =========================
+ERROR: file not found: or
+
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -m temporary
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items / 2 deselected / 2 selected
+
+test_sample.py .                                                         [ 50%]
+test_strings.py .                                                        [100%]
+
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+============= 2 passed, 2 deselected, 1 warnings in 0.13 seconds ==============
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -m temporary -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items / 2 deselected / 2 selected
+
+test_sample.py::test_add_int PASSED                                      [ 50%]
+test_strings.py::test_add_string PASSED                                  [100%]
+
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+============= 2 passed, 2 deselected, 1 warnings in 0.09 seconds ==============
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items
+
+test_sample.py::test_add_int FAILED                                      [ 25%]
+test_sample.py::test_add_folat PASSED                                    [ 50%]
+test_strings.py::test_add_string FAILED                                  [ 75%]
+test_strings.py::test_product_string PASSED                              [100%]
+
+================================== FAILURES ===================================
+________________________________ test_add_int _________________________________
+
+    @pytest.mark.temporary
+    def test_add_int():
+        addition_result = sample_file.addition(4, 5)
+        assert addition_result == 9
+        assert sample_file.addition(10, 50) == 60
+>       assert sample_file.addition(16, 14) == 10
+E       assert 30 == 10
+E         -30
+E         +10
+
+test_sample.py:9: AssertionError
+_______________________________ test_add_string _______________________________
+
+    @pytest.mark.temporary
+    def test_add_string():
+        addition_of_strings = sample_file.addition("Python", "Batch")
+>       assert addition_of_strings == "Pythonatch"
+E       AssertionError: assert 'PythonBatch' == 'Pythonatch'
+E         - PythonBatch
+E         ?       -
+E         + Pythonatch
+
+test_strings.py:7: AssertionError
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+=============== 2 failed, 2 passed, 1 warnings in 0.22 seconds ================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest --maxfail=1
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items
+
+test_sample.py F
+
+================================== FAILURES ===================================
+________________________________ test_add_int _________________________________
+
+    @pytest.mark.temporary
+    def test_add_int():
+        addition_result = sample_file.addition(4, 5)
+        assert addition_result == 9
+        assert sample_file.addition(10, 50) == 60
+>       assert sample_file.addition(16, 14) == 10
+E       assert 30 == 10
+E        +  where 30 = <function addition at 0x03D3E4B0>(16, 14)
+E        +    where <function addition at 0x03D3E4B0> = sample_file.addition
+
+test_sample.py:9: AssertionError
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+==================== 1 failed, 1 warnings in 0.13 seconds =====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest --maxfail=1 -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items
+
+test_sample.py::test_add_int FAILED                                      [ 25%]
+
+================================== FAILURES ===================================
+________________________________ test_add_int _________________________________
+
+    @pytest.mark.temporary
+    def test_add_int():
+        addition_result = sample_file.addition(4, 5)
+        assert addition_result == 9
+        assert sample_file.addition(10, 50) == 60
+>       assert sample_file.addition(16, 14) == 10
+E       assert 30 == 10
+E         -30
+E         +10
+
+test_sample.py:9: AssertionError
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+==================== 1 failed, 1 warnings in 0.14 seconds =====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest --maxfail=2 -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items
+
+test_sample.py::test_add_int FAILED                                      [ 25%]
+test_sample.py::test_add_folat PASSED                                    [ 50%]
+test_strings.py::test_add_string FAILED                                  [ 75%]
+
+================================== FAILURES ===================================
+________________________________ test_add_int _________________________________
+
+    @pytest.mark.temporary
+    def test_add_int():
+        addition_result = sample_file.addition(4, 5)
+        assert addition_result == 9
+        assert sample_file.addition(10, 50) == 60
+>       assert sample_file.addition(16, 14) == 10
+E       assert 30 == 10
+E         -30
+E         +10
+
+test_sample.py:9: AssertionError
+_______________________________ test_add_string _______________________________
+
+    @pytest.mark.temporary
+    def test_add_string():
+        addition_of_strings = sample_file.addition("Python", "Batch")
+>       assert addition_of_strings == "Pythonatch"
+E       AssertionError: assert 'PythonBatch' == 'Pythonatch'
+E         - PythonBatch
+E         ?       -
+E         + Pythonatch
+
+test_strings.py:7: AssertionError
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+=============== 2 failed, 1 passed, 1 warnings in 0.16 seconds ================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -v -x
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items
+
+test_sample.py::test_add_int FAILED                                      [ 25%]
+
+================================== FAILURES ===================================
+________________________________ test_add_int _________________________________
+
+    @pytest.mark.temporary
+    def test_add_int():
+        addition_result = sample_file.addition(4, 5)
+        assert addition_result == 9
+        assert sample_file.addition(10, 50) == 60
+>       assert sample_file.addition(16, 14) == 10
+E       assert 30 == 10
+E         -30
+E         +10
+
+test_sample.py:9: AssertionError
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+==================== 1 failed, 1 warnings in 0.13 seconds =====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -v -x --tb=no
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items
+
+test_sample.py::test_add_int FAILED                                      [ 25%]
+
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+==================== 1 failed, 1 warnings in 0.10 seconds =====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -x --tb=no
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 4 items
+
+test_sample.py F
+
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+==================== 1 failed, 1 warnings in 0.10 seconds =====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 6 items
+
+test_sample.py::test_add_int FAILED                                      [ 16%]
+test_sample.py::test_add_folat PASSED                                    [ 33%]
+test_string_methods.py::test_add_string[Pycharm- 2022-Pycharm 2022] PASSED [ 50%]
+test_string_methods.py::test_add_string[Pycharm- 2020-Pycharm 2020] PASSED [ 66%]
+test_strings.py::test_add_string FAILED                                  [ 83%]
+test_strings.py::test_product_string SKIPPED                             [100%]
+
+================================== FAILURES ===================================
+________________________________ test_add_int _________________________________
+
+    @pytest.mark.temporary
+    def test_add_int():
+        addition_result = sample_file.addition(4, 5)
+        assert addition_result == 9
+        assert sample_file.addition(10, 50) == 60
+>       assert sample_file.addition(16, 14) == 10
+E       assert 30 == 10
+E         -30
+E         +10
+
+test_sample.py:9: AssertionError
+_______________________________ test_add_string _______________________________
+
+    @pytest.mark.temporary
+    def test_add_string():
+        addition_of_strings = sample_file.addition("Python", "Batch")
+>       assert addition_of_strings == "Pythonatch"
+E       AssertionError: assert 'PythonBatch' == 'Pythonatch'
+E         - PythonBatch
+E         ?       -
+E         + Pythonatch
+
+test_strings.py:7: AssertionError
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+========== 2 failed, 3 passed, 1 skipped, 1 warnings in 0.25 seconds ==========
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 6 items
+
+test_sample.py::test_add_int FAILED                                      [ 16%]
+test_sample.py::test_add_folat PASSED                                    [ 33%]
+test_string_methods.py::test_add_string[Pycharm- 2022-Pycharm 2022] PASSED [ 50%]
+test_string_methods.py::test_add_string[Pycharm- 2020-Pycharm 2020] PASSED [ 66%]
+test_strings.py::test_add_string FAILED                                  [ 83%]
+test_strings.py::test_product_string SKIPPED                             [100%]
+
+================================== FAILURES ===================================
+________________________________ test_add_int _________________________________
+
+    @pytest.mark.temporary
+    def test_add_int():
+        addition_result = sample_file.addition(4, 5)
+        assert addition_result == 9
+        assert sample_file.addition(10, 50) == 60
+>       assert sample_file.addition(16, 14) == 10
+E       assert 30 == 10
+E         -30
+E         +10
+
+test_sample.py:9: AssertionError
+_______________________________ test_add_string _______________________________
+
+    @pytest.mark.temporary
+    def test_add_string():
+        addition_of_strings = sample_file.addition("Python", "Batch")
+>       assert addition_of_strings == "Pythonatch"
+E       AssertionError: assert 'PythonBatch' == 'Pythonatch'
+E         - PythonBatch
+E         ?       -
+E         + Pythonatch
+
+test_strings.py:7: AssertionError
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.temporary - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+========== 2 failed, 3 passed, 1 skipped, 1 warnings in 0.27 seconds ==========
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>
+
+**************************************************************************************************
+Microsoft Windows [Version 10.0.19044.1826]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\pavinasx>cd PycharmProjects
+
+C:\Users\pavinasx\PycharmProjects>cd sample
+
+C:\Users\pavinasx\PycharmProjects\sample>cd pytest_examples
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items
+
+test_sample.py ...                                                       [100%]
+
+========================== 3 passed in 0.08 seconds ===========================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items
+
+test_sample.py::test_add_int PASSED                                      [ 33%]
+test_sample.py::test_add_folat PASSED                                    [ 66%]
+test_sample.py::test_add_string PASSED                                   [100%]
+
+========================== 3 passed in 0.07 seconds ===========================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k add
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items
+
+test_sample.py ...                                                       [100%]
+
+========================== 3 passed in 0.06 seconds ===========================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k add_string
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items / 2 deselected / 1 selected
+
+test_sample.py .                                                         [100%]
+
+=================== 1 passed, 2 deselected in 0.05 seconds ====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k test_add
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items
+
+test_sample.py ...                                                       [100%]
+
+========================== 3 passed in 0.06 seconds ===========================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -k test_add -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items
+
+test_sample.py::test_add_int PASSED                                      [ 33%]
+test_sample.py::test_add_folat PASSED                                    [ 66%]
+test_sample.py::test_add_string PASSED                                   [100%]
+
+========================== 3 passed in 0.07 seconds ===========================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 6 items
+
+test_sample.py ...                                                       [ 50%]
+test_strings.py ...                                                      [100%]
+
+========================== 6 passed in 0.10 seconds ===========================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 6 items
+
+test_sample.py::test_add_int PASSED                                      [ 16%]
+test_sample.py::test_add_folat PASSED                                    [ 33%]
+test_sample.py::test_add_string PASSED                                   [ 50%]
+test_strings.py::test_add_int PASSED                                     [ 66%]
+test_strings.py::test_add_folat PASSED                                   [ 83%]
+test_strings.py::test_add_string PASSED                                  [100%]
+
+========================== 6 passed in 0.11 seconds ===========================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_strings.py
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items
+
+test_strings.py ...                                                      [100%]
+
+========================== 3 passed in 0.05 seconds ===========================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_strings.py test_add_float
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 0 items
+
+======================== no tests ran in 0.01 seconds =========================
+ERROR: file not found: test_add_float
+
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_strings.py test_add_foalt
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 0 items
+
+======================== no tests ran in 0.02 seconds =========================
+ERROR: file not found: test_add_foalt
+
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_strings.py test_add_folat
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 0 items
+
+======================== no tests ran in 0.02 seconds =========================
+ERROR: file not found: test_add_folat
+
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_strings.py test_add_int
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 0 items
+
+======================== no tests ran in 0.02 seconds =========================
+ERROR: file not found: test_add_int
+
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_sample.py test_add_int
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 0 items
+
+======================== no tests ran in 0.01 seconds =========================
+ERROR: file not found: test_add_int
+
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_strings.py
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items
+
+test_strings.py ...                                                      [100%]
+
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.add - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+==================== 3 passed, 1 warnings in 0.06 seconds =====================
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_strings.py -m
+ERROR: usage: pytest [options] [file_or_dir] [file_or_dir] [...]
+pytest: error: argument -m: expected one argument
+
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_strings.py -m add
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items / 1 deselected / 2 selected
+
+test_strings.py ..                                                       [100%]
+
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.add - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+============= 2 passed, 1 deselected, 1 warnings in 0.06 seconds ==============
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_strings.py -m add -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items / 1 deselected / 2 selected
+
+test_strings.py::test_add_int PASSED                                     [ 50%]
+test_strings.py::test_add_folat PASSED                                   [100%]
+
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.add - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+============= 2 passed, 1 deselected, 1 warnings in 0.07 seconds ==============
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>pytest test_strings.py -m add -v
+============================= test session starts =============================
+platform win32 -- Python 2.7.18, pytest-4.6.11, py-1.11.0, pluggy-0.13.1 -- c:\python27\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\pavinasx\PycharmProjects\sample\pytest_examples
+collected 3 items / 2 deselected / 1 selected
+
+test_strings.py::test_add_int PASSED                                     [100%]
+
+============================== warnings summary ===============================
+c:\python27\lib\site-packages\_pytest\mark\structures.py:335
+  c:\python27\lib\site-packages\_pytest\mark\structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.add - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+============= 1 passed, 2 deselected, 1 warnings in 0.06 seconds ==============
+
+C:\Users\pavinasx\PycharmProjects\sample\pytest_examples>
