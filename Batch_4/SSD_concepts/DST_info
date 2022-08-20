@@ -1,0 +1,72 @@
+1. is it front end or back end
+
+
+https://nvmexpress.org/wp-content/uploads/NVM-Express-Management-Interface-1.1b-2020.10.05-Ratified.pdf
+
+
+
+
+LBA
+
+Nand Die  -->  Block  --> page  -->  sectors  --> 4 byte LBA
+
+
+ins
+https://nvmexpress.org/wp-content/uploads/NVMe-NVM-Express-2.0a-2021.07.26-Ratified.pdf
+
+Figure 24: I/O Controller – Log Page Support --> namespace scope
+
+
+
+
+
+Figure 110: List of NVMe Admin Commands Supported using the Out-of-Band Mechanism
+https://nvmexpress.org/wp-content/uploads/NVM-Express-Management-Interface-1.1b-2020.10.05-Ratified.pdf
+
+customer >> Generic
+
+
+
+setup
+
+5.17.2.1 Identify Controller data structure (CNS 01h)--> 261 byte --> 5 bit
+
+work load
+
+Getlogpage command works fine
+
+teardown
+
+dummy
+
+
+media = physical medium/place you are storing your data
+___________________________________________________________________
+
+0 to FFFFFFFFh  (4294967295)
+Number of Namespaces (NN):  -->128
+
+FFFFFFFFh brodcast NSID
+
+--->50 NS create, 25 attach controller
+
+0 , 129-FFFFFFFE- invalid
+1-128  valid
+	Allocated 1-50
+		Active   1-25
+		Inactive 26-50
+	Unallocated 51-128
+
+___________________________________________________________________
+Example:
+Device Self-test In Progress
+Expected status code Type 0 Actual status code  Type  1
+Expected status code 0  Actual status code 1D
+Expected MI status code 0  Actual MI status code 0
+
+Example:
+Invalid field is command
+
+Expected status code Type 0 Actual status code  Type  0
+Expected status code 0  Actual status code 2
+Expected MI status code 0  Actual MI status code 0

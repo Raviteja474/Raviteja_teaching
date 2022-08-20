@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec39a946-7ff8-4e21-a275-43ba65e65eac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Batch_4/assert_statements.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/sample_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/unittest_explanation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/utility/Animal_program.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/utility/Person_program.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/utility/utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Raviteja_teaching.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Raviteja_teaching.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Batch_4/Automation_explanation" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Batch_4/SSD_concepts/DST_info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Batch_4/oops/oops_thoery" beforeDir="false" afterPath="$PROJECT_DIR$/Batch_4/oops/oops_thoery" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Batch_4/pytest_introduction" beforeDir="false" afterPath="$PROJECT_DIR$/Batch_4/pytest_introduction" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Batch_4/project_info/project_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Batch_4/project_info/project_info.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -37,14 +31,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "full.screen.before.presentation.mode": "false",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python tests.Unittests in sample_1.py">
     <configuration name="Person_program" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Raviteja_teaching" />

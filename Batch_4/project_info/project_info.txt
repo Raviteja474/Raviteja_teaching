@@ -212,7 +212,22 @@ When someone joins to the team, buddy(mentor) will introduce you
 2. review process
 3. different portals with access and usage
 
+Automation project:
+_________________________________________________________
 
+json  --> dictionaries
+
+dictionary -->.json file
+
+.json file --> dictionary
+
+.json read, .json creting
+
+openpyxl--> open python MS EXcel
+
+csv --> comma separted value
+
+xmldict
 
 
 
