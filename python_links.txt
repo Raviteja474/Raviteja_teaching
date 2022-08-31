@@ -141,7 +141,9 @@ https://www.geeksforgeeks.org/python-split-by-repeating-substring/	-	Python | Sp
 https://youtu.be/7BJ_BKeeJyM	-	100 Percent Test Coverage in Python
 
 https://www.youtube.com/watch?v=3PekU8OGBCA		-	Python Automation with PyAutoGUI | Full Course With Projects!
-	
+
+
+https://www.42u.com/vendors/raritan/dcim-software --> raritan
 
 
 
