@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec39a946-7ff8-4e21-a275-43ba65e65eac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Batch_4/commands/ip address.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/file_systems/logs_creation_deletion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/file_systems/os_shutil_practice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/file_systems/os_shutil_theory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batch_4/file_systems/shutil_practice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Batch_4/resumes/sample_resume.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Batch_4/resumes/sample_resume.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supporting_material/important_links" beforeDir="false" afterPath="$PROJECT_DIR$/supporting_material/important_links" afterDir="false" />
-    </list>
+    <list default="true" id="ec39a946-7ff8-4e21-a275-43ba65e65eac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

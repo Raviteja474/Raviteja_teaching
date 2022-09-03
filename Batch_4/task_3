@@ -1,0 +1,23 @@
+matraix_1= [[1,2,3,8],[1,6,7,6],[9,7,6,5]]
+
+
+rows --> len outer list
+columns --> len one element in list
+
+Expectation
+m*n --> n*m
+matraix_2=  same size; dummy matrix
+
+for loops
+
+for row in in range(0,m)
+	for column in in range(0,n)
+		matrix_2 [column] [row] = matraix_1[row] [column]
+
+
+filelist = [ f for f in os.listdir(mydir) if f.endswith(".bak") ]
+
+filelist = [ file_name for file_name in os.listdir(mydir) if file_name.endswith(".bak") ]
+
+file_names = os.listdir(mydir)
+filelist = [ file_name for file_name in file_names if file_name.endswith(".bak")]
