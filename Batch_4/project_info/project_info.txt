@@ -230,6 +230,57 @@ csv --> comma separted value
 xmldict
 
 
+Project 2: Release&Tools team
+_______________________________________________________________________
+
+1. Creating Test suite instller(.exe)(Inno setup)
+NVMe_Test_Suite.exe -->  C:\Program Files (x86)\Samsung
+.iss  --> Inno setup
+a. git clone TS_OEM_Release
+b. configurations 09.2022
+   next month 10.2022
+c. Using Inno setup .iss file, u will build and compile and create Test suite instller.exe
+
+2. Crating Master installer(From individaul installers)(Inno setup)
+
+Master = Test suite+ Framework+Driver
+--> NVMe_Master_Suite.exe
+
+2.1 Change list creation
+change list = Change is a accumulated list of test plans, tests during last one month.
+
+Technology: gitpython
+How it works:
+
+3. Ownership for full runs for OEM and generic ,Sharing reports to stakeholders
+5. Creating jiras for failure
+6. Mapping and closure(gitpython)
+
+_________________________________________________
+
+Ramya akka project explanation
+________________________________________________
+what is the product? VMWare product
+Revenue genearation? cloud services ==> web application services
+workspace ==> orders place ==> ERP tool
+defects raising tools => Change management tool, jira
+Guidelines ==> FRD = functional requirement document
+
+Collabarations ==> BA(business Analysts) , dev team (Oracle fusion)
+test -> Q --> pre production --> production
+
+BAT = Build acceptacance testing
+Baseline project = commonalities  ==> smoke test
+everycycle ==> regression
+
+____________________________________________________
+
+
+
+
+
+
+
 
 
 

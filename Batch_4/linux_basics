@@ -1,0 +1,37 @@
+Linux vs Windows
+
+windows - GUI vs Linux - CLI
+
+server vs computer
+
+Advantages:
+1. Free and Open Source
+2. Stability and Reliability
+3. Security
+4. Flexibility
+5. Hardware Support
+6. Total Cost of Ownership (TCO) and Maintenance
+
+
+How to enable GUI in linux?
+https://techglimpse.com/install-desktop-gui-ubuntu-linux-server/
+
+
+Firmware flashing:
+
+1. Firmware windows machine
+2. copy using WinSCP tool--> IP , username, password
+
+windows --> windows ; remote desktop
+linux --> windows ; winscp
+windows --> linux ; winscp
+linux --> linux ; GUI enable, then take remote
+
+3. How you are going to run your commands in remote:
+Putty tool --> IP , username, password
+
+File structure:
+c:/Progaram files /
+\root\ravit\
+
+https://www.javatpoint.com/linux-commands

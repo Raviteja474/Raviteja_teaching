@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec39a946-7ff8-4e21-a275-43ba65e65eac" name="Changes" comment="" />
+    <list default="true" id="ec39a946-7ff8-4e21-a275-43ba65e65eac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Batch_4/linux_basics" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Batch_4/project_info/project_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Batch_4/project_info/project_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Batch_4/resumes/Adarsh Permukha (1).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Batch_4/resumes/sample_resume.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Batch_4/resumes/~$mple_resume.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Batch_4/resumes/~WRL0003.tmp" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
