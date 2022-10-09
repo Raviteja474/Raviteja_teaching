@@ -1,0 +1,10 @@
+Project: Release activities(System tools)
+Client: Micron technology
+Project Description:
+The system tools team is responsible for generating the Test suite installer, Master installer, and automation change list report between two installers to provide sanity reports and change list execution reports for the system testing team for the full run cycle.
+
+Roles and Responsibilities:
+ Prepare Test suite installer which contains validation tests, utility files and library files with required configuration inputs from inno setup tool for every alternate sprint.
+ Responsible to create Master installer with artifacts like test suite installer, driver installer, and Framework setup for the single-step installation process and copy to network share for all other stakeholders' usage.
+ Change list automation development involves generating reports BDR, scripts added, BDR, scripts deleted and BDR, scripts modified between installers using gitpython module which will communicate git server remotely.
+ Responsible to provide sanity reports and change list execution reports(over the weekend) to kick-start the full cycle run. Responsible to generate the release notes document for clear information for the system testing team to run the full cycle in case of customized or Adhoc run instructions.

@@ -1,6 +1,7 @@
 import logging
 import time
 import os
+from base import Repo
 
 # create a log file in folder 1 --> minute 1
 # create a log file in folder 2  --> minute 2
